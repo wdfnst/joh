@@ -54,7 +54,7 @@ int main()
     for (auto i = 0; i < rep; i++)
             sum += calc() * i;
     // std::cout << "sum 1: " << sum << std::endl;
-    std::cout << " " << " bandwidth\n";
+    std::cout << " " << " bandwidth    \n";
     outer_cal<120 - 9 * 10>();
     outer_cal<120 - 8 * 10>();
     outer_cal<120 - 7 * 10>();
