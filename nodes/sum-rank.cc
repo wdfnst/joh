@@ -39,7 +39,7 @@ int outer_cal() {
             sum += calc() * i;
     tim.stop();
     std::cout << num_thread << " " << std::setw(10) <<  memory /
-        tim.elapsed_seconds() / 1024.  / 1024. / 1024.  << "\n";
+        tim.elapsed_seconds() / 1024.  / 1024. / 1024.  << "    \n";
 }
 
 
