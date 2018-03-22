@@ -55,7 +55,6 @@ int main()
             sum += calc() * i;
     // std::cout << "sum 1: " << sum << std::endl;
     std::cout << " " << " bandwidth\n";
-		/*
     outer_cal<120 - 9 * 10>();
     outer_cal<120 - 8 * 10>();
     outer_cal<120 - 7 * 10>();
@@ -71,7 +70,6 @@ int main()
     outer_cal<120 + 3 * 10>();
     outer_cal<120 + 4 * 10>();
     outer_cal<120 + 5 * 10>();
-		*/
     outer_cal<120 + 6 * 10>();
     outer_cal<120 + 7 * 10>();
     outer_cal<120 + 8 * 10>();

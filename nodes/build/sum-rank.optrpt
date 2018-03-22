@@ -55,7 +55,7 @@ LOOP BEGIN at sum-rank.cc(54,5)
    remark #15346: vector dependence: assumed OUTPUT dependence between ret (23:1) and ret (22:14)
 LOOP END
 
-LOOP BEGIN at sum-rank.cc(38,17) inlined into sum-rank.cc(75,5)
+LOOP BEGIN at sum-rank.cc(38,17) inlined into sum-rank.cc(64,5)
    remark #15382: vectorization support: call to function __kmpc_ok_to_fork cannot be vectorized   [ sum-rank.cc(23,1) ]
    remark #15382: vectorization support: call to function __kmpc_fork_call cannot be vectorized   [ sum-rank.cc(23,1) ]
    remark #15382: vectorization support: call to function __kmpc_serialized_parallel cannot be vectorized   [ sum-rank.cc(23,1) ]
@@ -66,7 +66,7 @@ LOOP BEGIN at sum-rank.cc(38,17) inlined into sum-rank.cc(75,5)
    remark #15346: vector dependence: assumed OUTPUT dependence between ret (23:1) and ret (22:14)
 LOOP END
 
-LOOP BEGIN at sum-rank.cc(38,17) inlined into sum-rank.cc(76,5)
+LOOP BEGIN at sum-rank.cc(38,17) inlined into sum-rank.cc(65,5)
    remark #15382: vectorization support: call to function __kmpc_ok_to_fork cannot be vectorized   [ sum-rank.cc(23,1) ]
    remark #15382: vectorization support: call to function __kmpc_fork_call cannot be vectorized   [ sum-rank.cc(23,1) ]
    remark #15382: vectorization support: call to function __kmpc_serialized_parallel cannot be vectorized   [ sum-rank.cc(23,1) ]
@@ -77,7 +77,7 @@ LOOP BEGIN at sum-rank.cc(38,17) inlined into sum-rank.cc(76,5)
    remark #15346: vector dependence: assumed OUTPUT dependence between ret (23:1) and ret (22:14)
 LOOP END
 
-LOOP BEGIN at sum-rank.cc(38,17) inlined into sum-rank.cc(77,5)
+LOOP BEGIN at sum-rank.cc(38,17) inlined into sum-rank.cc(66,5)
    remark #15382: vectorization support: call to function __kmpc_ok_to_fork cannot be vectorized   [ sum-rank.cc(23,1) ]
    remark #15382: vectorization support: call to function __kmpc_fork_call cannot be vectorized   [ sum-rank.cc(23,1) ]
    remark #15382: vectorization support: call to function __kmpc_serialized_parallel cannot be vectorized   [ sum-rank.cc(23,1) ]
@@ -88,11 +88,110 @@ LOOP BEGIN at sum-rank.cc(38,17) inlined into sum-rank.cc(77,5)
    remark #15346: vector dependence: assumed OUTPUT dependence between ret (23:1) and ret (22:14)
 LOOP END
 
-LOOP BEGIN at sum-rank.cc(38,17) inlined into sum-rank.cc(78,5)
+LOOP BEGIN at sum-rank.cc(38,17) inlined into sum-rank.cc(67,5)
    remark #15382: vectorization support: call to function __kmpc_ok_to_fork cannot be vectorized   [ sum-rank.cc(23,1) ]
    remark #15382: vectorization support: call to function __kmpc_fork_call cannot be vectorized   [ sum-rank.cc(23,1) ]
    remark #15382: vectorization support: call to function __kmpc_serialized_parallel cannot be vectorized   [ sum-rank.cc(23,1) ]
    remark #15382: vectorization support: call to function .9 cannot be vectorized   [ sum-rank.cc(23,1) ]
+   remark #15382: vectorization support: call to function __kmpc_end_serialized_parallel cannot be vectorized   [ sum-rank.cc(23,1) ]
+   remark #15344: loop was not vectorized: vector dependence prevents vectorization
+   remark #15346: vector dependence: assumed OUTPUT dependence between ret (22:14) and ret (23:1)
+   remark #15346: vector dependence: assumed OUTPUT dependence between ret (23:1) and ret (22:14)
+LOOP END
+
+LOOP BEGIN at sum-rank.cc(38,17) inlined into sum-rank.cc(68,5)
+   remark #15382: vectorization support: call to function __kmpc_ok_to_fork cannot be vectorized   [ sum-rank.cc(23,1) ]
+   remark #15382: vectorization support: call to function __kmpc_fork_call cannot be vectorized   [ sum-rank.cc(23,1) ]
+   remark #15382: vectorization support: call to function __kmpc_serialized_parallel cannot be vectorized   [ sum-rank.cc(23,1) ]
+   remark #15382: vectorization support: call to function .11 cannot be vectorized   [ sum-rank.cc(23,1) ]
+   remark #15382: vectorization support: call to function __kmpc_end_serialized_parallel cannot be vectorized   [ sum-rank.cc(23,1) ]
+   remark #15344: loop was not vectorized: vector dependence prevents vectorization
+   remark #15346: vector dependence: assumed OUTPUT dependence between ret (22:14) and ret (23:1)
+   remark #15346: vector dependence: assumed OUTPUT dependence between ret (23:1) and ret (22:14)
+LOOP END
+
+LOOP BEGIN at sum-rank.cc(38,17) inlined into sum-rank.cc(69,5)
+   remark #15382: vectorization support: call to function __kmpc_ok_to_fork cannot be vectorized   [ sum-rank.cc(23,1) ]
+   remark #15382: vectorization support: call to function __kmpc_fork_call cannot be vectorized   [ sum-rank.cc(23,1) ]
+   remark #15382: vectorization support: call to function __kmpc_serialized_parallel cannot be vectorized   [ sum-rank.cc(23,1) ]
+   remark #15382: vectorization support: call to function .13 cannot be vectorized   [ sum-rank.cc(23,1) ]
+   remark #15382: vectorization support: call to function __kmpc_end_serialized_parallel cannot be vectorized   [ sum-rank.cc(23,1) ]
+   remark #15344: loop was not vectorized: vector dependence prevents vectorization
+   remark #15346: vector dependence: assumed OUTPUT dependence between ret (22:14) and ret (23:1)
+   remark #15346: vector dependence: assumed OUTPUT dependence between ret (23:1) and ret (22:14)
+LOOP END
+
+LOOP BEGIN at sum-rank.cc(38,17) inlined into sum-rank.cc(70,5)
+   remark #15382: vectorization support: call to function __kmpc_ok_to_fork cannot be vectorized   [ sum-rank.cc(23,1) ]
+   remark #15382: vectorization support: call to function __kmpc_fork_call cannot be vectorized   [ sum-rank.cc(23,1) ]
+   remark #15382: vectorization support: call to function __kmpc_serialized_parallel cannot be vectorized   [ sum-rank.cc(23,1) ]
+   remark #15382: vectorization support: call to function .15 cannot be vectorized   [ sum-rank.cc(23,1) ]
+   remark #15382: vectorization support: call to function __kmpc_end_serialized_parallel cannot be vectorized   [ sum-rank.cc(23,1) ]
+   remark #15344: loop was not vectorized: vector dependence prevents vectorization
+   remark #15346: vector dependence: assumed OUTPUT dependence between ret (22:14) and ret (23:1)
+   remark #15346: vector dependence: assumed OUTPUT dependence between ret (23:1) and ret (22:14)
+LOOP END
+
+LOOP BEGIN at sum-rank.cc(38,17) inlined into sum-rank.cc(71,5)
+   remark #15382: vectorization support: call to function __kmpc_ok_to_fork cannot be vectorized   [ sum-rank.cc(23,1) ]
+   remark #15382: vectorization support: call to function __kmpc_fork_call cannot be vectorized   [ sum-rank.cc(23,1) ]
+   remark #15382: vectorization support: call to function __kmpc_serialized_parallel cannot be vectorized   [ sum-rank.cc(23,1) ]
+   remark #15382: vectorization support: call to function .17 cannot be vectorized   [ sum-rank.cc(23,1) ]
+   remark #15382: vectorization support: call to function __kmpc_end_serialized_parallel cannot be vectorized   [ sum-rank.cc(23,1) ]
+   remark #15344: loop was not vectorized: vector dependence prevents vectorization
+   remark #15346: vector dependence: assumed OUTPUT dependence between ret (22:14) and ret (23:1)
+   remark #15346: vector dependence: assumed OUTPUT dependence between ret (23:1) and ret (22:14)
+LOOP END
+
+LOOP BEGIN at sum-rank.cc(38,17) inlined into sum-rank.cc(72,5)
+   remark #15382: vectorization support: call to function __kmpc_ok_to_fork cannot be vectorized   [ sum-rank.cc(23,1) ]
+   remark #15382: vectorization support: call to function __kmpc_fork_call cannot be vectorized   [ sum-rank.cc(23,1) ]
+   remark #15382: vectorization support: call to function __kmpc_serialized_parallel cannot be vectorized   [ sum-rank.cc(23,1) ]
+   remark #15382: vectorization support: call to function .19 cannot be vectorized   [ sum-rank.cc(23,1) ]
+   remark #15382: vectorization support: call to function __kmpc_end_serialized_parallel cannot be vectorized   [ sum-rank.cc(23,1) ]
+   remark #15344: loop was not vectorized: vector dependence prevents vectorization
+   remark #15346: vector dependence: assumed OUTPUT dependence between ret (22:14) and ret (23:1)
+   remark #15346: vector dependence: assumed OUTPUT dependence between ret (23:1) and ret (22:14)
+LOOP END
+
+LOOP BEGIN at sum-rank.cc(38,17) inlined into sum-rank.cc(73,5)
+   remark #15382: vectorization support: call to function __kmpc_ok_to_fork cannot be vectorized   [ sum-rank.cc(23,1) ]
+   remark #15382: vectorization support: call to function __kmpc_fork_call cannot be vectorized   [ sum-rank.cc(23,1) ]
+   remark #15382: vectorization support: call to function __kmpc_serialized_parallel cannot be vectorized   [ sum-rank.cc(23,1) ]
+   remark #15382: vectorization support: call to function .21 cannot be vectorized   [ sum-rank.cc(23,1) ]
+   remark #15382: vectorization support: call to function __kmpc_end_serialized_parallel cannot be vectorized   [ sum-rank.cc(23,1) ]
+   remark #15344: loop was not vectorized: vector dependence prevents vectorization
+   remark #15346: vector dependence: assumed OUTPUT dependence between ret (22:14) and ret (23:1)
+   remark #15346: vector dependence: assumed OUTPUT dependence between ret (23:1) and ret (22:14)
+LOOP END
+
+LOOP BEGIN at sum-rank.cc(38,17) inlined into sum-rank.cc(74,5)
+   remark #15382: vectorization support: call to function __kmpc_ok_to_fork cannot be vectorized   [ sum-rank.cc(23,1) ]
+   remark #15382: vectorization support: call to function __kmpc_fork_call cannot be vectorized   [ sum-rank.cc(23,1) ]
+   remark #15382: vectorization support: call to function __kmpc_serialized_parallel cannot be vectorized   [ sum-rank.cc(23,1) ]
+   remark #15382: vectorization support: call to function .23 cannot be vectorized   [ sum-rank.cc(23,1) ]
+   remark #15382: vectorization support: call to function __kmpc_end_serialized_parallel cannot be vectorized   [ sum-rank.cc(23,1) ]
+   remark #15344: loop was not vectorized: vector dependence prevents vectorization
+   remark #15346: vector dependence: assumed OUTPUT dependence between ret (22:14) and ret (23:1)
+   remark #15346: vector dependence: assumed OUTPUT dependence between ret (23:1) and ret (22:14)
+LOOP END
+
+LOOP BEGIN at sum-rank.cc(38,17) inlined into sum-rank.cc(75,5)
+   remark #15382: vectorization support: call to function __kmpc_ok_to_fork cannot be vectorized   [ sum-rank.cc(23,1) ]
+   remark #15382: vectorization support: call to function __kmpc_fork_call cannot be vectorized   [ sum-rank.cc(23,1) ]
+   remark #15382: vectorization support: call to function __kmpc_serialized_parallel cannot be vectorized   [ sum-rank.cc(23,1) ]
+   remark #15382: vectorization support: call to function .25 cannot be vectorized   [ sum-rank.cc(23,1) ]
+   remark #15382: vectorization support: call to function __kmpc_end_serialized_parallel cannot be vectorized   [ sum-rank.cc(23,1) ]
+   remark #15344: loop was not vectorized: vector dependence prevents vectorization
+   remark #15346: vector dependence: assumed OUTPUT dependence between ret (22:14) and ret (23:1)
+   remark #15346: vector dependence: assumed OUTPUT dependence between ret (23:1) and ret (22:14)
+LOOP END
+
+LOOP BEGIN at sum-rank.cc(38,17) inlined into sum-rank.cc(76,5)
+   remark #15382: vectorization support: call to function __kmpc_ok_to_fork cannot be vectorized   [ sum-rank.cc(23,1) ]
+   remark #15382: vectorization support: call to function __kmpc_fork_call cannot be vectorized   [ sum-rank.cc(23,1) ]
+   remark #15382: vectorization support: call to function __kmpc_serialized_parallel cannot be vectorized   [ sum-rank.cc(23,1) ]
+   remark #15382: vectorization support: call to function .27 cannot be vectorized   [ sum-rank.cc(23,1) ]
    remark #15382: vectorization support: call to function __kmpc_end_serialized_parallel cannot be vectorized   [ sum-rank.cc(23,1) ]
    remark #15344: loop was not vectorized: vector dependence prevents vectorization
    remark #15346: vector dependence: assumed OUTPUT dependence between ret (22:14) and ret (23:1)
@@ -125,6 +224,292 @@ LOOP BEGIN at sum-rank.cc(23,1) inlined into sum-rank.cc(55,20)
    remark #15301: REMAINDER LOOP WAS VECTORIZED
 LOOP END
 
+LOOP BEGIN at sum-rank.cc(23,1) inlined into sum-rank.cc(64,5)
+   remark #15389: vectorization support: reference rank[i] has unaligned access   [ sum-rank.cc(25,18) ]
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15415: vectorization support: irregularly indexed load was generated for the variable <b.a[rank[i]]>, part of index is read from memory   [ sum-rank.cc(25,16) ]
+   remark #15305: vectorization support: vector length 16
+   remark #15399: vectorization support: unroll factor set to 4
+   remark #15309: vectorization support: normalized vectorization overhead 0.283
+   remark #15300: LOOP WAS VECTORIZED
+   remark #15450: unmasked unaligned unit stride loads: 1 
+   remark #15462: unmasked indexed (or gather) loads: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 5 
+   remark #15477: vector cost: 1.870 
+   remark #15478: estimated potential speedup: 2.660 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at sum-rank.cc(23,1) inlined into sum-rank.cc(64,5)
+<Remainder loop for vectorization>
+   remark #15389: vectorization support: reference rank[i] has unaligned access   [ sum-rank.cc(25,18) ]
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15305: vectorization support: vector length 16
+   remark #15309: vectorization support: normalized vectorization overhead 0.385
+   remark #15301: REMAINDER LOOP WAS VECTORIZED
+LOOP END
+
+LOOP BEGIN at sum-rank.cc(23,1) inlined into sum-rank.cc(65,5)
+   remark #15389: vectorization support: reference rank[i] has unaligned access   [ sum-rank.cc(25,18) ]
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15415: vectorization support: irregularly indexed load was generated for the variable <b.a[rank[i]]>, part of index is read from memory   [ sum-rank.cc(25,16) ]
+   remark #15305: vectorization support: vector length 16
+   remark #15399: vectorization support: unroll factor set to 4
+   remark #15309: vectorization support: normalized vectorization overhead 0.283
+   remark #15300: LOOP WAS VECTORIZED
+   remark #15450: unmasked unaligned unit stride loads: 1 
+   remark #15462: unmasked indexed (or gather) loads: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 5 
+   remark #15477: vector cost: 1.870 
+   remark #15478: estimated potential speedup: 2.660 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at sum-rank.cc(23,1) inlined into sum-rank.cc(65,5)
+<Remainder loop for vectorization>
+   remark #15389: vectorization support: reference rank[i] has unaligned access   [ sum-rank.cc(25,18) ]
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15305: vectorization support: vector length 16
+   remark #15309: vectorization support: normalized vectorization overhead 0.385
+   remark #15301: REMAINDER LOOP WAS VECTORIZED
+LOOP END
+
+LOOP BEGIN at sum-rank.cc(23,1) inlined into sum-rank.cc(66,5)
+   remark #15389: vectorization support: reference rank[i] has unaligned access   [ sum-rank.cc(25,18) ]
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15415: vectorization support: irregularly indexed load was generated for the variable <b.a[rank[i]]>, part of index is read from memory   [ sum-rank.cc(25,16) ]
+   remark #15305: vectorization support: vector length 16
+   remark #15399: vectorization support: unroll factor set to 4
+   remark #15309: vectorization support: normalized vectorization overhead 0.283
+   remark #15300: LOOP WAS VECTORIZED
+   remark #15450: unmasked unaligned unit stride loads: 1 
+   remark #15462: unmasked indexed (or gather) loads: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 5 
+   remark #15477: vector cost: 1.870 
+   remark #15478: estimated potential speedup: 2.660 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at sum-rank.cc(23,1) inlined into sum-rank.cc(66,5)
+<Remainder loop for vectorization>
+   remark #15389: vectorization support: reference rank[i] has unaligned access   [ sum-rank.cc(25,18) ]
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15305: vectorization support: vector length 16
+   remark #15309: vectorization support: normalized vectorization overhead 0.385
+   remark #15301: REMAINDER LOOP WAS VECTORIZED
+LOOP END
+
+LOOP BEGIN at sum-rank.cc(23,1) inlined into sum-rank.cc(67,5)
+   remark #15389: vectorization support: reference rank[i] has unaligned access   [ sum-rank.cc(25,18) ]
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15415: vectorization support: irregularly indexed load was generated for the variable <b.a[rank[i]]>, part of index is read from memory   [ sum-rank.cc(25,16) ]
+   remark #15305: vectorization support: vector length 16
+   remark #15399: vectorization support: unroll factor set to 4
+   remark #15309: vectorization support: normalized vectorization overhead 0.283
+   remark #15300: LOOP WAS VECTORIZED
+   remark #15450: unmasked unaligned unit stride loads: 1 
+   remark #15462: unmasked indexed (or gather) loads: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 5 
+   remark #15477: vector cost: 1.870 
+   remark #15478: estimated potential speedup: 2.660 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at sum-rank.cc(23,1) inlined into sum-rank.cc(67,5)
+<Remainder loop for vectorization>
+   remark #15389: vectorization support: reference rank[i] has unaligned access   [ sum-rank.cc(25,18) ]
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15305: vectorization support: vector length 16
+   remark #15309: vectorization support: normalized vectorization overhead 0.385
+   remark #15301: REMAINDER LOOP WAS VECTORIZED
+LOOP END
+
+LOOP BEGIN at sum-rank.cc(23,1) inlined into sum-rank.cc(68,5)
+   remark #15389: vectorization support: reference rank[i] has unaligned access   [ sum-rank.cc(25,18) ]
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15415: vectorization support: irregularly indexed load was generated for the variable <b.a[rank[i]]>, part of index is read from memory   [ sum-rank.cc(25,16) ]
+   remark #15305: vectorization support: vector length 16
+   remark #15399: vectorization support: unroll factor set to 4
+   remark #15309: vectorization support: normalized vectorization overhead 0.283
+   remark #15300: LOOP WAS VECTORIZED
+   remark #15450: unmasked unaligned unit stride loads: 1 
+   remark #15462: unmasked indexed (or gather) loads: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 5 
+   remark #15477: vector cost: 1.870 
+   remark #15478: estimated potential speedup: 2.660 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at sum-rank.cc(23,1) inlined into sum-rank.cc(68,5)
+<Remainder loop for vectorization>
+   remark #15389: vectorization support: reference rank[i] has unaligned access   [ sum-rank.cc(25,18) ]
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15305: vectorization support: vector length 16
+   remark #15309: vectorization support: normalized vectorization overhead 0.385
+   remark #15301: REMAINDER LOOP WAS VECTORIZED
+LOOP END
+
+LOOP BEGIN at sum-rank.cc(23,1) inlined into sum-rank.cc(69,5)
+   remark #15389: vectorization support: reference rank[i] has unaligned access   [ sum-rank.cc(25,18) ]
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15415: vectorization support: irregularly indexed load was generated for the variable <b.a[rank[i]]>, part of index is read from memory   [ sum-rank.cc(25,16) ]
+   remark #15305: vectorization support: vector length 16
+   remark #15399: vectorization support: unroll factor set to 4
+   remark #15309: vectorization support: normalized vectorization overhead 0.283
+   remark #15300: LOOP WAS VECTORIZED
+   remark #15450: unmasked unaligned unit stride loads: 1 
+   remark #15462: unmasked indexed (or gather) loads: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 5 
+   remark #15477: vector cost: 1.870 
+   remark #15478: estimated potential speedup: 2.660 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at sum-rank.cc(23,1) inlined into sum-rank.cc(69,5)
+<Remainder loop for vectorization>
+   remark #15389: vectorization support: reference rank[i] has unaligned access   [ sum-rank.cc(25,18) ]
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15305: vectorization support: vector length 16
+   remark #15309: vectorization support: normalized vectorization overhead 0.385
+   remark #15301: REMAINDER LOOP WAS VECTORIZED
+LOOP END
+
+LOOP BEGIN at sum-rank.cc(23,1) inlined into sum-rank.cc(70,5)
+   remark #15389: vectorization support: reference rank[i] has unaligned access   [ sum-rank.cc(25,18) ]
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15415: vectorization support: irregularly indexed load was generated for the variable <b.a[rank[i]]>, part of index is read from memory   [ sum-rank.cc(25,16) ]
+   remark #15305: vectorization support: vector length 16
+   remark #15399: vectorization support: unroll factor set to 4
+   remark #15309: vectorization support: normalized vectorization overhead 0.283
+   remark #15300: LOOP WAS VECTORIZED
+   remark #15450: unmasked unaligned unit stride loads: 1 
+   remark #15462: unmasked indexed (or gather) loads: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 5 
+   remark #15477: vector cost: 1.870 
+   remark #15478: estimated potential speedup: 2.660 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at sum-rank.cc(23,1) inlined into sum-rank.cc(70,5)
+<Remainder loop for vectorization>
+   remark #15389: vectorization support: reference rank[i] has unaligned access   [ sum-rank.cc(25,18) ]
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15305: vectorization support: vector length 16
+   remark #15309: vectorization support: normalized vectorization overhead 0.385
+   remark #15301: REMAINDER LOOP WAS VECTORIZED
+LOOP END
+
+LOOP BEGIN at sum-rank.cc(23,1) inlined into sum-rank.cc(71,5)
+   remark #15389: vectorization support: reference rank[i] has unaligned access   [ sum-rank.cc(25,18) ]
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15415: vectorization support: irregularly indexed load was generated for the variable <b.a[rank[i]]>, part of index is read from memory   [ sum-rank.cc(25,16) ]
+   remark #15305: vectorization support: vector length 16
+   remark #15399: vectorization support: unroll factor set to 4
+   remark #15309: vectorization support: normalized vectorization overhead 0.283
+   remark #15300: LOOP WAS VECTORIZED
+   remark #15450: unmasked unaligned unit stride loads: 1 
+   remark #15462: unmasked indexed (or gather) loads: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 5 
+   remark #15477: vector cost: 1.870 
+   remark #15478: estimated potential speedup: 2.660 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at sum-rank.cc(23,1) inlined into sum-rank.cc(71,5)
+<Remainder loop for vectorization>
+   remark #15389: vectorization support: reference rank[i] has unaligned access   [ sum-rank.cc(25,18) ]
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15305: vectorization support: vector length 16
+   remark #15309: vectorization support: normalized vectorization overhead 0.385
+   remark #15301: REMAINDER LOOP WAS VECTORIZED
+LOOP END
+
+LOOP BEGIN at sum-rank.cc(23,1) inlined into sum-rank.cc(72,5)
+   remark #15389: vectorization support: reference rank[i] has unaligned access   [ sum-rank.cc(25,18) ]
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15415: vectorization support: irregularly indexed load was generated for the variable <b.a[rank[i]]>, part of index is read from memory   [ sum-rank.cc(25,16) ]
+   remark #15305: vectorization support: vector length 16
+   remark #15399: vectorization support: unroll factor set to 4
+   remark #15309: vectorization support: normalized vectorization overhead 0.283
+   remark #15300: LOOP WAS VECTORIZED
+   remark #15450: unmasked unaligned unit stride loads: 1 
+   remark #15462: unmasked indexed (or gather) loads: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 5 
+   remark #15477: vector cost: 1.870 
+   remark #15478: estimated potential speedup: 2.660 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at sum-rank.cc(23,1) inlined into sum-rank.cc(72,5)
+<Remainder loop for vectorization>
+   remark #15389: vectorization support: reference rank[i] has unaligned access   [ sum-rank.cc(25,18) ]
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15305: vectorization support: vector length 16
+   remark #15309: vectorization support: normalized vectorization overhead 0.385
+   remark #15301: REMAINDER LOOP WAS VECTORIZED
+LOOP END
+
+LOOP BEGIN at sum-rank.cc(23,1) inlined into sum-rank.cc(73,5)
+   remark #15389: vectorization support: reference rank[i] has unaligned access   [ sum-rank.cc(25,18) ]
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15415: vectorization support: irregularly indexed load was generated for the variable <b.a[rank[i]]>, part of index is read from memory   [ sum-rank.cc(25,16) ]
+   remark #15305: vectorization support: vector length 16
+   remark #15399: vectorization support: unroll factor set to 4
+   remark #15309: vectorization support: normalized vectorization overhead 0.283
+   remark #15300: LOOP WAS VECTORIZED
+   remark #15450: unmasked unaligned unit stride loads: 1 
+   remark #15462: unmasked indexed (or gather) loads: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 5 
+   remark #15477: vector cost: 1.870 
+   remark #15478: estimated potential speedup: 2.660 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at sum-rank.cc(23,1) inlined into sum-rank.cc(73,5)
+<Remainder loop for vectorization>
+   remark #15389: vectorization support: reference rank[i] has unaligned access   [ sum-rank.cc(25,18) ]
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15305: vectorization support: vector length 16
+   remark #15309: vectorization support: normalized vectorization overhead 0.385
+   remark #15301: REMAINDER LOOP WAS VECTORIZED
+LOOP END
+
+LOOP BEGIN at sum-rank.cc(23,1) inlined into sum-rank.cc(74,5)
+   remark #15389: vectorization support: reference rank[i] has unaligned access   [ sum-rank.cc(25,18) ]
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15415: vectorization support: irregularly indexed load was generated for the variable <b.a[rank[i]]>, part of index is read from memory   [ sum-rank.cc(25,16) ]
+   remark #15305: vectorization support: vector length 16
+   remark #15399: vectorization support: unroll factor set to 4
+   remark #15309: vectorization support: normalized vectorization overhead 0.283
+   remark #15300: LOOP WAS VECTORIZED
+   remark #15450: unmasked unaligned unit stride loads: 1 
+   remark #15462: unmasked indexed (or gather) loads: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 5 
+   remark #15477: vector cost: 1.870 
+   remark #15478: estimated potential speedup: 2.660 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at sum-rank.cc(23,1) inlined into sum-rank.cc(74,5)
+<Remainder loop for vectorization>
+   remark #15389: vectorization support: reference rank[i] has unaligned access   [ sum-rank.cc(25,18) ]
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15305: vectorization support: vector length 16
+   remark #15309: vectorization support: normalized vectorization overhead 0.385
+   remark #15301: REMAINDER LOOP WAS VECTORIZED
+LOOP END
+
 LOOP BEGIN at sum-rank.cc(23,1) inlined into sum-rank.cc(75,5)
    remark #15389: vectorization support: reference rank[i] has unaligned access   [ sum-rank.cc(25,18) ]
    remark #15381: vectorization support: unaligned access used inside loop body
@@ -176,8 +561,25 @@ LOOP BEGIN at sum-rank.cc(23,1) inlined into sum-rank.cc(76,5)
    remark #15309: vectorization support: normalized vectorization overhead 0.385
    remark #15301: REMAINDER LOOP WAS VECTORIZED
 LOOP END
+===========================================================================
 
-LOOP BEGIN at sum-rank.cc(23,1) inlined into sum-rank.cc(77,5)
+Begin optimization report for: outer_cal<30>()
+
+    Report from: Vector optimizations [vec]
+
+
+LOOP BEGIN at sum-rank.cc(38,17)
+   remark #15382: vectorization support: call to function __kmpc_ok_to_fork cannot be vectorized   [ sum-rank.cc(23,1) ]
+   remark #15382: vectorization support: call to function __kmpc_fork_call cannot be vectorized   [ sum-rank.cc(23,1) ]
+   remark #15382: vectorization support: call to function __kmpc_serialized_parallel cannot be vectorized   [ sum-rank.cc(23,1) ]
+   remark #15382: vectorization support: call to function .37 cannot be vectorized   [ sum-rank.cc(23,1) ]
+   remark #15382: vectorization support: call to function __kmpc_end_serialized_parallel cannot be vectorized   [ sum-rank.cc(23,1) ]
+   remark #15344: loop was not vectorized: vector dependence prevents vectorization
+   remark #15346: vector dependence: assumed OUTPUT dependence between ret (22:14) and ret (23:1)
+   remark #15346: vector dependence: assumed OUTPUT dependence between ret (23:1) and ret (22:14)
+LOOP END
+
+LOOP BEGIN at sum-rank.cc(23,1) inlined into sum-rank.cc(39,20)
    remark #15389: vectorization support: reference rank[i] has unaligned access   [ sum-rank.cc(25,18) ]
    remark #15381: vectorization support: unaligned access used inside loop body
    remark #15415: vectorization support: irregularly indexed load was generated for the variable <b.a[rank[i]]>, part of index is read from memory   [ sum-rank.cc(25,16) ]
@@ -194,7 +596,7 @@ LOOP BEGIN at sum-rank.cc(23,1) inlined into sum-rank.cc(77,5)
    remark #15488: --- end vector cost summary ---
 LOOP END
 
-LOOP BEGIN at sum-rank.cc(23,1) inlined into sum-rank.cc(77,5)
+LOOP BEGIN at sum-rank.cc(23,1) inlined into sum-rank.cc(39,20)
 <Remainder loop for vectorization>
    remark #15389: vectorization support: reference rank[i] has unaligned access   [ sum-rank.cc(25,18) ]
    remark #15381: vectorization support: unaligned access used inside loop body
@@ -202,8 +604,25 @@ LOOP BEGIN at sum-rank.cc(23,1) inlined into sum-rank.cc(77,5)
    remark #15309: vectorization support: normalized vectorization overhead 0.385
    remark #15301: REMAINDER LOOP WAS VECTORIZED
 LOOP END
+===========================================================================
 
-LOOP BEGIN at sum-rank.cc(23,1) inlined into sum-rank.cc(78,5)
+Begin optimization report for: outer_cal<40>()
+
+    Report from: Vector optimizations [vec]
+
+
+LOOP BEGIN at sum-rank.cc(38,17)
+   remark #15382: vectorization support: call to function __kmpc_ok_to_fork cannot be vectorized   [ sum-rank.cc(23,1) ]
+   remark #15382: vectorization support: call to function __kmpc_fork_call cannot be vectorized   [ sum-rank.cc(23,1) ]
+   remark #15382: vectorization support: call to function __kmpc_serialized_parallel cannot be vectorized   [ sum-rank.cc(23,1) ]
+   remark #15382: vectorization support: call to function .39 cannot be vectorized   [ sum-rank.cc(23,1) ]
+   remark #15382: vectorization support: call to function __kmpc_end_serialized_parallel cannot be vectorized   [ sum-rank.cc(23,1) ]
+   remark #15344: loop was not vectorized: vector dependence prevents vectorization
+   remark #15346: vector dependence: assumed OUTPUT dependence between ret (22:14) and ret (23:1)
+   remark #15346: vector dependence: assumed OUTPUT dependence between ret (23:1) and ret (22:14)
+LOOP END
+
+LOOP BEGIN at sum-rank.cc(23,1) inlined into sum-rank.cc(39,20)
    remark #15389: vectorization support: reference rank[i] has unaligned access   [ sum-rank.cc(25,18) ]
    remark #15381: vectorization support: unaligned access used inside loop body
    remark #15415: vectorization support: irregularly indexed load was generated for the variable <b.a[rank[i]]>, part of index is read from memory   [ sum-rank.cc(25,16) ]
@@ -220,7 +639,179 @@ LOOP BEGIN at sum-rank.cc(23,1) inlined into sum-rank.cc(78,5)
    remark #15488: --- end vector cost summary ---
 LOOP END
 
-LOOP BEGIN at sum-rank.cc(23,1) inlined into sum-rank.cc(78,5)
+LOOP BEGIN at sum-rank.cc(23,1) inlined into sum-rank.cc(39,20)
+<Remainder loop for vectorization>
+   remark #15389: vectorization support: reference rank[i] has unaligned access   [ sum-rank.cc(25,18) ]
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15305: vectorization support: vector length 16
+   remark #15309: vectorization support: normalized vectorization overhead 0.385
+   remark #15301: REMAINDER LOOP WAS VECTORIZED
+LOOP END
+===========================================================================
+
+Begin optimization report for: outer_cal<50>()
+
+    Report from: Vector optimizations [vec]
+
+
+LOOP BEGIN at sum-rank.cc(38,17)
+   remark #15382: vectorization support: call to function __kmpc_ok_to_fork cannot be vectorized   [ sum-rank.cc(23,1) ]
+   remark #15382: vectorization support: call to function __kmpc_fork_call cannot be vectorized   [ sum-rank.cc(23,1) ]
+   remark #15382: vectorization support: call to function __kmpc_serialized_parallel cannot be vectorized   [ sum-rank.cc(23,1) ]
+   remark #15382: vectorization support: call to function .41 cannot be vectorized   [ sum-rank.cc(23,1) ]
+   remark #15382: vectorization support: call to function __kmpc_end_serialized_parallel cannot be vectorized   [ sum-rank.cc(23,1) ]
+   remark #15344: loop was not vectorized: vector dependence prevents vectorization
+   remark #15346: vector dependence: assumed OUTPUT dependence between ret (22:14) and ret (23:1)
+   remark #15346: vector dependence: assumed OUTPUT dependence between ret (23:1) and ret (22:14)
+LOOP END
+
+LOOP BEGIN at sum-rank.cc(23,1) inlined into sum-rank.cc(39,20)
+   remark #15389: vectorization support: reference rank[i] has unaligned access   [ sum-rank.cc(25,18) ]
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15415: vectorization support: irregularly indexed load was generated for the variable <b.a[rank[i]]>, part of index is read from memory   [ sum-rank.cc(25,16) ]
+   remark #15305: vectorization support: vector length 16
+   remark #15399: vectorization support: unroll factor set to 4
+   remark #15309: vectorization support: normalized vectorization overhead 0.283
+   remark #15300: LOOP WAS VECTORIZED
+   remark #15450: unmasked unaligned unit stride loads: 1 
+   remark #15462: unmasked indexed (or gather) loads: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 5 
+   remark #15477: vector cost: 1.870 
+   remark #15478: estimated potential speedup: 2.660 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at sum-rank.cc(23,1) inlined into sum-rank.cc(39,20)
+<Remainder loop for vectorization>
+   remark #15389: vectorization support: reference rank[i] has unaligned access   [ sum-rank.cc(25,18) ]
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15305: vectorization support: vector length 16
+   remark #15309: vectorization support: normalized vectorization overhead 0.385
+   remark #15301: REMAINDER LOOP WAS VECTORIZED
+LOOP END
+===========================================================================
+
+Begin optimization report for: outer_cal<60>()
+
+    Report from: Vector optimizations [vec]
+
+
+LOOP BEGIN at sum-rank.cc(38,17)
+   remark #15382: vectorization support: call to function __kmpc_ok_to_fork cannot be vectorized   [ sum-rank.cc(23,1) ]
+   remark #15382: vectorization support: call to function __kmpc_fork_call cannot be vectorized   [ sum-rank.cc(23,1) ]
+   remark #15382: vectorization support: call to function __kmpc_serialized_parallel cannot be vectorized   [ sum-rank.cc(23,1) ]
+   remark #15382: vectorization support: call to function .43 cannot be vectorized   [ sum-rank.cc(23,1) ]
+   remark #15382: vectorization support: call to function __kmpc_end_serialized_parallel cannot be vectorized   [ sum-rank.cc(23,1) ]
+   remark #15344: loop was not vectorized: vector dependence prevents vectorization
+   remark #15346: vector dependence: assumed OUTPUT dependence between ret (22:14) and ret (23:1)
+   remark #15346: vector dependence: assumed OUTPUT dependence between ret (23:1) and ret (22:14)
+LOOP END
+
+LOOP BEGIN at sum-rank.cc(23,1) inlined into sum-rank.cc(39,20)
+   remark #15389: vectorization support: reference rank[i] has unaligned access   [ sum-rank.cc(25,18) ]
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15415: vectorization support: irregularly indexed load was generated for the variable <b.a[rank[i]]>, part of index is read from memory   [ sum-rank.cc(25,16) ]
+   remark #15305: vectorization support: vector length 16
+   remark #15399: vectorization support: unroll factor set to 4
+   remark #15309: vectorization support: normalized vectorization overhead 0.283
+   remark #15300: LOOP WAS VECTORIZED
+   remark #15450: unmasked unaligned unit stride loads: 1 
+   remark #15462: unmasked indexed (or gather) loads: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 5 
+   remark #15477: vector cost: 1.870 
+   remark #15478: estimated potential speedup: 2.660 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at sum-rank.cc(23,1) inlined into sum-rank.cc(39,20)
+<Remainder loop for vectorization>
+   remark #15389: vectorization support: reference rank[i] has unaligned access   [ sum-rank.cc(25,18) ]
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15305: vectorization support: vector length 16
+   remark #15309: vectorization support: normalized vectorization overhead 0.385
+   remark #15301: REMAINDER LOOP WAS VECTORIZED
+LOOP END
+===========================================================================
+
+Begin optimization report for: outer_cal<70>()
+
+    Report from: Vector optimizations [vec]
+
+
+LOOP BEGIN at sum-rank.cc(38,17)
+   remark #15382: vectorization support: call to function __kmpc_ok_to_fork cannot be vectorized   [ sum-rank.cc(23,1) ]
+   remark #15382: vectorization support: call to function __kmpc_fork_call cannot be vectorized   [ sum-rank.cc(23,1) ]
+   remark #15382: vectorization support: call to function __kmpc_serialized_parallel cannot be vectorized   [ sum-rank.cc(23,1) ]
+   remark #15382: vectorization support: call to function .45 cannot be vectorized   [ sum-rank.cc(23,1) ]
+   remark #15382: vectorization support: call to function __kmpc_end_serialized_parallel cannot be vectorized   [ sum-rank.cc(23,1) ]
+   remark #15344: loop was not vectorized: vector dependence prevents vectorization
+   remark #15346: vector dependence: assumed OUTPUT dependence between ret (22:14) and ret (23:1)
+   remark #15346: vector dependence: assumed OUTPUT dependence between ret (23:1) and ret (22:14)
+LOOP END
+
+LOOP BEGIN at sum-rank.cc(23,1) inlined into sum-rank.cc(39,20)
+   remark #15389: vectorization support: reference rank[i] has unaligned access   [ sum-rank.cc(25,18) ]
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15415: vectorization support: irregularly indexed load was generated for the variable <b.a[rank[i]]>, part of index is read from memory   [ sum-rank.cc(25,16) ]
+   remark #15305: vectorization support: vector length 16
+   remark #15399: vectorization support: unroll factor set to 4
+   remark #15309: vectorization support: normalized vectorization overhead 0.283
+   remark #15300: LOOP WAS VECTORIZED
+   remark #15450: unmasked unaligned unit stride loads: 1 
+   remark #15462: unmasked indexed (or gather) loads: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 5 
+   remark #15477: vector cost: 1.870 
+   remark #15478: estimated potential speedup: 2.660 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at sum-rank.cc(23,1) inlined into sum-rank.cc(39,20)
+<Remainder loop for vectorization>
+   remark #15389: vectorization support: reference rank[i] has unaligned access   [ sum-rank.cc(25,18) ]
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15305: vectorization support: vector length 16
+   remark #15309: vectorization support: normalized vectorization overhead 0.385
+   remark #15301: REMAINDER LOOP WAS VECTORIZED
+LOOP END
+===========================================================================
+
+Begin optimization report for: outer_cal<80>()
+
+    Report from: Vector optimizations [vec]
+
+
+LOOP BEGIN at sum-rank.cc(38,17)
+   remark #15382: vectorization support: call to function __kmpc_ok_to_fork cannot be vectorized   [ sum-rank.cc(23,1) ]
+   remark #15382: vectorization support: call to function __kmpc_fork_call cannot be vectorized   [ sum-rank.cc(23,1) ]
+   remark #15382: vectorization support: call to function __kmpc_serialized_parallel cannot be vectorized   [ sum-rank.cc(23,1) ]
+   remark #15382: vectorization support: call to function .47 cannot be vectorized   [ sum-rank.cc(23,1) ]
+   remark #15382: vectorization support: call to function __kmpc_end_serialized_parallel cannot be vectorized   [ sum-rank.cc(23,1) ]
+   remark #15344: loop was not vectorized: vector dependence prevents vectorization
+   remark #15346: vector dependence: assumed OUTPUT dependence between ret (22:14) and ret (23:1)
+   remark #15346: vector dependence: assumed OUTPUT dependence between ret (23:1) and ret (22:14)
+LOOP END
+
+LOOP BEGIN at sum-rank.cc(23,1) inlined into sum-rank.cc(39,20)
+   remark #15389: vectorization support: reference rank[i] has unaligned access   [ sum-rank.cc(25,18) ]
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15415: vectorization support: irregularly indexed load was generated for the variable <b.a[rank[i]]>, part of index is read from memory   [ sum-rank.cc(25,16) ]
+   remark #15305: vectorization support: vector length 16
+   remark #15399: vectorization support: unroll factor set to 4
+   remark #15309: vectorization support: normalized vectorization overhead 0.283
+   remark #15300: LOOP WAS VECTORIZED
+   remark #15450: unmasked unaligned unit stride loads: 1 
+   remark #15462: unmasked indexed (or gather) loads: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 5 
+   remark #15477: vector cost: 1.870 
+   remark #15478: estimated potential speedup: 2.660 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at sum-rank.cc(23,1) inlined into sum-rank.cc(39,20)
 <Remainder loop for vectorization>
    remark #15389: vectorization support: reference rank[i] has unaligned access   [ sum-rank.cc(25,18) ]
    remark #15381: vectorization support: unaligned access used inside loop body
