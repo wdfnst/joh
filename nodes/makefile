@@ -13,7 +13,7 @@ $(BUILD)/:
 	mkdir -p $(BUILD)/
 %: %.cc | $(BUILD)/
 	$(CC) $(CCFLAGS) -o $(BUILD)/$@ $^ $(DEPEND)
-	./$(BUILD)/$@ >> README.md && ../plot_result.sh >> README.md
+	./$(BUILD)/$@ >> README.md && ../plot_result.sh # >> README.md
 	#./$(BUILD)/$@ > /dev/shm/mytempfile && trap 'rm /dev/shm/mytempfile' EXIT && ../plot_result.sh
 
 run: %
