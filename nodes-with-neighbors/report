@@ -1,0 +1,44 @@
+#!/bin/fish
+
+echo "-----------------------------------------------------"
+echo "sum-cont-type"
+echo "-----------------------------------------------------"
+head -n2 sum-cont-type.cc
+echo
+
+echo "-----------------------------------------------------"
+echo "sum-uncont-type"
+echo "-----------------------------------------------------"
+head -n2 sum-uncont-type.cc
+echo
+
+echo "-----------------------------------------------------"
+echo "sum-uncont-type-rank"
+echo "-----------------------------------------------------"
+head -n2 sum-uncont-type-rank.cc
+echo
+
+echo "-----------------------------------------------------"
+echo "sum-uncont-type-random-rank"
+echo "-----------------------------------------------------"
+head -n4 sum-uncont-type-random-rank.cc
+echo
+
+echo "-----------------------------------------------------"
+echo "sum-uncont-type-with-neighbors"
+echo "-----------------------------------------------------"
+head -n2 sum-uncont-type-with-neighbors.cc
+echo
+
+echo "-----------------------------------------------------"
+echo "sum-uncont-type-with-neighbors-rank"
+echo "-----------------------------------------------------"
+head -n2 sum-uncont-type-with-neighbors-rank.cc
+echo
+
+echo "-----------------------------------------------------"
+echo "sum-uncont-type-with-neighbors-random-rank"
+echo "-----------------------------------------------------"
+head -n4 sum-uncont-type-with-neighbors-random-rank.cc
+echo
+

@@ -1,0 +1,174 @@
+Intel(R) Advisor can now assist with vectorization and show optimization
+  report messages with your source code.
+See "https://software.intel.com/en-us/intel-advisor-xe" for details.
+
+Intel(R) C++ Intel(R) 64 Compiler for applications running on Intel(R) 64, Version 18.0.1.163 Build 20171018
+
+Compiler options: -xMIC-AVX512 -qopt-report-phase=vec -qopt-report=5 -fopenmp -std=c++14 -O3 -o build/sum-uncont-type
+
+Begin optimization report for: main()
+
+    Report from: Vector optimizations [vec]
+
+
+LOOP BEGIN at sum-uncont-type.cc(58,5)
+   remark #15416: vectorization support: non-unit strided store was generated for the variable <a.a[i][j]>, stride is 16   [ sum-uncont-type.cc(59,38) ]
+   remark #15416: vectorization support: non-unit strided store was generated for the variable <a.a[i][j]>, stride is 16   [ sum-uncont-type.cc(59,38) ]
+   remark #15416: vectorization support: non-unit strided store was generated for the variable <a.a[i][j]>, stride is 16   [ sum-uncont-type.cc(59,38) ]
+   remark #15416: vectorization support: non-unit strided store was generated for the variable <a.a[i][j]>, stride is 16   [ sum-uncont-type.cc(59,38) ]
+   remark #15416: vectorization support: non-unit strided store was generated for the variable <a.a[i][j]>, stride is 16   [ sum-uncont-type.cc(59,38) ]
+   remark #15416: vectorization support: non-unit strided store was generated for the variable <a.a[i][j]>, stride is 16   [ sum-uncont-type.cc(59,38) ]
+   remark #15416: vectorization support: non-unit strided store was generated for the variable <a.a[i][j]>, stride is 16   [ sum-uncont-type.cc(59,38) ]
+   remark #15416: vectorization support: non-unit strided store was generated for the variable <a.a[i][j]>, stride is 16   [ sum-uncont-type.cc(59,38) ]
+   remark #15416: vectorization support: non-unit strided store was generated for the variable <a.a[i][j]>, stride is 16   [ sum-uncont-type.cc(59,38) ]
+   remark #15416: vectorization support: non-unit strided store was generated for the variable <a.a[i][j]>, stride is 16   [ sum-uncont-type.cc(59,38) ]
+   remark #15416: vectorization support: non-unit strided store was generated for the variable <a.a[i][j]>, stride is 16   [ sum-uncont-type.cc(59,38) ]
+   remark #15416: vectorization support: non-unit strided store was generated for the variable <a.a[i][j]>, stride is 16   [ sum-uncont-type.cc(59,38) ]
+   remark #15416: vectorization support: non-unit strided store was generated for the variable <a.next[i][j]>, stride is 16   [ sum-uncont-type.cc(60,37) ]
+   remark #15416: vectorization support: non-unit strided store was generated for the variable <a.next[i][j]>, stride is 16   [ sum-uncont-type.cc(60,37) ]
+   remark #15416: vectorization support: non-unit strided store was generated for the variable <a.next[i][j]>, stride is 16   [ sum-uncont-type.cc(60,37) ]
+   remark #15416: vectorization support: non-unit strided store was generated for the variable <a.next[i][j]>, stride is 16   [ sum-uncont-type.cc(60,37) ]
+   remark #15305: vectorization support: vector length 32
+   remark #15309: vectorization support: normalized vectorization overhead 0.084
+   remark #15300: LOOP WAS VECTORIZED
+   remark #15453: unmasked strided stores: 16 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 70 
+   remark #15477: vector cost: 29.870 
+   remark #15478: estimated potential speedup: 2.340 
+   remark #15488: --- end vector cost summary ---
+
+   LOOP BEGIN at sum-uncont-type.cc(59,9)
+   LOOP END
+
+   LOOP BEGIN at sum-uncont-type.cc(60,9)
+   LOOP END
+LOOP END
+
+LOOP BEGIN at sum-uncont-type.cc(66,5)
+   remark #15382: vectorization support: call to function __kmpc_ok_to_fork cannot be vectorized   [ sum-uncont-type.cc(28,1) ]
+   remark #15382: vectorization support: call to function __kmpc_fork_call cannot be vectorized   [ sum-uncont-type.cc(28,1) ]
+   remark #15382: vectorization support: call to function __kmpc_serialized_parallel cannot be vectorized   [ sum-uncont-type.cc(28,1) ]
+   remark #15382: vectorization support: call to function .2 cannot be vectorized   [ sum-uncont-type.cc(28,1) ]
+   remark #15382: vectorization support: call to function __kmpc_end_serialized_parallel cannot be vectorized   [ sum-uncont-type.cc(28,1) ]
+   remark #15344: loop was not vectorized: vector dependence prevents vectorization
+   remark #15346: vector dependence: assumed FLOW dependence between ret (27:14) and ret (67:9)
+   remark #15346: vector dependence: assumed ANTI dependence between ret (67:9) and ret (27:14)
+LOOP END
+
+LOOP BEGIN at sum-uncont-type.cc(71,17)
+   remark #15382: vectorization support: call to function __kmpc_ok_to_fork cannot be vectorized   [ sum-uncont-type.cc(28,1) ]
+   remark #15382: vectorization support: call to function __kmpc_fork_call cannot be vectorized   [ sum-uncont-type.cc(28,1) ]
+   remark #15382: vectorization support: call to function __kmpc_serialized_parallel cannot be vectorized   [ sum-uncont-type.cc(28,1) ]
+   remark #15382: vectorization support: call to function .4 cannot be vectorized   [ sum-uncont-type.cc(28,1) ]
+   remark #15382: vectorization support: call to function __kmpc_end_serialized_parallel cannot be vectorized   [ sum-uncont-type.cc(28,1) ]
+   remark #15344: loop was not vectorized: vector dependence prevents vectorization
+   remark #15346: vector dependence: assumed FLOW dependence between ret (27:14) and ret (72:9)
+   remark #15346: vector dependence: assumed ANTI dependence between ret (72:9) and ret (27:14)
+LOOP END
+
+LOOP BEGIN at sum-uncont-type.cc(28,1) inlined into sum-uncont-type.cc(67,16)
+   remark #15542: loop was not vectorized: inner loop was already vectorized
+
+   LOOP BEGIN at sum-uncont-type.cc(32,9) inlined into sum-uncont-type.cc(67,16)
+      remark #15388: vectorization support: reference a.a[i][_2] has aligned access   [ sum-uncont-type.cc(32,16) ]
+      remark #15305: vectorization support: vector length 4
+      remark #15427: loop was completely unrolled
+      remark #15399: vectorization support: unroll factor set to 3
+      remark #15309: vectorization support: normalized vectorization overhead 1.267
+      remark #15301: MATERIALIZED LOOP WAS VECTORIZED
+      remark #15448: unmasked aligned unit stride loads: 1 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 3 
+      remark #15477: vector cost: 1.250 
+      remark #15478: estimated potential speedup: 1.050 
+      remark #15488: --- end vector cost summary ---
+   LOOP END
+
+   LOOP BEGIN at sum-uncont-type.cc(44,9) inlined into sum-uncont-type.cc(67,16)
+      remark #15388: vectorization support: reference a.next[i][_2] has aligned access   [ sum-uncont-type.cc(44,16) ]
+      remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+      remark #15305: vectorization support: vector length 4
+      remark #15427: loop was completely unrolled
+      remark #15309: vectorization support: normalized vectorization overhead 3.800
+      remark #15448: unmasked aligned unit stride loads: 1 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 3 
+      remark #15477: vector cost: 1.250 
+      remark #15478: estimated potential speedup: 0.500 
+      remark #15488: --- end vector cost summary ---
+   LOOP END
+LOOP END
+
+LOOP BEGIN at sum-uncont-type.cc(28,1) inlined into sum-uncont-type.cc(72,16)
+   remark #15542: loop was not vectorized: inner loop was already vectorized
+
+   LOOP BEGIN at sum-uncont-type.cc(32,9) inlined into sum-uncont-type.cc(72,16)
+      remark #15388: vectorization support: reference a.a[i][_2] has aligned access   [ sum-uncont-type.cc(32,16) ]
+      remark #15305: vectorization support: vector length 4
+      remark #15427: loop was completely unrolled
+      remark #15399: vectorization support: unroll factor set to 3
+      remark #15309: vectorization support: normalized vectorization overhead 1.267
+      remark #15301: MATERIALIZED LOOP WAS VECTORIZED
+      remark #15448: unmasked aligned unit stride loads: 1 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 3 
+      remark #15477: vector cost: 1.250 
+      remark #15478: estimated potential speedup: 1.050 
+      remark #15488: --- end vector cost summary ---
+   LOOP END
+
+   LOOP BEGIN at sum-uncont-type.cc(44,9) inlined into sum-uncont-type.cc(72,16)
+      remark #15388: vectorization support: reference a.next[i][_2] has aligned access   [ sum-uncont-type.cc(44,16) ]
+      remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+      remark #15305: vectorization support: vector length 4
+      remark #15427: loop was completely unrolled
+      remark #15309: vectorization support: normalized vectorization overhead 3.800
+      remark #15448: unmasked aligned unit stride loads: 1 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 3 
+      remark #15477: vector cost: 1.250 
+      remark #15478: estimated potential speedup: 0.500 
+      remark #15488: --- end vector cost summary ---
+   LOOP END
+LOOP END
+===========================================================================
+
+Begin optimization report for: calc()
+
+    Report from: Vector optimizations [vec]
+
+
+LOOP BEGIN at sum-uncont-type.cc(28,1)
+   remark #15542: loop was not vectorized: inner loop was already vectorized
+
+   LOOP BEGIN at sum-uncont-type.cc(32,9)
+      remark #15388: vectorization support: reference a.a[i][_2] has aligned access   [ sum-uncont-type.cc(32,16) ]
+      remark #15305: vectorization support: vector length 4
+      remark #15427: loop was completely unrolled
+      remark #15399: vectorization support: unroll factor set to 3
+      remark #15309: vectorization support: normalized vectorization overhead 1.267
+      remark #15301: MATERIALIZED LOOP WAS VECTORIZED
+      remark #15448: unmasked aligned unit stride loads: 1 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 3 
+      remark #15477: vector cost: 1.250 
+      remark #15478: estimated potential speedup: 1.050 
+      remark #15488: --- end vector cost summary ---
+   LOOP END
+
+   LOOP BEGIN at sum-uncont-type.cc(44,9)
+      remark #15388: vectorization support: reference a.next[i][_2] has aligned access   [ sum-uncont-type.cc(44,16) ]
+      remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+      remark #15305: vectorization support: vector length 4
+      remark #15427: loop was completely unrolled
+      remark #15309: vectorization support: normalized vectorization overhead 3.800
+      remark #15448: unmasked aligned unit stride loads: 1 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 3 
+      remark #15477: vector cost: 1.250 
+      remark #15478: estimated potential speedup: 0.500 
+      remark #15488: --- end vector cost summary ---
+   LOOP END
+LOOP END
+===========================================================================

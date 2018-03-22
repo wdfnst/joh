@@ -1,0 +1,1033 @@
+Intel(R) Advisor can now assist with vectorization and show optimization
+  report messages with your source code.
+See "https://software.intel.com/en-us/intel-advisor-xe" for details.
+
+Intel(R) C++ Intel(R) 64 Compiler for applications running on Intel(R) 64, Version 18.0.1.163 Build 20171018
+
+Compiler options: -xMIC-AVX512 -qopt-report-phase=vec -qopt-report=5 -fopenmp -std=c++14 -O3 -o build/sum-uncont-type-with-neighbors-random-rank
+
+Begin optimization report for: main()
+
+    Report from: Vector optimizations [vec]
+
+
+LOOP BEGIN at /usr/include/c++/4.8.5/bits/random.tcc(334,7) inlined into sum-uncont-type-with-neighbors-random-rank.cc(79,24)
+   remark #15344: loop was not vectorized: vector dependence prevents vectorization
+   remark #15346: vector dependence: assumed FLOW dependence between gen._M_x[__i] (340:4) and gen._M_x[__i-1] (336:20)
+LOOP END
+
+LOOP BEGIN at sum-uncont-type-with-neighbors-random-rank.cc(84,5)
+   remark #15542: loop was not vectorized: inner loop was already vectorized
+
+   LOOP BEGIN at sum-uncont-type-with-neighbors-random-rank.cc(86,9)
+      remark #15542: loop was not vectorized: inner loop was already vectorized
+
+      LOOP BEGIN at /usr/include/c++/4.8.5/bits/random.tcc(901,42) inlined into sum-uncont-type-with-neighbors-random-rank.cc(86,55)
+         remark #15542: loop was not vectorized: inner loop was already vectorized
+
+         LOOP BEGIN at /usr/include/c++/4.8.5/bits/random.tcc(404,7) inlined into sum-uncont-type-with-neighbors-random-rank.cc(86,55)
+            remark #15388: vectorization support: reference gen._M_x[__k] has aligned access   [ /usr/include/c++/4.8.5/bits/random.tcc(406,22) ]
+            remark #15389: vectorization support: reference gen._M_x[__k+1] has unaligned access   [ /usr/include/c++/4.8.5/bits/random.tcc(407,10) ]
+            remark #15388: vectorization support: reference gen._M_x[__k] has aligned access   [ /usr/include/c++/4.8.5/bits/random.tcc(408,4) ]
+            remark #15389: vectorization support: reference gen._M_x[__k+397] has unaligned access   [ /usr/include/c++/4.8.5/bits/random.tcc(408,17) ]
+            remark #15381: vectorization support: unaligned access used inside loop body
+            remark #15305: vectorization support: vector length 8
+            remark #15309: vectorization support: normalized vectorization overhead 0.182
+            remark #15300: LOOP WAS VECTORIZED
+            remark #15448: unmasked aligned unit stride loads: 1 
+            remark #15449: unmasked aligned unit stride stores: 1 
+            remark #15450: unmasked unaligned unit stride loads: 2 
+            remark #15475: --- begin vector cost summary ---
+            remark #15476: scalar cost: 19 
+            remark #15477: vector cost: 4.120 
+            remark #15478: estimated potential speedup: 4.330 
+            remark #15488: --- end vector cost summary ---
+         LOOP END
+
+         LOOP BEGIN at /usr/include/c++/4.8.5/bits/random.tcc(412,7) inlined into sum-uncont-type-with-neighbors-random-rank.cc(86,55)
+            remark #15344: loop was not vectorized: vector dependence prevents vectorization
+            remark #15346: vector dependence: assumed FLOW dependence between gen._M_x[__k] (416:4) and gen._M_x[__k+?] (416:4)
+            remark #15346: vector dependence: assumed ANTI dependence between gen._M_x[__k+?] (416:4) and gen._M_x[__k] (416:4)
+         LOOP END
+
+         LOOP BEGIN at /usr/include/c++/4.8.5/bits/random.tcc(404,7) inlined into sum-uncont-type-with-neighbors-random-rank.cc(86,55)
+         <Remainder loop for vectorization>
+            remark #15388: vectorization support: reference gen._M_x[__k] has aligned access   [ /usr/include/c++/4.8.5/bits/random.tcc(406,22) ]
+            remark #15389: vectorization support: reference gen._M_x[__k+1] has unaligned access   [ /usr/include/c++/4.8.5/bits/random.tcc(407,10) ]
+            remark #15388: vectorization support: reference gen._M_x[__k] has aligned access   [ /usr/include/c++/4.8.5/bits/random.tcc(408,4) ]
+            remark #15389: vectorization support: reference gen._M_x[__k+397] has unaligned access   [ /usr/include/c++/4.8.5/bits/random.tcc(408,17) ]
+            remark #15381: vectorization support: unaligned access used inside loop body
+            remark #15335: remainder loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+            remark #15305: vectorization support: vector length 2
+            remark #15427: loop was completely unrolled
+            remark #15309: vectorization support: normalized vectorization overhead 0.283
+         LOOP END
+      LOOP END
+
+      LOOP BEGIN at /usr/include/c++/4.8.5/bits/random.tcc(932,21) inlined into sum-uncont-type-with-neighbors-random-rank.cc(86,55)
+         remark #15542: loop was not vectorized: inner loop was already vectorized
+
+         LOOP BEGIN at /usr/include/c++/4.8.5/bits/random.tcc(404,7) inlined into sum-uncont-type-with-neighbors-random-rank.cc(86,55)
+            remark #15388: vectorization support: reference gen._M_x[__k] has aligned access   [ /usr/include/c++/4.8.5/bits/random.tcc(406,22) ]
+            remark #15389: vectorization support: reference gen._M_x[__k+1] has unaligned access   [ /usr/include/c++/4.8.5/bits/random.tcc(407,10) ]
+            remark #15388: vectorization support: reference gen._M_x[__k] has aligned access   [ /usr/include/c++/4.8.5/bits/random.tcc(408,4) ]
+            remark #15389: vectorization support: reference gen._M_x[__k+397] has unaligned access   [ /usr/include/c++/4.8.5/bits/random.tcc(408,17) ]
+            remark #15381: vectorization support: unaligned access used inside loop body
+            remark #15305: vectorization support: vector length 8
+            remark #15309: vectorization support: normalized vectorization overhead 0.182
+            remark #15300: LOOP WAS VECTORIZED
+            remark #15448: unmasked aligned unit stride loads: 1 
+            remark #15449: unmasked aligned unit stride stores: 1 
+            remark #15450: unmasked unaligned unit stride loads: 2 
+            remark #15475: --- begin vector cost summary ---
+            remark #15476: scalar cost: 19 
+            remark #15477: vector cost: 4.120 
+            remark #15478: estimated potential speedup: 4.330 
+            remark #15488: --- end vector cost summary ---
+         LOOP END
+
+         LOOP BEGIN at /usr/include/c++/4.8.5/bits/random.tcc(412,7) inlined into sum-uncont-type-with-neighbors-random-rank.cc(86,55)
+            remark #15344: loop was not vectorized: vector dependence prevents vectorization
+            remark #15346: vector dependence: assumed FLOW dependence between gen._M_x[__k] (416:4) and gen._M_x[__k+?] (416:4)
+            remark #15346: vector dependence: assumed ANTI dependence between gen._M_x[__k+?] (416:4) and gen._M_x[__k] (416:4)
+         LOOP END
+
+         LOOP BEGIN at /usr/include/c++/4.8.5/bits/random.tcc(404,7) inlined into sum-uncont-type-with-neighbors-random-rank.cc(86,55)
+         <Remainder loop for vectorization>
+            remark #15388: vectorization support: reference gen._M_x[__k] has aligned access   [ /usr/include/c++/4.8.5/bits/random.tcc(406,22) ]
+            remark #15389: vectorization support: reference gen._M_x[__k+1] has unaligned access   [ /usr/include/c++/4.8.5/bits/random.tcc(407,10) ]
+            remark #15388: vectorization support: reference gen._M_x[__k] has aligned access   [ /usr/include/c++/4.8.5/bits/random.tcc(408,4) ]
+            remark #15389: vectorization support: reference gen._M_x[__k+397] has unaligned access   [ /usr/include/c++/4.8.5/bits/random.tcc(408,17) ]
+            remark #15381: vectorization support: unaligned access used inside loop body
+            remark #15335: remainder loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+            remark #15305: vectorization support: vector length 2
+            remark #15427: loop was completely unrolled
+            remark #15309: vectorization support: normalized vectorization overhead 0.283
+         LOOP END
+      LOOP END
+
+      LOOP BEGIN at /usr/include/c++/4.8.5/bits/random.tcc(404,7) inlined into sum-uncont-type-with-neighbors-random-rank.cc(86,55)
+         remark #15388: vectorization support: reference gen._M_x[__k] has aligned access   [ /usr/include/c++/4.8.5/bits/random.tcc(406,22) ]
+         remark #15389: vectorization support: reference gen._M_x[__k+1] has unaligned access   [ /usr/include/c++/4.8.5/bits/random.tcc(407,10) ]
+         remark #15388: vectorization support: reference gen._M_x[__k] has aligned access   [ /usr/include/c++/4.8.5/bits/random.tcc(408,4) ]
+         remark #15389: vectorization support: reference gen._M_x[__k+397] has unaligned access   [ /usr/include/c++/4.8.5/bits/random.tcc(408,17) ]
+         remark #15381: vectorization support: unaligned access used inside loop body
+         remark #15305: vectorization support: vector length 8
+         remark #15309: vectorization support: normalized vectorization overhead 0.182
+         remark #15300: LOOP WAS VECTORIZED
+         remark #15448: unmasked aligned unit stride loads: 1 
+         remark #15449: unmasked aligned unit stride stores: 1 
+         remark #15450: unmasked unaligned unit stride loads: 2 
+         remark #15475: --- begin vector cost summary ---
+         remark #15476: scalar cost: 19 
+         remark #15477: vector cost: 4.120 
+         remark #15478: estimated potential speedup: 4.330 
+         remark #15488: --- end vector cost summary ---
+      LOOP END
+
+      LOOP BEGIN at /usr/include/c++/4.8.5/bits/random.tcc(412,7) inlined into sum-uncont-type-with-neighbors-random-rank.cc(86,55)
+         remark #15344: loop was not vectorized: vector dependence prevents vectorization
+         remark #15346: vector dependence: assumed FLOW dependence between gen._M_x[__k] (416:4) and gen._M_x[__k+?] (416:4)
+         remark #15346: vector dependence: assumed ANTI dependence between gen._M_x[__k+?] (416:4) and gen._M_x[__k] (416:4)
+      LOOP END
+
+      LOOP BEGIN at /usr/include/c++/4.8.5/bits/random.tcc(404,7) inlined into sum-uncont-type-with-neighbors-random-rank.cc(86,55)
+      <Remainder loop for vectorization>
+         remark #15388: vectorization support: reference gen._M_x[__k] has aligned access   [ /usr/include/c++/4.8.5/bits/random.tcc(406,22) ]
+         remark #15389: vectorization support: reference gen._M_x[__k+1] has unaligned access   [ /usr/include/c++/4.8.5/bits/random.tcc(407,10) ]
+         remark #15388: vectorization support: reference gen._M_x[__k] has aligned access   [ /usr/include/c++/4.8.5/bits/random.tcc(408,4) ]
+         remark #15389: vectorization support: reference gen._M_x[__k+397] has unaligned access   [ /usr/include/c++/4.8.5/bits/random.tcc(408,17) ]
+         remark #15381: vectorization support: unaligned access used inside loop body
+         remark #15335: remainder loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+         remark #15305: vectorization support: vector length 2
+         remark #15427: loop was completely unrolled
+         remark #15309: vectorization support: normalized vectorization overhead 0.283
+      LOOP END
+   LOOP END
+
+   LOOP BEGIN at sum-uncont-type-with-neighbors-random-rank.cc(85,9)
+      remark #15388: vectorization support: reference a.a[i][j] has aligned access   [ sum-uncont-type-with-neighbors-random-rank.cc(85,38) ]
+      remark #15305: vectorization support: vector length 4
+      remark #15427: loop was completely unrolled
+      remark #15399: vectorization support: unroll factor set to 3
+      remark #15388: vectorization support: reference a.a[i][j] has aligned access   [ sum-uncont-type-with-neighbors-random-rank.cc(85,38) ]
+      remark #15305: vectorization support: vector length 16
+      remark #15427: loop was completely unrolled
+      remark #15309: vectorization support: normalized vectorization overhead 0.250
+      remark #15300: LOOP WAS VECTORIZED
+      remark #15455: masked aligned unit stride stores: 1 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 4 
+      remark #15477: vector cost: 0.500 
+      remark #15478: estimated potential speedup: 4.790 
+      remark #15488: --- end vector cost summary ---
+   LOOP END
+LOOP END
+
+LOOP BEGIN at sum-uncont-type-with-neighbors-random-rank.cc(90,9)
+   remark #15542: loop was not vectorized: inner loop was already vectorized
+
+   LOOP BEGIN at sum-uncont-type-with-neighbors-random-rank.cc(89,5)
+   <Peeled loop for vectorization>
+      remark #15389: vectorization support: reference rank[j][i] has unaligned access   [ sum-uncont-type-with-neighbors-random-rank.cc(91,13) ]
+      remark #15381: vectorization support: unaligned access used inside loop body
+      remark #15305: vectorization support: vector length 16
+      remark #15309: vectorization support: normalized vectorization overhead 1.455
+      remark #15301: PEEL LOOP WAS VECTORIZED
+   LOOP END
+
+   LOOP BEGIN at sum-uncont-type-with-neighbors-random-rank.cc(89,5)
+      remark #15388: vectorization support: reference rank[j][i] has aligned access   [ sum-uncont-type-with-neighbors-random-rank.cc(91,13) ]
+      remark #15305: vectorization support: vector length 16
+      remark #15399: vectorization support: unroll factor set to 4
+      remark #15309: vectorization support: normalized vectorization overhead 0.917
+      remark #15301: PERMUTED LOOP WAS VECTORIZED
+      remark #15449: unmasked aligned unit stride stores: 1 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 2 
+      remark #15477: vector cost: 0.180 
+      remark #15478: estimated potential speedup: 10.660 
+      remark #15488: --- end vector cost summary ---
+   LOOP END
+
+   LOOP BEGIN at sum-uncont-type-with-neighbors-random-rank.cc(89,5)
+   <Remainder loop for vectorization>
+      remark #15388: vectorization support: reference rank[j][i] has aligned access   [ sum-uncont-type-with-neighbors-random-rank.cc(91,13) ]
+      remark #15305: vectorization support: vector length 16
+      remark #15309: vectorization support: normalized vectorization overhead 1.444
+      remark #15301: REMAINDER LOOP WAS VECTORIZED
+   LOOP END
+LOOP END
+
+LOOP BEGIN at /usr/include/c++/4.8.5/bits/random.tcc(334,7) inlined into sum-uncont-type-with-neighbors-random-rank.cc(94,5)
+   remark #15344: loop was not vectorized: vector dependence prevents vectorization
+   remark #15346: vector dependence: assumed FLOW dependence between gen.gen[__i] (340:4) and gen.gen[__i-1] (336:20)
+LOOP END
+
+LOOP BEGIN at sum-uncont-type-with-neighbors-random-rank.cc(64,5) inlined into sum-uncont-type-with-neighbors-random-rank.cc(94,5)
+   remark #15542: loop was not vectorized: inner loop was already vectorized
+
+   LOOP BEGIN at sum-uncont-type-with-neighbors-random-rank.cc(65,9) inlined into sum-uncont-type-with-neighbors-random-rank.cc(94,5)
+      remark #15542: loop was not vectorized: inner loop was already vectorized
+
+      LOOP BEGIN at /usr/include/c++/4.8.5/bits/random.tcc(901,42) inlined into sum-uncont-type-with-neighbors-random-rank.cc(94,5)
+         remark #15542: loop was not vectorized: inner loop was already vectorized
+
+         LOOP BEGIN at /usr/include/c++/4.8.5/bits/random.tcc(404,7) inlined into sum-uncont-type-with-neighbors-random-rank.cc(94,5)
+            remark #15388: vectorization support: reference gen.gen[__k] has aligned access   [ /usr/include/c++/4.8.5/bits/random.tcc(406,22) ]
+            remark #15389: vectorization support: reference gen.gen[__k+1] has unaligned access   [ /usr/include/c++/4.8.5/bits/random.tcc(407,10) ]
+            remark #15388: vectorization support: reference gen.gen[__k] has aligned access   [ /usr/include/c++/4.8.5/bits/random.tcc(408,4) ]
+            remark #15389: vectorization support: reference gen.gen[__k+397] has unaligned access   [ /usr/include/c++/4.8.5/bits/random.tcc(408,17) ]
+            remark #15381: vectorization support: unaligned access used inside loop body
+            remark #15305: vectorization support: vector length 8
+            remark #15309: vectorization support: normalized vectorization overhead 0.182
+            remark #15300: LOOP WAS VECTORIZED
+            remark #15448: unmasked aligned unit stride loads: 1 
+            remark #15449: unmasked aligned unit stride stores: 1 
+            remark #15450: unmasked unaligned unit stride loads: 2 
+            remark #15475: --- begin vector cost summary ---
+            remark #15476: scalar cost: 19 
+            remark #15477: vector cost: 4.120 
+            remark #15478: estimated potential speedup: 4.330 
+            remark #15488: --- end vector cost summary ---
+         LOOP END
+
+         LOOP BEGIN at /usr/include/c++/4.8.5/bits/random.tcc(412,7) inlined into sum-uncont-type-with-neighbors-random-rank.cc(94,5)
+            remark #15344: loop was not vectorized: vector dependence prevents vectorization
+            remark #15346: vector dependence: assumed FLOW dependence between gen.gen[__k] (416:4) and gen.gen[__k+?] (416:4)
+            remark #15346: vector dependence: assumed ANTI dependence between gen.gen[__k+?] (416:4) and gen.gen[__k] (416:4)
+         LOOP END
+
+         LOOP BEGIN at /usr/include/c++/4.8.5/bits/random.tcc(404,7) inlined into sum-uncont-type-with-neighbors-random-rank.cc(94,5)
+         <Remainder loop for vectorization>
+            remark #15388: vectorization support: reference gen.gen[__k] has aligned access   [ /usr/include/c++/4.8.5/bits/random.tcc(406,22) ]
+            remark #15389: vectorization support: reference gen.gen[__k+1] has unaligned access   [ /usr/include/c++/4.8.5/bits/random.tcc(407,10) ]
+            remark #15388: vectorization support: reference gen.gen[__k] has aligned access   [ /usr/include/c++/4.8.5/bits/random.tcc(408,4) ]
+            remark #15389: vectorization support: reference gen.gen[__k+397] has unaligned access   [ /usr/include/c++/4.8.5/bits/random.tcc(408,17) ]
+            remark #15381: vectorization support: unaligned access used inside loop body
+            remark #15335: remainder loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+            remark #15305: vectorization support: vector length 2
+            remark #15427: loop was completely unrolled
+            remark #15309: vectorization support: normalized vectorization overhead 0.283
+         LOOP END
+      LOOP END
+
+      LOOP BEGIN at /usr/include/c++/4.8.5/bits/random.tcc(932,21) inlined into sum-uncont-type-with-neighbors-random-rank.cc(94,5)
+         remark #15542: loop was not vectorized: inner loop was already vectorized
+
+         LOOP BEGIN at /usr/include/c++/4.8.5/bits/random.tcc(404,7) inlined into sum-uncont-type-with-neighbors-random-rank.cc(94,5)
+            remark #15388: vectorization support: reference gen.gen[__k] has aligned access   [ /usr/include/c++/4.8.5/bits/random.tcc(406,22) ]
+            remark #15389: vectorization support: reference gen.gen[__k+1] has unaligned access   [ /usr/include/c++/4.8.5/bits/random.tcc(407,10) ]
+            remark #15388: vectorization support: reference gen.gen[__k] has aligned access   [ /usr/include/c++/4.8.5/bits/random.tcc(408,4) ]
+            remark #15389: vectorization support: reference gen.gen[__k+397] has unaligned access   [ /usr/include/c++/4.8.5/bits/random.tcc(408,17) ]
+            remark #15381: vectorization support: unaligned access used inside loop body
+            remark #15305: vectorization support: vector length 8
+            remark #15309: vectorization support: normalized vectorization overhead 0.182
+            remark #15300: LOOP WAS VECTORIZED
+            remark #15448: unmasked aligned unit stride loads: 1 
+            remark #15449: unmasked aligned unit stride stores: 1 
+            remark #15450: unmasked unaligned unit stride loads: 2 
+            remark #15475: --- begin vector cost summary ---
+            remark #15476: scalar cost: 19 
+            remark #15477: vector cost: 4.120 
+            remark #15478: estimated potential speedup: 4.330 
+            remark #15488: --- end vector cost summary ---
+         LOOP END
+
+         LOOP BEGIN at /usr/include/c++/4.8.5/bits/random.tcc(412,7) inlined into sum-uncont-type-with-neighbors-random-rank.cc(94,5)
+            remark #15344: loop was not vectorized: vector dependence prevents vectorization
+            remark #15346: vector dependence: assumed FLOW dependence between gen.gen[__k] (416:4) and gen.gen[__k+?] (416:4)
+            remark #15346: vector dependence: assumed ANTI dependence between gen.gen[__k+?] (416:4) and gen.gen[__k] (416:4)
+         LOOP END
+
+         LOOP BEGIN at /usr/include/c++/4.8.5/bits/random.tcc(404,7) inlined into sum-uncont-type-with-neighbors-random-rank.cc(94,5)
+         <Remainder loop for vectorization>
+            remark #15388: vectorization support: reference gen.gen[__k] has aligned access   [ /usr/include/c++/4.8.5/bits/random.tcc(406,22) ]
+            remark #15389: vectorization support: reference gen.gen[__k+1] has unaligned access   [ /usr/include/c++/4.8.5/bits/random.tcc(407,10) ]
+            remark #15388: vectorization support: reference gen.gen[__k] has aligned access   [ /usr/include/c++/4.8.5/bits/random.tcc(408,4) ]
+            remark #15389: vectorization support: reference gen.gen[__k+397] has unaligned access   [ /usr/include/c++/4.8.5/bits/random.tcc(408,17) ]
+            remark #15381: vectorization support: unaligned access used inside loop body
+            remark #15335: remainder loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+            remark #15305: vectorization support: vector length 2
+            remark #15427: loop was completely unrolled
+            remark #15309: vectorization support: normalized vectorization overhead 0.283
+         LOOP END
+      LOOP END
+
+      LOOP BEGIN at /usr/include/c++/4.8.5/bits/random.tcc(404,7) inlined into sum-uncont-type-with-neighbors-random-rank.cc(94,5)
+         remark #15388: vectorization support: reference gen.gen[__k] has aligned access   [ /usr/include/c++/4.8.5/bits/random.tcc(406,22) ]
+         remark #15389: vectorization support: reference gen.gen[__k+1] has unaligned access   [ /usr/include/c++/4.8.5/bits/random.tcc(407,10) ]
+         remark #15388: vectorization support: reference gen.gen[__k] has aligned access   [ /usr/include/c++/4.8.5/bits/random.tcc(408,4) ]
+         remark #15389: vectorization support: reference gen.gen[__k+397] has unaligned access   [ /usr/include/c++/4.8.5/bits/random.tcc(408,17) ]
+         remark #15381: vectorization support: unaligned access used inside loop body
+         remark #15305: vectorization support: vector length 8
+         remark #15309: vectorization support: normalized vectorization overhead 0.182
+         remark #15300: LOOP WAS VECTORIZED
+         remark #15448: unmasked aligned unit stride loads: 1 
+         remark #15449: unmasked aligned unit stride stores: 1 
+         remark #15450: unmasked unaligned unit stride loads: 2 
+         remark #15475: --- begin vector cost summary ---
+         remark #15476: scalar cost: 19 
+         remark #15477: vector cost: 4.120 
+         remark #15478: estimated potential speedup: 4.330 
+         remark #15488: --- end vector cost summary ---
+      LOOP END
+
+      LOOP BEGIN at /usr/include/c++/4.8.5/bits/random.tcc(412,7) inlined into sum-uncont-type-with-neighbors-random-rank.cc(94,5)
+         remark #15344: loop was not vectorized: vector dependence prevents vectorization
+         remark #15346: vector dependence: assumed FLOW dependence between gen.gen[__k] (416:4) and gen.gen[__k+?] (416:4)
+         remark #15346: vector dependence: assumed ANTI dependence between gen.gen[__k+?] (416:4) and gen.gen[__k] (416:4)
+      LOOP END
+
+      LOOP BEGIN at /usr/include/c++/4.8.5/bits/random.tcc(901,42) inlined into sum-uncont-type-with-neighbors-random-rank.cc(94,5)
+         remark #15542: loop was not vectorized: inner loop was already vectorized
+
+         LOOP BEGIN at /usr/include/c++/4.8.5/bits/random.tcc(404,7) inlined into sum-uncont-type-with-neighbors-random-rank.cc(94,5)
+            remark #15388: vectorization support: reference gen.gen[__k] has aligned access   [ /usr/include/c++/4.8.5/bits/random.tcc(406,22) ]
+            remark #15389: vectorization support: reference gen.gen[__k+1] has unaligned access   [ /usr/include/c++/4.8.5/bits/random.tcc(407,10) ]
+            remark #15388: vectorization support: reference gen.gen[__k] has aligned access   [ /usr/include/c++/4.8.5/bits/random.tcc(408,4) ]
+            remark #15389: vectorization support: reference gen.gen[__k+397] has unaligned access   [ /usr/include/c++/4.8.5/bits/random.tcc(408,17) ]
+            remark #15381: vectorization support: unaligned access used inside loop body
+            remark #15305: vectorization support: vector length 8
+            remark #15309: vectorization support: normalized vectorization overhead 0.182
+            remark #15300: LOOP WAS VECTORIZED
+            remark #15448: unmasked aligned unit stride loads: 1 
+            remark #15449: unmasked aligned unit stride stores: 1 
+            remark #15450: unmasked unaligned unit stride loads: 2 
+            remark #15475: --- begin vector cost summary ---
+            remark #15476: scalar cost: 19 
+            remark #15477: vector cost: 4.120 
+            remark #15478: estimated potential speedup: 4.330 
+            remark #15488: --- end vector cost summary ---
+         LOOP END
+
+         LOOP BEGIN at /usr/include/c++/4.8.5/bits/random.tcc(412,7) inlined into sum-uncont-type-with-neighbors-random-rank.cc(94,5)
+            remark #15344: loop was not vectorized: vector dependence prevents vectorization
+            remark #15346: vector dependence: assumed FLOW dependence between gen.gen[__k] (416:4) and gen.gen[__k+?] (416:4)
+            remark #15346: vector dependence: assumed ANTI dependence between gen.gen[__k+?] (416:4) and gen.gen[__k] (416:4)
+         LOOP END
+
+         LOOP BEGIN at /usr/include/c++/4.8.5/bits/random.tcc(404,7) inlined into sum-uncont-type-with-neighbors-random-rank.cc(94,5)
+         <Remainder loop for vectorization>
+            remark #15388: vectorization support: reference gen.gen[__k] has aligned access   [ /usr/include/c++/4.8.5/bits/random.tcc(406,22) ]
+            remark #15389: vectorization support: reference gen.gen[__k+1] has unaligned access   [ /usr/include/c++/4.8.5/bits/random.tcc(407,10) ]
+            remark #15388: vectorization support: reference gen.gen[__k] has aligned access   [ /usr/include/c++/4.8.5/bits/random.tcc(408,4) ]
+            remark #15389: vectorization support: reference gen.gen[__k+397] has unaligned access   [ /usr/include/c++/4.8.5/bits/random.tcc(408,17) ]
+            remark #15381: vectorization support: unaligned access used inside loop body
+            remark #15335: remainder loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+            remark #15305: vectorization support: vector length 2
+            remark #15427: loop was completely unrolled
+            remark #15309: vectorization support: normalized vectorization overhead 0.283
+         LOOP END
+      LOOP END
+
+      LOOP BEGIN at /usr/include/c++/4.8.5/bits/random.tcc(932,21) inlined into sum-uncont-type-with-neighbors-random-rank.cc(94,5)
+         remark #15542: loop was not vectorized: inner loop was already vectorized
+
+         LOOP BEGIN at /usr/include/c++/4.8.5/bits/random.tcc(404,7) inlined into sum-uncont-type-with-neighbors-random-rank.cc(94,5)
+            remark #15388: vectorization support: reference gen.gen[__k] has aligned access   [ /usr/include/c++/4.8.5/bits/random.tcc(406,22) ]
+            remark #15389: vectorization support: reference gen.gen[__k+1] has unaligned access   [ /usr/include/c++/4.8.5/bits/random.tcc(407,10) ]
+            remark #15388: vectorization support: reference gen.gen[__k] has aligned access   [ /usr/include/c++/4.8.5/bits/random.tcc(408,4) ]
+            remark #15389: vectorization support: reference gen.gen[__k+397] has unaligned access   [ /usr/include/c++/4.8.5/bits/random.tcc(408,17) ]
+            remark #15381: vectorization support: unaligned access used inside loop body
+            remark #15305: vectorization support: vector length 8
+            remark #15309: vectorization support: normalized vectorization overhead 0.182
+            remark #15300: LOOP WAS VECTORIZED
+            remark #15448: unmasked aligned unit stride loads: 1 
+            remark #15449: unmasked aligned unit stride stores: 1 
+            remark #15450: unmasked unaligned unit stride loads: 2 
+            remark #15475: --- begin vector cost summary ---
+            remark #15476: scalar cost: 19 
+            remark #15477: vector cost: 4.120 
+            remark #15478: estimated potential speedup: 4.330 
+            remark #15488: --- end vector cost summary ---
+         LOOP END
+
+         LOOP BEGIN at /usr/include/c++/4.8.5/bits/random.tcc(412,7) inlined into sum-uncont-type-with-neighbors-random-rank.cc(94,5)
+            remark #15344: loop was not vectorized: vector dependence prevents vectorization
+            remark #15346: vector dependence: assumed FLOW dependence between gen.gen[__k] (416:4) and gen.gen[__k+?] (416:4)
+            remark #15346: vector dependence: assumed ANTI dependence between gen.gen[__k+?] (416:4) and gen.gen[__k] (416:4)
+         LOOP END
+
+         LOOP BEGIN at /usr/include/c++/4.8.5/bits/random.tcc(404,7) inlined into sum-uncont-type-with-neighbors-random-rank.cc(94,5)
+         <Remainder loop for vectorization>
+            remark #15388: vectorization support: reference gen.gen[__k] has aligned access   [ /usr/include/c++/4.8.5/bits/random.tcc(406,22) ]
+            remark #15389: vectorization support: reference gen.gen[__k+1] has unaligned access   [ /usr/include/c++/4.8.5/bits/random.tcc(407,10) ]
+            remark #15388: vectorization support: reference gen.gen[__k] has aligned access   [ /usr/include/c++/4.8.5/bits/random.tcc(408,4) ]
+            remark #15389: vectorization support: reference gen.gen[__k+397] has unaligned access   [ /usr/include/c++/4.8.5/bits/random.tcc(408,17) ]
+            remark #15381: vectorization support: unaligned access used inside loop body
+            remark #15335: remainder loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+            remark #15305: vectorization support: vector length 2
+            remark #15427: loop was completely unrolled
+            remark #15309: vectorization support: normalized vectorization overhead 0.283
+         LOOP END
+      LOOP END
+
+      LOOP BEGIN at /usr/include/c++/4.8.5/bits/random.tcc(404,7) inlined into sum-uncont-type-with-neighbors-random-rank.cc(94,5)
+         remark #15388: vectorization support: reference gen.gen[__k] has aligned access   [ /usr/include/c++/4.8.5/bits/random.tcc(406,22) ]
+         remark #15389: vectorization support: reference gen.gen[__k+1] has unaligned access   [ /usr/include/c++/4.8.5/bits/random.tcc(407,10) ]
+         remark #15388: vectorization support: reference gen.gen[__k] has aligned access   [ /usr/include/c++/4.8.5/bits/random.tcc(408,4) ]
+         remark #15389: vectorization support: reference gen.gen[__k+397] has unaligned access   [ /usr/include/c++/4.8.5/bits/random.tcc(408,17) ]
+         remark #15381: vectorization support: unaligned access used inside loop body
+         remark #15305: vectorization support: vector length 8
+         remark #15309: vectorization support: normalized vectorization overhead 0.182
+         remark #15300: LOOP WAS VECTORIZED
+         remark #15448: unmasked aligned unit stride loads: 1 
+         remark #15449: unmasked aligned unit stride stores: 1 
+         remark #15450: unmasked unaligned unit stride loads: 2 
+         remark #15475: --- begin vector cost summary ---
+         remark #15476: scalar cost: 19 
+         remark #15477: vector cost: 4.120 
+         remark #15478: estimated potential speedup: 4.330 
+         remark #15488: --- end vector cost summary ---
+      LOOP END
+
+      LOOP BEGIN at /usr/include/c++/4.8.5/bits/random.tcc(412,7) inlined into sum-uncont-type-with-neighbors-random-rank.cc(94,5)
+         remark #15344: loop was not vectorized: vector dependence prevents vectorization
+         remark #15346: vector dependence: assumed FLOW dependence between gen.gen[__k] (416:4) and gen.gen[__k+?] (416:4)
+         remark #15346: vector dependence: assumed ANTI dependence between gen.gen[__k+?] (416:4) and gen.gen[__k] (416:4)
+      LOOP END
+
+      LOOP BEGIN at /usr/include/c++/4.8.5/bits/random.tcc(404,7) inlined into sum-uncont-type-with-neighbors-random-rank.cc(94,5)
+      <Remainder loop for vectorization>
+         remark #15388: vectorization support: reference gen.gen[__k] has aligned access   [ /usr/include/c++/4.8.5/bits/random.tcc(406,22) ]
+         remark #15389: vectorization support: reference gen.gen[__k+1] has unaligned access   [ /usr/include/c++/4.8.5/bits/random.tcc(407,10) ]
+         remark #15388: vectorization support: reference gen.gen[__k] has aligned access   [ /usr/include/c++/4.8.5/bits/random.tcc(408,4) ]
+         remark #15389: vectorization support: reference gen.gen[__k+397] has unaligned access   [ /usr/include/c++/4.8.5/bits/random.tcc(408,17) ]
+         remark #15381: vectorization support: unaligned access used inside loop body
+         remark #15335: remainder loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+         remark #15305: vectorization support: vector length 2
+         remark #15427: loop was completely unrolled
+         remark #15309: vectorization support: normalized vectorization overhead 0.283
+      LOOP END
+
+      LOOP BEGIN at /usr/include/c++/4.8.5/bits/random.tcc(404,7) inlined into sum-uncont-type-with-neighbors-random-rank.cc(94,5)
+      <Remainder loop for vectorization>
+         remark #15388: vectorization support: reference gen.gen[__k] has aligned access   [ /usr/include/c++/4.8.5/bits/random.tcc(406,22) ]
+         remark #15389: vectorization support: reference gen.gen[__k+1] has unaligned access   [ /usr/include/c++/4.8.5/bits/random.tcc(407,10) ]
+         remark #15388: vectorization support: reference gen.gen[__k] has aligned access   [ /usr/include/c++/4.8.5/bits/random.tcc(408,4) ]
+         remark #15389: vectorization support: reference gen.gen[__k+397] has unaligned access   [ /usr/include/c++/4.8.5/bits/random.tcc(408,17) ]
+         remark #15381: vectorization support: unaligned access used inside loop body
+         remark #15335: remainder loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+         remark #15305: vectorization support: vector length 2
+         remark #15427: loop was completely unrolled
+         remark #15309: vectorization support: normalized vectorization overhead 0.283
+      LOOP END
+   LOOP END
+LOOP END
+
+LOOP BEGIN at sum-uncont-type-with-neighbors-random-rank.cc(99,5)
+   remark #15382: vectorization support: call to function calc() cannot be vectorized   [ sum-uncont-type-with-neighbors-random-rank.cc(100,16) ]
+   remark #15344: loop was not vectorized: vector dependence prevents vectorization
+LOOP END
+
+LOOP BEGIN at sum-uncont-type-with-neighbors-random-rank.cc(104,5)
+   remark #15382: vectorization support: call to function calc() cannot be vectorized   [ sum-uncont-type-with-neighbors-random-rank.cc(105,16) ]
+   remark #15344: loop was not vectorized: vector dependence prevents vectorization
+LOOP END
+===========================================================================
+
+Begin optimization report for: calc()
+
+    Report from: Vector optimizations [vec]
+
+
+LOOP BEGIN at sum-uncont-type-with-neighbors-random-rank.cc(35,1)
+   remark #15542: loop was not vectorized: inner loop was already vectorized
+
+   LOOP BEGIN at sum-uncont-type-with-neighbors-random-rank.cc(41,9)
+      remark #15388: vectorization support: reference a.a[rank[:][i]][_2] has aligned access   [ sum-uncont-type-with-neighbors-random-rank.cc(41,16) ]
+      remark #15305: vectorization support: vector length 4
+      remark #15427: loop was completely unrolled
+      remark #15399: vectorization support: unroll factor set to 3
+      remark #15309: vectorization support: normalized vectorization overhead 1.267
+      remark #15301: MATERIALIZED LOOP WAS VECTORIZED
+      remark #15448: unmasked aligned unit stride loads: 1 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 5 
+      remark #15477: vector cost: 1.250 
+      remark #15478: estimated potential speedup: 1.760 
+      remark #15488: --- end vector cost summary ---
+   LOOP END
+
+   LOOP BEGIN at sum-uncont-type-with-neighbors-random-rank.cc(43,9)
+      remark #15388: vectorization support: reference a.a[a.next[rank[:][i]][0]][_2] has aligned access   [ sum-uncont-type-with-neighbors-random-rank.cc(43,16) ]
+      remark #15305: vectorization support: vector length 4
+      remark #15427: loop was completely unrolled
+      remark #15399: vectorization support: unroll factor set to 3
+      remark #15309: vectorization support: normalized vectorization overhead 1.267
+      remark #15301: MATERIALIZED LOOP WAS VECTORIZED
+      remark #15448: unmasked aligned unit stride loads: 1 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 7 
+      remark #15477: vector cost: 1.250 
+      remark #15478: estimated potential speedup: 2.470 
+      remark #15488: --- end vector cost summary ---
+   LOOP END
+
+   LOOP BEGIN at sum-uncont-type-with-neighbors-random-rank.cc(44,9)
+      remark #15388: vectorization support: reference a.next[a.next[rank[:][i]][0]][_2] has aligned access   [ sum-uncont-type-with-neighbors-random-rank.cc(44,16) ]
+      remark #15305: vectorization support: vector length 4
+      remark #15427: loop was completely unrolled
+      remark #15309: vectorization support: normalized vectorization overhead 3.800
+      remark #15301: MATERIALIZED LOOP WAS VECTORIZED
+      remark #15448: unmasked aligned unit stride loads: 1 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 7 
+      remark #15477: vector cost: 1.250 
+      remark #15478: estimated potential speedup: 1.160 
+      remark #15488: --- end vector cost summary ---
+   LOOP END
+
+   LOOP BEGIN at sum-uncont-type-with-neighbors-random-rank.cc(46,9)
+      remark #15388: vectorization support: reference a.a[a.next[rank[:][i]][1]][_2] has aligned access   [ sum-uncont-type-with-neighbors-random-rank.cc(46,16) ]
+      remark #15305: vectorization support: vector length 4
+      remark #15427: loop was completely unrolled
+      remark #15399: vectorization support: unroll factor set to 3
+      remark #15309: vectorization support: normalized vectorization overhead 1.267
+      remark #15301: MATERIALIZED LOOP WAS VECTORIZED
+      remark #15448: unmasked aligned unit stride loads: 1 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 7 
+      remark #15477: vector cost: 1.250 
+      remark #15478: estimated potential speedup: 2.470 
+      remark #15488: --- end vector cost summary ---
+   LOOP END
+
+   LOOP BEGIN at sum-uncont-type-with-neighbors-random-rank.cc(47,9)
+      remark #15388: vectorization support: reference a.next[a.next[rank[:][i]][1]][_2] has aligned access   [ sum-uncont-type-with-neighbors-random-rank.cc(47,16) ]
+      remark #15305: vectorization support: vector length 4
+      remark #15427: loop was completely unrolled
+      remark #15309: vectorization support: normalized vectorization overhead 3.800
+      remark #15301: MATERIALIZED LOOP WAS VECTORIZED
+      remark #15448: unmasked aligned unit stride loads: 1 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 7 
+      remark #15477: vector cost: 1.250 
+      remark #15478: estimated potential speedup: 1.160 
+      remark #15488: --- end vector cost summary ---
+   LOOP END
+
+   LOOP BEGIN at sum-uncont-type-with-neighbors-random-rank.cc(49,9)
+      remark #15388: vectorization support: reference a.a[a.next[rank[:][i]][2]][_2] has aligned access   [ sum-uncont-type-with-neighbors-random-rank.cc(49,16) ]
+      remark #15305: vectorization support: vector length 4
+      remark #15427: loop was completely unrolled
+      remark #15399: vectorization support: unroll factor set to 3
+      remark #15309: vectorization support: normalized vectorization overhead 1.267
+      remark #15301: MATERIALIZED LOOP WAS VECTORIZED
+      remark #15448: unmasked aligned unit stride loads: 1 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 7 
+      remark #15477: vector cost: 1.250 
+      remark #15478: estimated potential speedup: 2.470 
+      remark #15488: --- end vector cost summary ---
+   LOOP END
+
+   LOOP BEGIN at sum-uncont-type-with-neighbors-random-rank.cc(50,9)
+      remark #15388: vectorization support: reference a.next[a.next[rank[:][i]][2]][_2] has aligned access   [ sum-uncont-type-with-neighbors-random-rank.cc(50,16) ]
+      remark #15305: vectorization support: vector length 4
+      remark #15427: loop was completely unrolled
+      remark #15309: vectorization support: normalized vectorization overhead 3.800
+      remark #15301: MATERIALIZED LOOP WAS VECTORIZED
+      remark #15448: unmasked aligned unit stride loads: 1 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 7 
+      remark #15477: vector cost: 1.250 
+      remark #15478: estimated potential speedup: 1.160 
+      remark #15488: --- end vector cost summary ---
+   LOOP END
+
+   LOOP BEGIN at sum-uncont-type-with-neighbors-random-rank.cc(52,9)
+      remark #15388: vectorization support: reference a.a[a.next[rank[:][i]][3]][_2] has aligned access   [ sum-uncont-type-with-neighbors-random-rank.cc(52,16) ]
+      remark #15305: vectorization support: vector length 4
+      remark #15427: loop was completely unrolled
+      remark #15399: vectorization support: unroll factor set to 3
+      remark #15309: vectorization support: normalized vectorization overhead 1.267
+      remark #15301: MATERIALIZED LOOP WAS VECTORIZED
+      remark #15448: unmasked aligned unit stride loads: 1 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 7 
+      remark #15477: vector cost: 1.250 
+      remark #15478: estimated potential speedup: 2.470 
+      remark #15488: --- end vector cost summary ---
+   LOOP END
+
+   LOOP BEGIN at sum-uncont-type-with-neighbors-random-rank.cc(53,9)
+      remark #15388: vectorization support: reference a.next[a.next[rank[:][i]][3]][_2] has aligned access   [ sum-uncont-type-with-neighbors-random-rank.cc(53,16) ]
+      remark #15305: vectorization support: vector length 4
+      remark #15427: loop was completely unrolled
+      remark #15309: vectorization support: normalized vectorization overhead 3.800
+      remark #15301: MATERIALIZED LOOP WAS VECTORIZED
+      remark #15448: unmasked aligned unit stride loads: 1 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 7 
+      remark #15477: vector cost: 1.250 
+      remark #15478: estimated potential speedup: 1.160 
+      remark #15488: --- end vector cost summary ---
+   LOOP END
+LOOP END
+===========================================================================
+
+Begin optimization report for: random_swap(int)
+
+    Report from: Vector optimizations [vec]
+
+
+LOOP BEGIN at /usr/include/c++/4.8.5/bits/random.tcc(334,7) inlined into sum-uncont-type-with-neighbors-random-rank.cc(62,24)
+   remark #15344: loop was not vectorized: vector dependence prevents vectorization
+   remark #15346: vector dependence: assumed FLOW dependence between gen._M_x[__i] (340:4) and gen._M_x[__i-1] (336:20)
+LOOP END
+
+LOOP BEGIN at sum-uncont-type-with-neighbors-random-rank.cc(64,5)
+   remark #15542: loop was not vectorized: inner loop was already vectorized
+
+   LOOP BEGIN at sum-uncont-type-with-neighbors-random-rank.cc(65,9)
+      remark #15542: loop was not vectorized: inner loop was already vectorized
+
+      LOOP BEGIN at /usr/include/c++/4.8.5/bits/random.tcc(901,42) inlined into sum-uncont-type-with-neighbors-random-rank.cc(66,27)
+         remark #15542: loop was not vectorized: inner loop was already vectorized
+
+         LOOP BEGIN at /usr/include/c++/4.8.5/bits/random.tcc(404,7) inlined into sum-uncont-type-with-neighbors-random-rank.cc(66,27)
+            remark #15388: vectorization support: reference gen._M_x[__k] has aligned access   [ /usr/include/c++/4.8.5/bits/random.tcc(406,22) ]
+            remark #15389: vectorization support: reference gen._M_x[__k+1] has unaligned access   [ /usr/include/c++/4.8.5/bits/random.tcc(407,10) ]
+            remark #15388: vectorization support: reference gen._M_x[__k] has aligned access   [ /usr/include/c++/4.8.5/bits/random.tcc(408,4) ]
+            remark #15389: vectorization support: reference gen._M_x[__k+397] has unaligned access   [ /usr/include/c++/4.8.5/bits/random.tcc(408,17) ]
+            remark #15381: vectorization support: unaligned access used inside loop body
+            remark #15305: vectorization support: vector length 8
+            remark #15309: vectorization support: normalized vectorization overhead 0.182
+            remark #15300: LOOP WAS VECTORIZED
+            remark #15448: unmasked aligned unit stride loads: 1 
+            remark #15449: unmasked aligned unit stride stores: 1 
+            remark #15450: unmasked unaligned unit stride loads: 2 
+            remark #15475: --- begin vector cost summary ---
+            remark #15476: scalar cost: 19 
+            remark #15477: vector cost: 4.120 
+            remark #15478: estimated potential speedup: 4.330 
+            remark #15488: --- end vector cost summary ---
+         LOOP END
+
+         LOOP BEGIN at /usr/include/c++/4.8.5/bits/random.tcc(412,7) inlined into sum-uncont-type-with-neighbors-random-rank.cc(66,27)
+            remark #15344: loop was not vectorized: vector dependence prevents vectorization
+            remark #15346: vector dependence: assumed FLOW dependence between gen._M_x[__k] (416:4) and gen._M_x[__k+?] (416:4)
+            remark #15346: vector dependence: assumed ANTI dependence between gen._M_x[__k+?] (416:4) and gen._M_x[__k] (416:4)
+         LOOP END
+
+         LOOP BEGIN at /usr/include/c++/4.8.5/bits/random.tcc(404,7) inlined into sum-uncont-type-with-neighbors-random-rank.cc(66,27)
+         <Remainder loop for vectorization>
+            remark #15388: vectorization support: reference gen._M_x[__k] has aligned access   [ /usr/include/c++/4.8.5/bits/random.tcc(406,22) ]
+            remark #15389: vectorization support: reference gen._M_x[__k+1] has unaligned access   [ /usr/include/c++/4.8.5/bits/random.tcc(407,10) ]
+            remark #15388: vectorization support: reference gen._M_x[__k] has aligned access   [ /usr/include/c++/4.8.5/bits/random.tcc(408,4) ]
+            remark #15389: vectorization support: reference gen._M_x[__k+397] has unaligned access   [ /usr/include/c++/4.8.5/bits/random.tcc(408,17) ]
+            remark #15381: vectorization support: unaligned access used inside loop body
+            remark #15335: remainder loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+            remark #15305: vectorization support: vector length 2
+            remark #15427: loop was completely unrolled
+            remark #15309: vectorization support: normalized vectorization overhead 0.283
+         LOOP END
+      LOOP END
+
+      LOOP BEGIN at /usr/include/c++/4.8.5/bits/random.tcc(932,21) inlined into sum-uncont-type-with-neighbors-random-rank.cc(66,27)
+         remark #15542: loop was not vectorized: inner loop was already vectorized
+
+         LOOP BEGIN at /usr/include/c++/4.8.5/bits/random.tcc(404,7) inlined into sum-uncont-type-with-neighbors-random-rank.cc(66,27)
+            remark #15388: vectorization support: reference gen._M_x[__k] has aligned access   [ /usr/include/c++/4.8.5/bits/random.tcc(406,22) ]
+            remark #15389: vectorization support: reference gen._M_x[__k+1] has unaligned access   [ /usr/include/c++/4.8.5/bits/random.tcc(407,10) ]
+            remark #15388: vectorization support: reference gen._M_x[__k] has aligned access   [ /usr/include/c++/4.8.5/bits/random.tcc(408,4) ]
+            remark #15389: vectorization support: reference gen._M_x[__k+397] has unaligned access   [ /usr/include/c++/4.8.5/bits/random.tcc(408,17) ]
+            remark #15381: vectorization support: unaligned access used inside loop body
+            remark #15305: vectorization support: vector length 8
+            remark #15309: vectorization support: normalized vectorization overhead 0.182
+            remark #15300: LOOP WAS VECTORIZED
+            remark #15448: unmasked aligned unit stride loads: 1 
+            remark #15449: unmasked aligned unit stride stores: 1 
+            remark #15450: unmasked unaligned unit stride loads: 2 
+            remark #15475: --- begin vector cost summary ---
+            remark #15476: scalar cost: 19 
+            remark #15477: vector cost: 4.120 
+            remark #15478: estimated potential speedup: 4.330 
+            remark #15488: --- end vector cost summary ---
+         LOOP END
+
+         LOOP BEGIN at /usr/include/c++/4.8.5/bits/random.tcc(412,7) inlined into sum-uncont-type-with-neighbors-random-rank.cc(66,27)
+            remark #15344: loop was not vectorized: vector dependence prevents vectorization
+            remark #15346: vector dependence: assumed FLOW dependence between gen._M_x[__k] (416:4) and gen._M_x[__k+?] (416:4)
+            remark #15346: vector dependence: assumed ANTI dependence between gen._M_x[__k+?] (416:4) and gen._M_x[__k] (416:4)
+         LOOP END
+
+         LOOP BEGIN at /usr/include/c++/4.8.5/bits/random.tcc(404,7) inlined into sum-uncont-type-with-neighbors-random-rank.cc(66,27)
+         <Remainder loop for vectorization>
+            remark #15388: vectorization support: reference gen._M_x[__k] has aligned access   [ /usr/include/c++/4.8.5/bits/random.tcc(406,22) ]
+            remark #15389: vectorization support: reference gen._M_x[__k+1] has unaligned access   [ /usr/include/c++/4.8.5/bits/random.tcc(407,10) ]
+            remark #15388: vectorization support: reference gen._M_x[__k] has aligned access   [ /usr/include/c++/4.8.5/bits/random.tcc(408,4) ]
+            remark #15389: vectorization support: reference gen._M_x[__k+397] has unaligned access   [ /usr/include/c++/4.8.5/bits/random.tcc(408,17) ]
+            remark #15381: vectorization support: unaligned access used inside loop body
+            remark #15335: remainder loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+            remark #15305: vectorization support: vector length 2
+            remark #15427: loop was completely unrolled
+            remark #15309: vectorization support: normalized vectorization overhead 0.283
+         LOOP END
+      LOOP END
+
+      LOOP BEGIN at /usr/include/c++/4.8.5/bits/random.tcc(404,7) inlined into sum-uncont-type-with-neighbors-random-rank.cc(66,27)
+         remark #15388: vectorization support: reference gen._M_x[__k] has aligned access   [ /usr/include/c++/4.8.5/bits/random.tcc(406,22) ]
+         remark #15389: vectorization support: reference gen._M_x[__k+1] has unaligned access   [ /usr/include/c++/4.8.5/bits/random.tcc(407,10) ]
+         remark #15388: vectorization support: reference gen._M_x[__k] has aligned access   [ /usr/include/c++/4.8.5/bits/random.tcc(408,4) ]
+         remark #15389: vectorization support: reference gen._M_x[__k+397] has unaligned access   [ /usr/include/c++/4.8.5/bits/random.tcc(408,17) ]
+         remark #15381: vectorization support: unaligned access used inside loop body
+         remark #15305: vectorization support: vector length 8
+         remark #15309: vectorization support: normalized vectorization overhead 0.182
+         remark #15300: LOOP WAS VECTORIZED
+         remark #15448: unmasked aligned unit stride loads: 1 
+         remark #15449: unmasked aligned unit stride stores: 1 
+         remark #15450: unmasked unaligned unit stride loads: 2 
+         remark #15475: --- begin vector cost summary ---
+         remark #15476: scalar cost: 19 
+         remark #15477: vector cost: 4.120 
+         remark #15478: estimated potential speedup: 4.330 
+         remark #15488: --- end vector cost summary ---
+      LOOP END
+
+      LOOP BEGIN at /usr/include/c++/4.8.5/bits/random.tcc(412,7) inlined into sum-uncont-type-with-neighbors-random-rank.cc(66,27)
+         remark #15344: loop was not vectorized: vector dependence prevents vectorization
+         remark #15346: vector dependence: assumed FLOW dependence between gen._M_x[__k] (416:4) and gen._M_x[__k+?] (416:4)
+         remark #15346: vector dependence: assumed ANTI dependence between gen._M_x[__k+?] (416:4) and gen._M_x[__k] (416:4)
+      LOOP END
+
+      LOOP BEGIN at /usr/include/c++/4.8.5/bits/random.tcc(901,42) inlined into sum-uncont-type-with-neighbors-random-rank.cc(67,27)
+         remark #15542: loop was not vectorized: inner loop was already vectorized
+
+         LOOP BEGIN at /usr/include/c++/4.8.5/bits/random.tcc(404,7) inlined into sum-uncont-type-with-neighbors-random-rank.cc(67,27)
+            remark #15388: vectorization support: reference gen._M_x[__k] has aligned access   [ /usr/include/c++/4.8.5/bits/random.tcc(406,22) ]
+            remark #15389: vectorization support: reference gen._M_x[__k+1] has unaligned access   [ /usr/include/c++/4.8.5/bits/random.tcc(407,10) ]
+            remark #15388: vectorization support: reference gen._M_x[__k] has aligned access   [ /usr/include/c++/4.8.5/bits/random.tcc(408,4) ]
+            remark #15389: vectorization support: reference gen._M_x[__k+397] has unaligned access   [ /usr/include/c++/4.8.5/bits/random.tcc(408,17) ]
+            remark #15381: vectorization support: unaligned access used inside loop body
+            remark #15305: vectorization support: vector length 8
+            remark #15309: vectorization support: normalized vectorization overhead 0.182
+            remark #15300: LOOP WAS VECTORIZED
+            remark #15448: unmasked aligned unit stride loads: 1 
+            remark #15449: unmasked aligned unit stride stores: 1 
+            remark #15450: unmasked unaligned unit stride loads: 2 
+            remark #15475: --- begin vector cost summary ---
+            remark #15476: scalar cost: 19 
+            remark #15477: vector cost: 4.120 
+            remark #15478: estimated potential speedup: 4.330 
+            remark #15488: --- end vector cost summary ---
+         LOOP END
+
+         LOOP BEGIN at /usr/include/c++/4.8.5/bits/random.tcc(412,7) inlined into sum-uncont-type-with-neighbors-random-rank.cc(67,27)
+            remark #15344: loop was not vectorized: vector dependence prevents vectorization
+            remark #15346: vector dependence: assumed FLOW dependence between gen._M_x[__k] (416:4) and gen._M_x[__k+?] (416:4)
+            remark #15346: vector dependence: assumed ANTI dependence between gen._M_x[__k+?] (416:4) and gen._M_x[__k] (416:4)
+         LOOP END
+
+         LOOP BEGIN at /usr/include/c++/4.8.5/bits/random.tcc(404,7) inlined into sum-uncont-type-with-neighbors-random-rank.cc(67,27)
+         <Remainder loop for vectorization>
+            remark #15388: vectorization support: reference gen._M_x[__k] has aligned access   [ /usr/include/c++/4.8.5/bits/random.tcc(406,22) ]
+            remark #15389: vectorization support: reference gen._M_x[__k+1] has unaligned access   [ /usr/include/c++/4.8.5/bits/random.tcc(407,10) ]
+            remark #15388: vectorization support: reference gen._M_x[__k] has aligned access   [ /usr/include/c++/4.8.5/bits/random.tcc(408,4) ]
+            remark #15389: vectorization support: reference gen._M_x[__k+397] has unaligned access   [ /usr/include/c++/4.8.5/bits/random.tcc(408,17) ]
+            remark #15381: vectorization support: unaligned access used inside loop body
+            remark #15335: remainder loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+            remark #15305: vectorization support: vector length 2
+            remark #15427: loop was completely unrolled
+            remark #15309: vectorization support: normalized vectorization overhead 0.283
+         LOOP END
+      LOOP END
+
+      LOOP BEGIN at /usr/include/c++/4.8.5/bits/random.tcc(932,21) inlined into sum-uncont-type-with-neighbors-random-rank.cc(67,27)
+         remark #15542: loop was not vectorized: inner loop was already vectorized
+
+         LOOP BEGIN at /usr/include/c++/4.8.5/bits/random.tcc(404,7) inlined into sum-uncont-type-with-neighbors-random-rank.cc(67,27)
+            remark #15388: vectorization support: reference gen._M_x[__k] has aligned access   [ /usr/include/c++/4.8.5/bits/random.tcc(406,22) ]
+            remark #15389: vectorization support: reference gen._M_x[__k+1] has unaligned access   [ /usr/include/c++/4.8.5/bits/random.tcc(407,10) ]
+            remark #15388: vectorization support: reference gen._M_x[__k] has aligned access   [ /usr/include/c++/4.8.5/bits/random.tcc(408,4) ]
+            remark #15389: vectorization support: reference gen._M_x[__k+397] has unaligned access   [ /usr/include/c++/4.8.5/bits/random.tcc(408,17) ]
+            remark #15381: vectorization support: unaligned access used inside loop body
+            remark #15305: vectorization support: vector length 8
+            remark #15309: vectorization support: normalized vectorization overhead 0.182
+            remark #15300: LOOP WAS VECTORIZED
+            remark #15448: unmasked aligned unit stride loads: 1 
+            remark #15449: unmasked aligned unit stride stores: 1 
+            remark #15450: unmasked unaligned unit stride loads: 2 
+            remark #15475: --- begin vector cost summary ---
+            remark #15476: scalar cost: 19 
+            remark #15477: vector cost: 4.120 
+            remark #15478: estimated potential speedup: 4.330 
+            remark #15488: --- end vector cost summary ---
+         LOOP END
+
+         LOOP BEGIN at /usr/include/c++/4.8.5/bits/random.tcc(412,7) inlined into sum-uncont-type-with-neighbors-random-rank.cc(67,27)
+            remark #15344: loop was not vectorized: vector dependence prevents vectorization
+            remark #15346: vector dependence: assumed FLOW dependence between gen._M_x[__k] (416:4) and gen._M_x[__k+?] (416:4)
+            remark #15346: vector dependence: assumed ANTI dependence between gen._M_x[__k+?] (416:4) and gen._M_x[__k] (416:4)
+         LOOP END
+
+         LOOP BEGIN at /usr/include/c++/4.8.5/bits/random.tcc(404,7) inlined into sum-uncont-type-with-neighbors-random-rank.cc(67,27)
+         <Remainder loop for vectorization>
+            remark #15388: vectorization support: reference gen._M_x[__k] has aligned access   [ /usr/include/c++/4.8.5/bits/random.tcc(406,22) ]
+            remark #15389: vectorization support: reference gen._M_x[__k+1] has unaligned access   [ /usr/include/c++/4.8.5/bits/random.tcc(407,10) ]
+            remark #15388: vectorization support: reference gen._M_x[__k] has aligned access   [ /usr/include/c++/4.8.5/bits/random.tcc(408,4) ]
+            remark #15389: vectorization support: reference gen._M_x[__k+397] has unaligned access   [ /usr/include/c++/4.8.5/bits/random.tcc(408,17) ]
+            remark #15381: vectorization support: unaligned access used inside loop body
+            remark #15335: remainder loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+            remark #15305: vectorization support: vector length 2
+            remark #15427: loop was completely unrolled
+            remark #15309: vectorization support: normalized vectorization overhead 0.283
+         LOOP END
+      LOOP END
+
+      LOOP BEGIN at /usr/include/c++/4.8.5/bits/random.tcc(404,7) inlined into sum-uncont-type-with-neighbors-random-rank.cc(67,27)
+         remark #15388: vectorization support: reference gen._M_x[__k] has aligned access   [ /usr/include/c++/4.8.5/bits/random.tcc(406,22) ]
+         remark #15389: vectorization support: reference gen._M_x[__k+1] has unaligned access   [ /usr/include/c++/4.8.5/bits/random.tcc(407,10) ]
+         remark #15388: vectorization support: reference gen._M_x[__k] has aligned access   [ /usr/include/c++/4.8.5/bits/random.tcc(408,4) ]
+         remark #15389: vectorization support: reference gen._M_x[__k+397] has unaligned access   [ /usr/include/c++/4.8.5/bits/random.tcc(408,17) ]
+         remark #15381: vectorization support: unaligned access used inside loop body
+         remark #15305: vectorization support: vector length 8
+         remark #15309: vectorization support: normalized vectorization overhead 0.182
+         remark #15300: LOOP WAS VECTORIZED
+         remark #15448: unmasked aligned unit stride loads: 1 
+         remark #15449: unmasked aligned unit stride stores: 1 
+         remark #15450: unmasked unaligned unit stride loads: 2 
+         remark #15475: --- begin vector cost summary ---
+         remark #15476: scalar cost: 19 
+         remark #15477: vector cost: 4.120 
+         remark #15478: estimated potential speedup: 4.330 
+         remark #15488: --- end vector cost summary ---
+      LOOP END
+
+      LOOP BEGIN at /usr/include/c++/4.8.5/bits/random.tcc(412,7) inlined into sum-uncont-type-with-neighbors-random-rank.cc(67,27)
+         remark #15344: loop was not vectorized: vector dependence prevents vectorization
+         remark #15346: vector dependence: assumed FLOW dependence between gen._M_x[__k] (416:4) and gen._M_x[__k+?] (416:4)
+         remark #15346: vector dependence: assumed ANTI dependence between gen._M_x[__k+?] (416:4) and gen._M_x[__k] (416:4)
+      LOOP END
+
+      LOOP BEGIN at /usr/include/c++/4.8.5/bits/random.tcc(404,7) inlined into sum-uncont-type-with-neighbors-random-rank.cc(66,27)
+      <Remainder loop for vectorization>
+         remark #15388: vectorization support: reference gen._M_x[__k] has aligned access   [ /usr/include/c++/4.8.5/bits/random.tcc(406,22) ]
+         remark #15389: vectorization support: reference gen._M_x[__k+1] has unaligned access   [ /usr/include/c++/4.8.5/bits/random.tcc(407,10) ]
+         remark #15388: vectorization support: reference gen._M_x[__k] has aligned access   [ /usr/include/c++/4.8.5/bits/random.tcc(408,4) ]
+         remark #15389: vectorization support: reference gen._M_x[__k+397] has unaligned access   [ /usr/include/c++/4.8.5/bits/random.tcc(408,17) ]
+         remark #15381: vectorization support: unaligned access used inside loop body
+         remark #15335: remainder loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+         remark #15305: vectorization support: vector length 2
+         remark #15427: loop was completely unrolled
+         remark #15309: vectorization support: normalized vectorization overhead 0.283
+      LOOP END
+
+      LOOP BEGIN at /usr/include/c++/4.8.5/bits/random.tcc(404,7) inlined into sum-uncont-type-with-neighbors-random-rank.cc(67,27)
+      <Remainder loop for vectorization>
+         remark #15388: vectorization support: reference gen._M_x[__k] has aligned access   [ /usr/include/c++/4.8.5/bits/random.tcc(406,22) ]
+         remark #15389: vectorization support: reference gen._M_x[__k+1] has unaligned access   [ /usr/include/c++/4.8.5/bits/random.tcc(407,10) ]
+         remark #15388: vectorization support: reference gen._M_x[__k] has aligned access   [ /usr/include/c++/4.8.5/bits/random.tcc(408,4) ]
+         remark #15389: vectorization support: reference gen._M_x[__k+397] has unaligned access   [ /usr/include/c++/4.8.5/bits/random.tcc(408,17) ]
+         remark #15381: vectorization support: unaligned access used inside loop body
+         remark #15335: remainder loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+         remark #15305: vectorization support: vector length 2
+         remark #15427: loop was completely unrolled
+         remark #15309: vectorization support: normalized vectorization overhead 0.283
+      LOOP END
+   LOOP END
+LOOP END
+===========================================================================
+
+Begin optimization report for: std::uniform_int_distribution<int>::operator()<std::mt19937>(std::uniform_int_distribution<int> *, std::mt19937 &, const std::uniform_int_distribution<int>::param_type &)
+
+    Report from: Vector optimizations [vec]
+
+
+LOOP BEGIN at /usr/include/c++/4.8.5/bits/random.tcc(458,11) inlined into /usr/include/c++/4.8.5/bits/random.tcc(904,31)
+   remark #15542: loop was not vectorized: inner loop was already vectorized
+
+   LOOP BEGIN at /usr/include/c++/4.8.5/bits/random.tcc(404,7) inlined into /usr/include/c++/4.8.5/bits/random.tcc(904,31)
+   <Peeled loop for vectorization>
+      remark #15389: vectorization support: reference __urng->_M_x[__k] has unaligned access   [ /usr/include/c++/4.8.5/bits/random.tcc(406,22) ]
+      remark #15389: vectorization support: reference __urng->_M_x[__k+1] has unaligned access   [ /usr/include/c++/4.8.5/bits/random.tcc(407,10) ]
+      remark #15389: vectorization support: reference __urng->_M_x[__k] has unaligned access   [ /usr/include/c++/4.8.5/bits/random.tcc(408,4) ]
+      remark #15389: vectorization support: reference __urng->_M_x[__k+397] has unaligned access   [ /usr/include/c++/4.8.5/bits/random.tcc(408,17) ]
+      remark #15381: vectorization support: unaligned access used inside loop body
+      remark #15305: vectorization support: vector length 8
+      remark #15309: vectorization support: normalized vectorization overhead 0.238
+      remark #15301: PEEL LOOP WAS VECTORIZED
+   LOOP END
+
+   LOOP BEGIN at /usr/include/c++/4.8.5/bits/random.tcc(404,7) inlined into /usr/include/c++/4.8.5/bits/random.tcc(904,31)
+      remark #15388: vectorization support: reference __urng->_M_x[__k] has aligned access   [ /usr/include/c++/4.8.5/bits/random.tcc(406,22) ]
+      remark #15389: vectorization support: reference __urng->_M_x[__k+1] has unaligned access   [ /usr/include/c++/4.8.5/bits/random.tcc(407,10) ]
+      remark #15388: vectorization support: reference __urng->_M_x[__k] has aligned access   [ /usr/include/c++/4.8.5/bits/random.tcc(408,4) ]
+      remark #15389: vectorization support: reference __urng->_M_x[__k+397] has unaligned access   [ /usr/include/c++/4.8.5/bits/random.tcc(408,17) ]
+      remark #15381: vectorization support: unaligned access used inside loop body
+      remark #15305: vectorization support: vector length 8
+      remark #15309: vectorization support: normalized vectorization overhead 0.485
+      remark #15300: LOOP WAS VECTORIZED
+      remark #15448: unmasked aligned unit stride loads: 1 
+      remark #15449: unmasked aligned unit stride stores: 1 
+      remark #15450: unmasked unaligned unit stride loads: 2 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 19 
+      remark #15477: vector cost: 4.120 
+      remark #15478: estimated potential speedup: 4.150 
+      remark #15488: --- end vector cost summary ---
+   LOOP END
+
+   LOOP BEGIN at /usr/include/c++/4.8.5/bits/random.tcc(412,7) inlined into /usr/include/c++/4.8.5/bits/random.tcc(904,31)
+      remark #15344: loop was not vectorized: vector dependence prevents vectorization
+      remark #15346: vector dependence: assumed FLOW dependence between __urng->_M_x[__k] (416:4) and __urng->_M_x[__k+?] (416:4)
+      remark #15346: vector dependence: assumed ANTI dependence between __urng->_M_x[__k+?] (416:4) and __urng->_M_x[__k] (416:4)
+   LOOP END
+
+   LOOP BEGIN at /usr/include/c++/4.8.5/bits/random.tcc(404,7) inlined into /usr/include/c++/4.8.5/bits/random.tcc(904,31)
+   <Remainder loop for vectorization>
+      remark #15388: vectorization support: reference __urng->_M_x[__k] has aligned access   [ /usr/include/c++/4.8.5/bits/random.tcc(406,22) ]
+      remark #15389: vectorization support: reference __urng->_M_x[__k+1] has unaligned access   [ /usr/include/c++/4.8.5/bits/random.tcc(407,10) ]
+      remark #15388: vectorization support: reference __urng->_M_x[__k] has aligned access   [ /usr/include/c++/4.8.5/bits/random.tcc(408,4) ]
+      remark #15389: vectorization support: reference __urng->_M_x[__k+397] has unaligned access   [ /usr/include/c++/4.8.5/bits/random.tcc(408,17) ]
+      remark #15381: vectorization support: unaligned access used inside loop body
+      remark #15305: vectorization support: vector length 8
+      remark #15309: vectorization support: normalized vectorization overhead 0.310
+      remark #15301: REMAINDER LOOP WAS VECTORIZED
+   LOOP END
+LOOP END
+
+LOOP BEGIN at /usr/include/c++/4.8.5/bits/random.tcc(932,21)
+   remark #15542: loop was not vectorized: inner loop was already vectorized
+
+   LOOP BEGIN at /usr/include/c++/4.8.5/bits/random.tcc(404,7) inlined into /usr/include/c++/4.8.5/bits/random.tcc(931,35)
+   <Peeled loop for vectorization>
+      remark #15389: vectorization support: reference __urng->_M_x[__k] has unaligned access   [ /usr/include/c++/4.8.5/bits/random.tcc(406,22) ]
+      remark #15389: vectorization support: reference __urng->_M_x[__k+1] has unaligned access   [ /usr/include/c++/4.8.5/bits/random.tcc(407,10) ]
+      remark #15389: vectorization support: reference __urng->_M_x[__k] has unaligned access   [ /usr/include/c++/4.8.5/bits/random.tcc(408,4) ]
+      remark #15389: vectorization support: reference __urng->_M_x[__k+397] has unaligned access   [ /usr/include/c++/4.8.5/bits/random.tcc(408,17) ]
+      remark #15381: vectorization support: unaligned access used inside loop body
+      remark #15305: vectorization support: vector length 8
+      remark #15309: vectorization support: normalized vectorization overhead 0.238
+      remark #15301: PEEL LOOP WAS VECTORIZED
+   LOOP END
+
+   LOOP BEGIN at /usr/include/c++/4.8.5/bits/random.tcc(404,7) inlined into /usr/include/c++/4.8.5/bits/random.tcc(931,35)
+      remark #15388: vectorization support: reference __urng->_M_x[__k] has aligned access   [ /usr/include/c++/4.8.5/bits/random.tcc(406,22) ]
+      remark #15389: vectorization support: reference __urng->_M_x[__k+1] has unaligned access   [ /usr/include/c++/4.8.5/bits/random.tcc(407,10) ]
+      remark #15388: vectorization support: reference __urng->_M_x[__k] has aligned access   [ /usr/include/c++/4.8.5/bits/random.tcc(408,4) ]
+      remark #15389: vectorization support: reference __urng->_M_x[__k+397] has unaligned access   [ /usr/include/c++/4.8.5/bits/random.tcc(408,17) ]
+      remark #15381: vectorization support: unaligned access used inside loop body
+      remark #15305: vectorization support: vector length 8
+      remark #15309: vectorization support: normalized vectorization overhead 0.485
+      remark #15300: LOOP WAS VECTORIZED
+      remark #15448: unmasked aligned unit stride loads: 1 
+      remark #15449: unmasked aligned unit stride stores: 1 
+      remark #15450: unmasked unaligned unit stride loads: 2 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 19 
+      remark #15477: vector cost: 4.120 
+      remark #15478: estimated potential speedup: 4.150 
+      remark #15488: --- end vector cost summary ---
+   LOOP END
+
+   LOOP BEGIN at /usr/include/c++/4.8.5/bits/random.tcc(412,7) inlined into /usr/include/c++/4.8.5/bits/random.tcc(931,35)
+      remark #15344: loop was not vectorized: vector dependence prevents vectorization
+      remark #15346: vector dependence: assumed FLOW dependence between __urng->_M_x[__k] (416:4) and __urng->_M_x[__k+?] (416:4)
+      remark #15346: vector dependence: assumed ANTI dependence between __urng->_M_x[__k+?] (416:4) and __urng->_M_x[__k] (416:4)
+   LOOP END
+
+   LOOP BEGIN at /usr/include/c++/4.8.5/bits/random.tcc(404,7) inlined into /usr/include/c++/4.8.5/bits/random.tcc(931,35)
+   <Remainder loop for vectorization>
+      remark #15388: vectorization support: reference __urng->_M_x[__k] has aligned access   [ /usr/include/c++/4.8.5/bits/random.tcc(406,22) ]
+      remark #15389: vectorization support: reference __urng->_M_x[__k+1] has unaligned access   [ /usr/include/c++/4.8.5/bits/random.tcc(407,10) ]
+      remark #15388: vectorization support: reference __urng->_M_x[__k] has aligned access   [ /usr/include/c++/4.8.5/bits/random.tcc(408,4) ]
+      remark #15389: vectorization support: reference __urng->_M_x[__k+397] has unaligned access   [ /usr/include/c++/4.8.5/bits/random.tcc(408,17) ]
+      remark #15381: vectorization support: unaligned access used inside loop body
+      remark #15305: vectorization support: vector length 8
+      remark #15309: vectorization support: normalized vectorization overhead 0.310
+      remark #15301: REMAINDER LOOP WAS VECTORIZED
+   LOOP END
+LOOP END
+
+LOOP BEGIN at /usr/include/c++/4.8.5/bits/random.tcc(404,7) inlined into /usr/include/c++/4.8.5/bits/random.tcc(936,27)
+<Peeled loop for vectorization>
+   remark #15389: vectorization support: reference __urng->_M_x[__k] has unaligned access   [ /usr/include/c++/4.8.5/bits/random.tcc(406,22) ]
+   remark #15389: vectorization support: reference __urng->_M_x[__k+1] has unaligned access   [ /usr/include/c++/4.8.5/bits/random.tcc(407,10) ]
+   remark #15389: vectorization support: reference __urng->_M_x[__k] has unaligned access   [ /usr/include/c++/4.8.5/bits/random.tcc(408,4) ]
+   remark #15389: vectorization support: reference __urng->_M_x[__k+397] has unaligned access   [ /usr/include/c++/4.8.5/bits/random.tcc(408,17) ]
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15305: vectorization support: vector length 8
+   remark #15309: vectorization support: normalized vectorization overhead 0.238
+   remark #15301: PEEL LOOP WAS VECTORIZED
+LOOP END
+
+LOOP BEGIN at /usr/include/c++/4.8.5/bits/random.tcc(404,7) inlined into /usr/include/c++/4.8.5/bits/random.tcc(936,27)
+   remark #15388: vectorization support: reference __urng->_M_x[__k] has aligned access   [ /usr/include/c++/4.8.5/bits/random.tcc(406,22) ]
+   remark #15389: vectorization support: reference __urng->_M_x[__k+1] has unaligned access   [ /usr/include/c++/4.8.5/bits/random.tcc(407,10) ]
+   remark #15388: vectorization support: reference __urng->_M_x[__k] has aligned access   [ /usr/include/c++/4.8.5/bits/random.tcc(408,4) ]
+   remark #15389: vectorization support: reference __urng->_M_x[__k+397] has unaligned access   [ /usr/include/c++/4.8.5/bits/random.tcc(408,17) ]
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15305: vectorization support: vector length 8
+   remark #15309: vectorization support: normalized vectorization overhead 0.303
+   remark #15300: LOOP WAS VECTORIZED
+   remark #15448: unmasked aligned unit stride loads: 1 
+   remark #15449: unmasked aligned unit stride stores: 1 
+   remark #15450: unmasked unaligned unit stride loads: 2 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 19 
+   remark #15477: vector cost: 4.120 
+   remark #15478: estimated potential speedup: 4.170 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at /usr/include/c++/4.8.5/bits/random.tcc(404,7) inlined into /usr/include/c++/4.8.5/bits/random.tcc(936,27)
+<Remainder loop for vectorization>
+   remark #15388: vectorization support: reference __urng->_M_x[__k] has aligned access   [ /usr/include/c++/4.8.5/bits/random.tcc(406,22) ]
+   remark #15389: vectorization support: reference __urng->_M_x[__k+1] has unaligned access   [ /usr/include/c++/4.8.5/bits/random.tcc(407,10) ]
+   remark #15388: vectorization support: reference __urng->_M_x[__k] has aligned access   [ /usr/include/c++/4.8.5/bits/random.tcc(408,4) ]
+   remark #15389: vectorization support: reference __urng->_M_x[__k+397] has unaligned access   [ /usr/include/c++/4.8.5/bits/random.tcc(408,17) ]
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15305: vectorization support: vector length 8
+   remark #15309: vectorization support: normalized vectorization overhead 0.207
+   remark #15301: REMAINDER LOOP WAS VECTORIZED
+LOOP END
+
+LOOP BEGIN at /usr/include/c++/4.8.5/bits/random.tcc(412,7) inlined into /usr/include/c++/4.8.5/bits/random.tcc(936,27)
+   remark #15344: loop was not vectorized: vector dependence prevents vectorization
+   remark #15346: vector dependence: assumed FLOW dependence between __urng->_M_x[__k] (416:4) and __urng->_M_x[__k+?] (416:4)
+   remark #15346: vector dependence: assumed ANTI dependence between __urng->_M_x[__k+?] (416:4) and __urng->_M_x[__k] (416:4)
+LOOP END
+===========================================================================

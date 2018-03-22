@@ -1,0 +1,5 @@
+#!/bin/fish
+
+echo "repot prefetch"
+head -n15 prefetch.cc
+

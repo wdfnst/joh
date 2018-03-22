@@ -1,0 +1,108 @@
+Intel(R) Advisor can now assist with vectorization and show optimization
+  report messages with your source code.
+See "https://software.intel.com/en-us/intel-advisor-xe" for details.
+
+Intel(R) C++ Intel(R) 64 Compiler for applications running on Intel(R) 64, Version 18.0.1.163 Build 20171018
+
+Compiler options: -xMIC-AVX512 -qopt-report-phase=vec -qopt-report=5 -fopenmp -std=c++14 -O3 -o build/sum-all
+
+Begin optimization report for: main()
+
+    Report from: Vector optimizations [vec]
+
+
+LOOP BEGIN at sum-all.cc(21,5)
+   remark #15388: vectorization support: reference a[i] has aligned access   [ sum-all.cc(22,9) ]
+   remark #15305: vectorization support: vector length 16
+   remark #15399: vectorization support: unroll factor set to 4
+   remark #15309: vectorization support: normalized vectorization overhead 0.083
+   remark #15300: LOOP WAS VECTORIZED
+   remark #15449: unmasked aligned unit stride stores: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 2 
+   remark #15477: vector cost: 0.180 
+   remark #15478: estimated potential speedup: 10.660 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at sum-all.cc(12,5) inlined into sum-all.cc(28,16)
+   remark #15388: vectorization support: reference a[i] has aligned access   [ sum-all.cc(13,16) ]
+   remark #15305: vectorization support: vector length 16
+   remark #15399: vectorization support: unroll factor set to 4
+   remark #15309: vectorization support: normalized vectorization overhead 1.550
+   remark #15300: LOOP WAS VECTORIZED
+   remark #15448: unmasked aligned unit stride loads: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 3 
+   remark #15477: vector cost: 0.310 
+   remark #15478: estimated potential speedup: 9.590 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at sum-all.cc(27,17)
+   remark #15305: vectorization support: vector length 16
+   remark #15399: vectorization support: unroll factor set to 6
+   remark #15309: vectorization support: normalized vectorization overhead 0.786
+   remark #15300: LOOP WAS VECTORIZED
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 2 
+   remark #15477: vector cost: 0.430 
+   remark #15478: estimated potential speedup: 2.240 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at sum-all.cc(27,17)
+<Remainder loop for vectorization>
+   remark #15335: remainder loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+   remark #15305: vectorization support: vector length 16
+   remark #15427: loop was completely unrolled
+   remark #15309: vectorization support: normalized vectorization overhead 0.200
+LOOP END
+
+LOOP BEGIN at sum-all.cc(12,5) inlined into sum-all.cc(35,20)
+   remark #15388: vectorization support: reference a[i] has aligned access   [ sum-all.cc(13,16) ]
+   remark #15305: vectorization support: vector length 16
+   remark #15399: vectorization support: unroll factor set to 4
+   remark #15309: vectorization support: normalized vectorization overhead 1.550
+   remark #15300: LOOP WAS VECTORIZED
+   remark #15448: unmasked aligned unit stride loads: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 3 
+   remark #15477: vector cost: 0.310 
+   remark #15478: estimated potential speedup: 9.590 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at sum-all.cc(34,9)
+   remark #15305: vectorization support: vector length 4
+   remark #15309: vectorization support: normalized vectorization overhead 3.000
+   remark #15305: vectorization support: vector length 16
+   remark #15309: vectorization support: normalized vectorization overhead 1.636
+   remark #15300: LOOP WAS VECTORIZED
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 2 
+   remark #15477: vector cost: 1.370 
+   remark #15478: estimated potential speedup: 1.320 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+===========================================================================
+
+Begin optimization report for: calc()
+
+    Report from: Vector optimizations [vec]
+
+
+LOOP BEGIN at sum-all.cc(12,5)
+   remark #15388: vectorization support: reference a[i] has aligned access   [ sum-all.cc(13,16) ]
+   remark #15305: vectorization support: vector length 16
+   remark #15399: vectorization support: unroll factor set to 4
+   remark #15309: vectorization support: normalized vectorization overhead 1.550
+   remark #15300: LOOP WAS VECTORIZED
+   remark #15448: unmasked aligned unit stride loads: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 3 
+   remark #15477: vector cost: 0.310 
+   remark #15478: estimated potential speedup: 9.590 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+===========================================================================

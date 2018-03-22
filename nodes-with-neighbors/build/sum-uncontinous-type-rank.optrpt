@@ -1,0 +1,204 @@
+Intel(R) Advisor can now assist with vectorization and show optimization
+  report messages with your source code.
+See "https://software.intel.com/en-us/intel-advisor-xe" for details.
+
+Intel(R) C++ Intel(R) 64 Compiler for applications running on Intel(R) 64, Version 18.0.1.163 Build 20171018
+
+Compiler options: -xMIC-AVX512 -qopt-report-phase=vec -qopt-report=5 -fopenmp -std=c++14 -O3 -o build/sum-uncontinous-type-rank
+
+Begin optimization report for: main()
+
+    Report from: Vector optimizations [vec]
+
+
+LOOP BEGIN at sum-uncontinous-type-rank.cc(63,5)
+   remark #15542: loop was not vectorized: inner loop was already vectorized
+
+   LOOP BEGIN at sum-uncontinous-type-rank.cc(64,9)
+      remark #15388: vectorization support: reference a.a[i][j] has aligned access   [ sum-uncontinous-type-rank.cc(64,38) ]
+      remark #15388: vectorization support: reference a.next[i][j] has aligned access   [ sum-uncontinous-type-rank.cc(65,38) ]
+      remark #15305: vectorization support: vector length 4
+      remark #15427: loop was completely unrolled
+      remark #15399: vectorization support: unroll factor set to 3
+      remark #15388: vectorization support: reference a.a[i][j] has aligned access   [ sum-uncontinous-type-rank.cc(64,38) ]
+      remark #15389: vectorization support: reference a.next[i][j] has unaligned access   [ sum-uncontinous-type-rank.cc(65,38) ]
+      remark #15381: vectorization support: unaligned access used inside loop body
+      remark #15305: vectorization support: vector length 16
+      remark #15427: loop was completely unrolled
+      remark #15309: vectorization support: normalized vectorization overhead 0.250
+      remark #15301: FUSED LOOP WAS VECTORIZED
+      remark #15455: masked aligned unit stride stores: 1 
+      remark #15457: masked unaligned unit stride stores: 1 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 9 
+      remark #15477: vector cost: 1.250 
+      remark #15478: estimated potential speedup: 4.320 
+      remark #15488: --- end vector cost summary ---
+   LOOP END
+
+   LOOP BEGIN at sum-uncontinous-type-rank.cc(65,9)
+   LOOP END
+LOOP END
+
+LOOP BEGIN at sum-uncontinous-type-rank.cc(69,9)
+   remark #15542: loop was not vectorized: inner loop was already vectorized
+
+   LOOP BEGIN at sum-uncontinous-type-rank.cc(68,5)
+   <Peeled loop for vectorization>
+      remark #15389: vectorization support: reference rank[j][i] has unaligned access   [ sum-uncontinous-type-rank.cc(70,13) ]
+      remark #15381: vectorization support: unaligned access used inside loop body
+      remark #15305: vectorization support: vector length 16
+      remark #15309: vectorization support: normalized vectorization overhead 1.455
+      remark #15301: PEEL LOOP WAS VECTORIZED
+   LOOP END
+
+   LOOP BEGIN at sum-uncontinous-type-rank.cc(68,5)
+      remark #15388: vectorization support: reference rank[j][i] has aligned access   [ sum-uncontinous-type-rank.cc(70,13) ]
+      remark #15305: vectorization support: vector length 16
+      remark #15399: vectorization support: unroll factor set to 4
+      remark #15309: vectorization support: normalized vectorization overhead 0.917
+      remark #15301: PERMUTED LOOP WAS VECTORIZED
+      remark #15449: unmasked aligned unit stride stores: 1 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 2 
+      remark #15477: vector cost: 0.180 
+      remark #15478: estimated potential speedup: 10.660 
+      remark #15488: --- end vector cost summary ---
+   LOOP END
+
+   LOOP BEGIN at sum-uncontinous-type-rank.cc(68,5)
+   <Remainder loop for vectorization>
+      remark #15388: vectorization support: reference rank[j][i] has aligned access   [ sum-uncontinous-type-rank.cc(70,13) ]
+      remark #15305: vectorization support: vector length 16
+      remark #15309: vectorization support: normalized vectorization overhead 1.444
+      remark #15301: REMAINDER LOOP WAS VECTORIZED
+   LOOP END
+LOOP END
+
+LOOP BEGIN at sum-uncontinous-type-rank.cc(76,5)
+   remark #15382: vectorization support: call to function __kmpc_ok_to_fork cannot be vectorized   [ sum-uncontinous-type-rank.cc(32,1) ]
+   remark #15382: vectorization support: call to function __kmpc_fork_call cannot be vectorized   [ sum-uncontinous-type-rank.cc(32,1) ]
+   remark #15382: vectorization support: call to function __kmpc_serialized_parallel cannot be vectorized   [ sum-uncontinous-type-rank.cc(32,1) ]
+   remark #15382: vectorization support: call to function .2 cannot be vectorized   [ sum-uncontinous-type-rank.cc(32,1) ]
+   remark #15382: vectorization support: call to function __kmpc_end_serialized_parallel cannot be vectorized   [ sum-uncontinous-type-rank.cc(32,1) ]
+   remark #15344: loop was not vectorized: vector dependence prevents vectorization
+   remark #15346: vector dependence: assumed OUTPUT dependence between ret (31:14) and ret (32:1)
+   remark #15346: vector dependence: assumed OUTPUT dependence between ret (32:1) and ret (31:14)
+LOOP END
+
+LOOP BEGIN at sum-uncontinous-type-rank.cc(81,17)
+   remark #15382: vectorization support: call to function __kmpc_ok_to_fork cannot be vectorized   [ sum-uncontinous-type-rank.cc(32,1) ]
+   remark #15382: vectorization support: call to function __kmpc_fork_call cannot be vectorized   [ sum-uncontinous-type-rank.cc(32,1) ]
+   remark #15382: vectorization support: call to function __kmpc_serialized_parallel cannot be vectorized   [ sum-uncontinous-type-rank.cc(32,1) ]
+   remark #15382: vectorization support: call to function .4 cannot be vectorized   [ sum-uncontinous-type-rank.cc(32,1) ]
+   remark #15382: vectorization support: call to function __kmpc_end_serialized_parallel cannot be vectorized   [ sum-uncontinous-type-rank.cc(32,1) ]
+   remark #15344: loop was not vectorized: vector dependence prevents vectorization
+   remark #15346: vector dependence: assumed OUTPUT dependence between ret (31:14) and ret (32:1)
+   remark #15346: vector dependence: assumed OUTPUT dependence between ret (32:1) and ret (31:14)
+LOOP END
+
+LOOP BEGIN at sum-uncontinous-type-rank.cc(32,1) inlined into sum-uncontinous-type-rank.cc(77,16)
+   remark #15542: loop was not vectorized: inner loop was already vectorized
+
+   LOOP BEGIN at sum-uncontinous-type-rank.cc(37,9) inlined into sum-uncontinous-type-rank.cc(77,16)
+      remark #15388: vectorization support: reference a.a[rank[:][i]][_2] has aligned access   [ sum-uncontinous-type-rank.cc(37,16) ]
+      remark #15305: vectorization support: vector length 4
+      remark #15427: loop was completely unrolled
+      remark #15399: vectorization support: unroll factor set to 3
+      remark #15309: vectorization support: normalized vectorization overhead 1.267
+      remark #15301: MATERIALIZED LOOP WAS VECTORIZED
+      remark #15448: unmasked aligned unit stride loads: 1 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 5 
+      remark #15477: vector cost: 1.250 
+      remark #15478: estimated potential speedup: 1.760 
+      remark #15488: --- end vector cost summary ---
+   LOOP END
+
+   LOOP BEGIN at sum-uncontinous-type-rank.cc(49,9) inlined into sum-uncontinous-type-rank.cc(77,16)
+      remark #15388: vectorization support: reference a.next[rank[:][i]][_2] has aligned access   [ sum-uncontinous-type-rank.cc(49,16) ]
+      remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+      remark #15305: vectorization support: vector length 4
+      remark #15427: loop was completely unrolled
+      remark #15309: vectorization support: normalized vectorization overhead 3.800
+      remark #15448: unmasked aligned unit stride loads: 1 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 5 
+      remark #15477: vector cost: 1.250 
+      remark #15478: estimated potential speedup: 0.830 
+      remark #15488: --- end vector cost summary ---
+   LOOP END
+LOOP END
+
+LOOP BEGIN at sum-uncontinous-type-rank.cc(32,1) inlined into sum-uncontinous-type-rank.cc(82,16)
+   remark #15542: loop was not vectorized: inner loop was already vectorized
+
+   LOOP BEGIN at sum-uncontinous-type-rank.cc(37,9) inlined into sum-uncontinous-type-rank.cc(82,16)
+      remark #15388: vectorization support: reference a.a[rank[:][i]][_2] has aligned access   [ sum-uncontinous-type-rank.cc(37,16) ]
+      remark #15305: vectorization support: vector length 4
+      remark #15427: loop was completely unrolled
+      remark #15399: vectorization support: unroll factor set to 3
+      remark #15309: vectorization support: normalized vectorization overhead 1.267
+      remark #15301: MATERIALIZED LOOP WAS VECTORIZED
+      remark #15448: unmasked aligned unit stride loads: 1 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 5 
+      remark #15477: vector cost: 1.250 
+      remark #15478: estimated potential speedup: 1.760 
+      remark #15488: --- end vector cost summary ---
+   LOOP END
+
+   LOOP BEGIN at sum-uncontinous-type-rank.cc(49,9) inlined into sum-uncontinous-type-rank.cc(82,16)
+      remark #15388: vectorization support: reference a.next[rank[:][i]][_2] has aligned access   [ sum-uncontinous-type-rank.cc(49,16) ]
+      remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+      remark #15305: vectorization support: vector length 4
+      remark #15427: loop was completely unrolled
+      remark #15309: vectorization support: normalized vectorization overhead 3.800
+      remark #15448: unmasked aligned unit stride loads: 1 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 5 
+      remark #15477: vector cost: 1.250 
+      remark #15478: estimated potential speedup: 0.830 
+      remark #15488: --- end vector cost summary ---
+   LOOP END
+LOOP END
+===========================================================================
+
+Begin optimization report for: calc()
+
+    Report from: Vector optimizations [vec]
+
+
+LOOP BEGIN at sum-uncontinous-type-rank.cc(32,1)
+   remark #15542: loop was not vectorized: inner loop was already vectorized
+
+   LOOP BEGIN at sum-uncontinous-type-rank.cc(37,9)
+      remark #15388: vectorization support: reference a.a[rank[:][i]][_2] has aligned access   [ sum-uncontinous-type-rank.cc(37,16) ]
+      remark #15305: vectorization support: vector length 4
+      remark #15427: loop was completely unrolled
+      remark #15399: vectorization support: unroll factor set to 3
+      remark #15309: vectorization support: normalized vectorization overhead 1.267
+      remark #15301: MATERIALIZED LOOP WAS VECTORIZED
+      remark #15448: unmasked aligned unit stride loads: 1 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 5 
+      remark #15477: vector cost: 1.250 
+      remark #15478: estimated potential speedup: 1.760 
+      remark #15488: --- end vector cost summary ---
+   LOOP END
+
+   LOOP BEGIN at sum-uncontinous-type-rank.cc(49,9)
+      remark #15388: vectorization support: reference a.next[rank[:][i]][_2] has aligned access   [ sum-uncontinous-type-rank.cc(49,16) ]
+      remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+      remark #15305: vectorization support: vector length 4
+      remark #15427: loop was completely unrolled
+      remark #15309: vectorization support: normalized vectorization overhead 3.800
+      remark #15448: unmasked aligned unit stride loads: 1 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 5 
+      remark #15477: vector cost: 1.250 
+      remark #15478: estimated potential speedup: 0.830 
+      remark #15488: --- end vector cost summary ---
+   LOOP END
+LOOP END
+===========================================================================
