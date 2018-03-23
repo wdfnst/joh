@@ -46,6 +46,14 @@ Xeon Phi 7210: 32 tiles / 64 cores (+ 6 tiles / 12 cores for yield recovery)
     - \_MM\_HINT\_T2:         34 GB/s.
     - \_MM\_HINT\_NTA:        20 GB/s.
 
+预取方法 | 带宽 | 注释 
+------------------|-----------------|-----------
+ without prefetch |  10 - 16 GB/s   |
+ \_MM\_HINT\_T0   |       30 GB/s   |
+ \_MM\_HINT\_T1   |       33 GB/s   |
+ \_MM\_HINT\_T2   |       34 GB/s   |
+ \_MM\_HINT\_NTA  |       20 GB/s   |
+
 2. 使用编译选项:    
 O3 –xmic-avx512 –qopt-prefetch=<n>:    
     - n = 0: 10 - 16 GB/s
