@@ -51,13 +51,14 @@ Xeon Phi 7210: 32 tiles / 64 cores (+ 6 tiles / 12 cores for yield recovery)
 
 2. 使用编译选项:    
 O3 –xmic-avx512 –qopt-prefetch=<n>:    
-	预取方法 |    带宽       | 注释 
-	---------|---------------|-----------
-	n = 0    | 10 - 16 GB/s  | 无
-	n = 2    |  16 GB/s      | 无
-	n = 3    | 10 - 14 GB/s  | 无
-	n = 4    | 同上          | 无
-	n = 5    | 26 - 30 GB/s  | 无
+
+预取方法 |    带宽       | 注释 
+---------|---------------|-----------
+n = 0    | 10 - 16 GB/s  | 无
+n = 2    |  16 GB/s      | 无
+n = 3    | 10 - 14 GB/s  | 无
+n = 4    | 同上          | 无
+n = 5    | 26 - 30 GB/s  | 无
 
 - 0    This is the default and if you omit the –qopt-prefetch option, then no auto-prefetching is done by the compiler    
 - 2    This is the default if you use only –qopt-prefetch with no explicit “<n>” argument. Insert prefetches for direct references where the compiler thinks the hardware prefetcher may not be able to handle it    
