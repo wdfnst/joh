@@ -40,33 +40,29 @@ Xeon Phi 7210: 32 tiles / 64 cores (+ 6 tiles / 12 cores for yield recovery)
 改动: 通过编译选项`-O3 –xmic-avx512 –qopt-prefetch=<n>`指导编译器预取
 
 1. 在源代码prefetch.cc中使用指示语句:
-    - without prefetch:  10 - 16 GB/s.
-    - \_MM\_HINT\_T0:         30 GB/s.
-    - \_MM\_HINT\_T1:         33 GB/s.
-    - \_MM\_HINT\_T2:         34 GB/s.
-    - \_MM\_HINT\_NTA:        20 GB/s.
-
-预取方法 | 带宽 | 注释 
-------------------|-----------------|-----------
- without prefetch |  10 - 16 GB/s   |
- \_MM\_HINT\_T0   |       30 GB/s   |
- \_MM\_HINT\_T1   |       33 GB/s   |
- \_MM\_HINT\_T2   |       34 GB/s   |
- \_MM\_HINT\_NTA  |       20 GB/s   |
+  	      预取方法    |       带宽      | 注释 
+	------------------|-----------------|-----------
+	 without prefetch |  10 - 16 GB/s   | 无
+	 \_MM\_HINT\_T0   |       30 GB/s   | 无
+	 \_MM\_HINT\_T1   |       33 GB/s   | 无
+	 \_MM\_HINT\_T2   |       34 GB/s   | 无
+	 \_MM\_HINT\_NTA  |       20 GB/s   | 无
 
 2. 使用编译选项:    
 O3 –xmic-avx512 –qopt-prefetch=<n>:    
-    - n = 0: 10 - 16 GB/s
-    - n = 2:      16 GB/s
-    - n = 3: 10 - 14 GB/s
-    - n = 4: 同上.
-    - n = 5: 26 - 30 GB/s
+	预取方法 |    带宽       | 注释 
+	---------|---------------|-----------
+	n = 0    | 10 - 16 GB/s  | 无
+	n = 2    |  16 GB/s      | 无
+	n = 3    | 10 - 14 GB/s  | 无
+	n = 4    | 同上          | 无
+	n = 5    | 26 - 30 GB/s  | 无
 
-0    This is the default and if you omit the –qopt-prefetch option, then no auto-prefetching is done by the compiler    
-2    This is the default if you use only –qopt-prefetch with no explicit “<n>” argument. Insert prefetches for direct references where the compiler thinks the hardware prefetcher may not be able to handle it    
-3    Prefetching is turned on for all direct memory references without regard to the hardware prefetcher    
-4    Same as n=3 (currently)    
-5    Additional prefetching for all indirect references (Intel® Advanced Vector Extensions 512 (Intel® AVX-512) and above)    
+- 0    This is the default and if you omit the –qopt-prefetch option, then no auto-prefetching is done by the compiler    
+- 2    This is the default if you use only –qopt-prefetch with no explicit “<n>” argument. Insert prefetches for direct references where the compiler thinks the hardware prefetcher may not be able to handle it    
+- 3    Prefetching is turned on for all direct memory references without regard to the hardware prefetcher    
+- 4    Same as n=3 (currently)    
+- 5    Additional prefetching for all indirect references (Intel® Advanced Vector Extensions 512 (Intel® AVX-512) and above)    
     - Indirect prefetches (hint 1) is done using AVX512-PF gatherpf instructions on Knights Landing (not all cases, but a subset)    
     - Extra prefetches issued for strided vector accesses (hint 0) to cover all cache-lines`
 
