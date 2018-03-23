@@ -13,9 +13,8 @@ $(BUILD)/:
 	mkdir -p $(BUILD)/
 %: %.cc | $(BUILD)/
 	$(CC) $(CCFLAGS) -o $(BUILD)/$@ $^ $(DEPEND)
-	./$(BUILD)/$@
+	./$(BUILD)/$@ > /dev/shm/mytempfile && cat /dev/shm/mytempfile >> README.md && trap 'rm /dev/shm/mytempfile' EXIT && ../plot_result.sh
 
 run: %
-	echo fuck
-	./$(BUILD)/$@ > /dev/shm/mytempfile && trap 'rm /dev/shm/mytempfile' EXIT && ../plot_result.sh
+	echo 'Journey Of The Heart'
 

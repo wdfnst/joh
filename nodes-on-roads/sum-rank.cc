@@ -7,7 +7,7 @@
 
 struct t64
 {
-    int a[16];
+    int a;
 } __attribute__((aligned(64)));
 // };
 
@@ -21,36 +21,20 @@ int calc()
 {
     auto ret = 0;
 #pragma omp parallel for default(shared) reduction(+: ret)
-    for (auto i = 0; i < maxn; i++) {
-        ret += b[rank[i]].a[0];
-        ret += b[rank[i]].a[1];
-        ret += b[rank[i]].a[2];
-        ret += b[rank[i]].a[3];
-        ret += b[rank[i]].a[4];
-        ret += b[rank[i]].a[5];
-        ret += b[rank[i]].a[6];
-        ret += b[rank[i]].a[7];
-        ret += b[rank[i]].a[8];
-        ret += b[rank[i]].a[9];
-        ret += b[rank[i]].a[10];
-        ret += b[rank[i]].a[11];
-        ret += b[rank[i]].a[12];
-        ret += b[rank[i]].a[13];
-        ret += b[rank[i]].a[14];
-        ret += b[rank[i]].a[15];
-		}
+    for (auto i = 0; i < maxn; i++)
+        ret += b[rank[i]].a;
     return ret;
 }
 
 template<int num_thread>
 int outer_cal() {
-    long long rep = 1;
-    long long memory = maxn * sizeof(t64) * rep + sizeof(rank);
+    long long rep = 10000;
+    long long memory = maxn * sizeof(t64) * rep;
     auto sum = 0;
     omp_set_num_threads(num_thread);
     icesp::timer tim;
     tim.start();
-// #pragma omp parallel for default(shared) reduction(+: sum)
+    // #pragma omp parallel for default(shared) reduction(+: sum)
     for (auto i = 0; i < rep; i++)
             sum += calc() * i;
     tim.stop();
@@ -62,24 +46,9 @@ int outer_cal() {
 int main()
 {
     long long rep = 10000;
-    for (int i = 0; i < maxn; i++) {
-        a[i] = b[i].a[0] = rank[i] = i;
-        a[i] = b[i].a[1] = rank[i] = i;
-        a[i] = b[i].a[2] = rank[i] = i;
-        a[i] = b[i].a[3] = rank[i] = i;
-        a[i] = b[i].a[4] = rank[i] = i;
-        a[i] = b[i].a[5] = rank[i] = i;
-        a[i] = b[i].a[6] = rank[i] = i;
-        a[i] = b[i].a[7] = rank[i] = i;
-        a[i] = b[i].a[8] = rank[i] = i;
-        a[i] = b[i].a[9] = rank[i] = i;
-        a[i] = b[i].a[10] = rank[i] = i;
-        a[i] = b[i].a[11] = rank[i] = i;
-        a[i] = b[i].a[12] = rank[i] = i;
-        a[i] = b[i].a[13] = rank[i] = i;
-        a[i] = b[i].a[14] = rank[i] = i;
-        a[i] = b[i].a[15] = rank[i] = i;
-		}
+    long long memory = maxn * sizeof(t64) * rep;
+    for (int i = 0; i < maxn; i++)
+        a[i] = b[i].a = rank[i] = i;
 
     auto sum = 0;
     for (auto i = 0; i < rep; i++)

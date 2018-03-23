@@ -7,8 +7,8 @@
 #include "../../../src/utils/timer.hh"
 
 auto constexpr KB = 1024ll;
-auto constexpr MB = KB * 1024;
-auto constexpr GB = MB * 1024;
+auto constexpr MB = KB * 1024.;
+auto constexpr GB = MB * 1024.;
 auto constexpr K = 1000;
 auto constexpr M = K * 1000;
 auto constexpr B = M * 1000;
@@ -53,7 +53,7 @@ int main()
 {
     std::cout << sizeof(t64) << " " << alignof(t64) << "\n";
 
-    long long rep = 10000;
+    long long rep = 1;
     long long memory = maxn * sizeof(t64) * rep;
     for (int i = 0; i < maxn; i++) {
         for (int j = 0; j < 16; j++)

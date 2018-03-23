@@ -4,28 +4,28 @@ See "https://software.intel.com/en-us/intel-advisor-xe" for details.
 
 Intel(R) C++ Intel(R) 64 Compiler for applications running on Intel(R) 64, Version 18.0.1.163 Build 20171018
 
-Compiler options: -xMIC-AVX512 -qopt-report-phase=vec -qopt-report=5 -fopenmp -std=c++14 -O3 -o build/prefetch
+Compiler options: -O3 -xMIC-AVX512 -qopt-prefetch=5 -qopt-report-phase=vec -qopt-report=5 -fopenmp -std=c++14 -o build/prefetch
 
 Begin optimization report for: main()
 
     Report from: Vector optimizations [vec]
 
 
-LOOP BEGIN at /usr/include/c++/4.8.5/bits/random.tcc(334,7) inlined into prefetch.cc(65,24)
+LOOP BEGIN at /usr/include/c++/4.8.5/bits/random.tcc(334,7) inlined into prefetch.cc(103,24)
    remark #15344: loop was not vectorized: vector dependence prevents vectorization
    remark #15346: vector dependence: assumed FLOW dependence between gen._M_x[__i] (340:4) and gen._M_x[__i-1] (336:20)
 LOOP END
 
-LOOP BEGIN at prefetch.cc(70,5)
+LOOP BEGIN at prefetch.cc(110,5)
    remark #15542: loop was not vectorized: inner loop was already vectorized
 
-   LOOP BEGIN at prefetch.cc(72,9)
+   LOOP BEGIN at prefetch.cc(112,9)
       remark #15542: loop was not vectorized: inner loop was already vectorized
 
-      LOOP BEGIN at /usr/include/c++/4.8.5/bits/random.tcc(901,42) inlined into prefetch.cc(72,55)
+      LOOP BEGIN at /usr/include/c++/4.8.5/bits/random.tcc(901,42) inlined into prefetch.cc(112,55)
          remark #15542: loop was not vectorized: inner loop was already vectorized
 
-         LOOP BEGIN at /usr/include/c++/4.8.5/bits/random.tcc(404,7) inlined into prefetch.cc(72,55)
+         LOOP BEGIN at /usr/include/c++/4.8.5/bits/random.tcc(404,7) inlined into prefetch.cc(112,55)
             remark #15388: vectorization support: reference gen._M_x[__k] has aligned access   [ /usr/include/c++/4.8.5/bits/random.tcc(406,22) ]
             remark #15389: vectorization support: reference gen._M_x[__k+1] has unaligned access   [ /usr/include/c++/4.8.5/bits/random.tcc(407,10) ]
             remark #15388: vectorization support: reference gen._M_x[__k] has aligned access   [ /usr/include/c++/4.8.5/bits/random.tcc(408,4) ]
@@ -44,13 +44,13 @@ LOOP BEGIN at prefetch.cc(70,5)
             remark #15488: --- end vector cost summary ---
          LOOP END
 
-         LOOP BEGIN at /usr/include/c++/4.8.5/bits/random.tcc(412,7) inlined into prefetch.cc(72,55)
+         LOOP BEGIN at /usr/include/c++/4.8.5/bits/random.tcc(412,7) inlined into prefetch.cc(112,55)
             remark #15344: loop was not vectorized: vector dependence prevents vectorization
             remark #15346: vector dependence: assumed FLOW dependence between gen._M_x[__k] (416:4) and gen._M_x[__k+?] (416:4)
             remark #15346: vector dependence: assumed ANTI dependence between gen._M_x[__k+?] (416:4) and gen._M_x[__k] (416:4)
          LOOP END
 
-         LOOP BEGIN at /usr/include/c++/4.8.5/bits/random.tcc(404,7) inlined into prefetch.cc(72,55)
+         LOOP BEGIN at /usr/include/c++/4.8.5/bits/random.tcc(404,7) inlined into prefetch.cc(112,55)
          <Remainder loop for vectorization>
             remark #15388: vectorization support: reference gen._M_x[__k] has aligned access   [ /usr/include/c++/4.8.5/bits/random.tcc(406,22) ]
             remark #15389: vectorization support: reference gen._M_x[__k+1] has unaligned access   [ /usr/include/c++/4.8.5/bits/random.tcc(407,10) ]
@@ -64,10 +64,10 @@ LOOP BEGIN at prefetch.cc(70,5)
          LOOP END
       LOOP END
 
-      LOOP BEGIN at /usr/include/c++/4.8.5/bits/random.tcc(932,21) inlined into prefetch.cc(72,55)
+      LOOP BEGIN at /usr/include/c++/4.8.5/bits/random.tcc(932,21) inlined into prefetch.cc(112,55)
          remark #15542: loop was not vectorized: inner loop was already vectorized
 
-         LOOP BEGIN at /usr/include/c++/4.8.5/bits/random.tcc(404,7) inlined into prefetch.cc(72,55)
+         LOOP BEGIN at /usr/include/c++/4.8.5/bits/random.tcc(404,7) inlined into prefetch.cc(112,55)
             remark #15388: vectorization support: reference gen._M_x[__k] has aligned access   [ /usr/include/c++/4.8.5/bits/random.tcc(406,22) ]
             remark #15389: vectorization support: reference gen._M_x[__k+1] has unaligned access   [ /usr/include/c++/4.8.5/bits/random.tcc(407,10) ]
             remark #15388: vectorization support: reference gen._M_x[__k] has aligned access   [ /usr/include/c++/4.8.5/bits/random.tcc(408,4) ]
@@ -86,13 +86,13 @@ LOOP BEGIN at prefetch.cc(70,5)
             remark #15488: --- end vector cost summary ---
          LOOP END
 
-         LOOP BEGIN at /usr/include/c++/4.8.5/bits/random.tcc(412,7) inlined into prefetch.cc(72,55)
+         LOOP BEGIN at /usr/include/c++/4.8.5/bits/random.tcc(412,7) inlined into prefetch.cc(112,55)
             remark #15344: loop was not vectorized: vector dependence prevents vectorization
             remark #15346: vector dependence: assumed FLOW dependence between gen._M_x[__k] (416:4) and gen._M_x[__k+?] (416:4)
             remark #15346: vector dependence: assumed ANTI dependence between gen._M_x[__k+?] (416:4) and gen._M_x[__k] (416:4)
          LOOP END
 
-         LOOP BEGIN at /usr/include/c++/4.8.5/bits/random.tcc(404,7) inlined into prefetch.cc(72,55)
+         LOOP BEGIN at /usr/include/c++/4.8.5/bits/random.tcc(404,7) inlined into prefetch.cc(112,55)
          <Remainder loop for vectorization>
             remark #15388: vectorization support: reference gen._M_x[__k] has aligned access   [ /usr/include/c++/4.8.5/bits/random.tcc(406,22) ]
             remark #15389: vectorization support: reference gen._M_x[__k+1] has unaligned access   [ /usr/include/c++/4.8.5/bits/random.tcc(407,10) ]
@@ -106,7 +106,7 @@ LOOP BEGIN at prefetch.cc(70,5)
          LOOP END
       LOOP END
 
-      LOOP BEGIN at /usr/include/c++/4.8.5/bits/random.tcc(404,7) inlined into prefetch.cc(72,55)
+      LOOP BEGIN at /usr/include/c++/4.8.5/bits/random.tcc(404,7) inlined into prefetch.cc(112,55)
          remark #15388: vectorization support: reference gen._M_x[__k] has aligned access   [ /usr/include/c++/4.8.5/bits/random.tcc(406,22) ]
          remark #15389: vectorization support: reference gen._M_x[__k+1] has unaligned access   [ /usr/include/c++/4.8.5/bits/random.tcc(407,10) ]
          remark #15388: vectorization support: reference gen._M_x[__k] has aligned access   [ /usr/include/c++/4.8.5/bits/random.tcc(408,4) ]
@@ -125,13 +125,13 @@ LOOP BEGIN at prefetch.cc(70,5)
          remark #15488: --- end vector cost summary ---
       LOOP END
 
-      LOOP BEGIN at /usr/include/c++/4.8.5/bits/random.tcc(412,7) inlined into prefetch.cc(72,55)
+      LOOP BEGIN at /usr/include/c++/4.8.5/bits/random.tcc(412,7) inlined into prefetch.cc(112,55)
          remark #15344: loop was not vectorized: vector dependence prevents vectorization
          remark #15346: vector dependence: assumed FLOW dependence between gen._M_x[__k] (416:4) and gen._M_x[__k+?] (416:4)
          remark #15346: vector dependence: assumed ANTI dependence between gen._M_x[__k+?] (416:4) and gen._M_x[__k] (416:4)
       LOOP END
 
-      LOOP BEGIN at /usr/include/c++/4.8.5/bits/random.tcc(404,7) inlined into prefetch.cc(72,55)
+      LOOP BEGIN at /usr/include/c++/4.8.5/bits/random.tcc(404,7) inlined into prefetch.cc(112,55)
       <Remainder loop for vectorization>
          remark #15388: vectorization support: reference gen._M_x[__k] has aligned access   [ /usr/include/c++/4.8.5/bits/random.tcc(406,22) ]
          remark #15389: vectorization support: reference gen._M_x[__k+1] has unaligned access   [ /usr/include/c++/4.8.5/bits/random.tcc(407,10) ]
@@ -145,12 +145,12 @@ LOOP BEGIN at prefetch.cc(70,5)
       LOOP END
    LOOP END
 
-   LOOP BEGIN at prefetch.cc(71,9)
-      remark #15388: vectorization support: reference a.a[i][j] has aligned access   [ prefetch.cc(71,38) ]
+   LOOP BEGIN at prefetch.cc(111,9)
+      remark #15388: vectorization support: reference a.a[i][j] has aligned access   [ prefetch.cc(111,38) ]
       remark #15305: vectorization support: vector length 4
       remark #15427: loop was completely unrolled
       remark #15399: vectorization support: unroll factor set to 3
-      remark #15388: vectorization support: reference a.a[i][j] has aligned access   [ prefetch.cc(71,38) ]
+      remark #15388: vectorization support: reference a.a[i][j] has aligned access   [ prefetch.cc(111,38) ]
       remark #15305: vectorization support: vector length 16
       remark #15427: loop was completely unrolled
       remark #15309: vectorization support: normalized vectorization overhead 0.250
@@ -164,13 +164,8 @@ LOOP BEGIN at prefetch.cc(70,5)
    LOOP END
 LOOP END
 
-LOOP BEGIN at prefetch.cc(78,5)
-   remark #15382: vectorization support: call to function calc() cannot be vectorized   [ prefetch.cc(79,16) ]
-   remark #15344: loop was not vectorized: vector dependence prevents vectorization
-LOOP END
-
-LOOP BEGIN at prefetch.cc(83,5)
-   remark #15382: vectorization support: call to function calc() cannot be vectorized   [ prefetch.cc(84,16) ]
+LOOP BEGIN at prefetch.cc(118,5)
+   remark #15382: vectorization support: call to function calc() cannot be vectorized   [ prefetch.cc(119,16) ]
    remark #15344: loop was not vectorized: vector dependence prevents vectorization
 LOOP END
 ===========================================================================
@@ -341,11 +336,11 @@ Begin optimization report for: calc()
     Report from: Vector optimizations [vec]
 
 
-LOOP BEGIN at prefetch.cc(31,1)
+LOOP BEGIN at prefetch.cc(43,1)
    remark #15542: loop was not vectorized: inner loop was already vectorized
 
-   LOOP BEGIN at prefetch.cc(35,9)
-      remark #15388: vectorization support: reference a.a[i][_2] has aligned access   [ prefetch.cc(35,16) ]
+   LOOP BEGIN at prefetch.cc(47,9)
+      remark #15388: vectorization support: reference a.a[i][_2] has aligned access   [ prefetch.cc(47,16) ]
       remark #15305: vectorization support: vector length 4
       remark #15427: loop was completely unrolled
       remark #15399: vectorization support: unroll factor set to 3
@@ -359,8 +354,8 @@ LOOP BEGIN at prefetch.cc(31,1)
       remark #15488: --- end vector cost summary ---
    LOOP END
 
-   LOOP BEGIN at prefetch.cc(36,9)
-      remark #15388: vectorization support: reference a.a[a.next[i][0]][_2] has aligned access   [ prefetch.cc(36,16) ]
+   LOOP BEGIN at prefetch.cc(50,9)
+      remark #15388: vectorization support: reference a.a[a.next[i][0]][_2] has aligned access   [ prefetch.cc(50,16) ]
       remark #15305: vectorization support: vector length 4
       remark #15427: loop was completely unrolled
       remark #15399: vectorization support: unroll factor set to 3
@@ -374,8 +369,8 @@ LOOP BEGIN at prefetch.cc(31,1)
       remark #15488: --- end vector cost summary ---
    LOOP END
 
-   LOOP BEGIN at prefetch.cc(37,9)
-      remark #15388: vectorization support: reference a.next[a.next[i][0]][_2] has aligned access   [ prefetch.cc(37,16) ]
+   LOOP BEGIN at prefetch.cc(56,9)
+      remark #15388: vectorization support: reference a.next[a.next[i][0]][_2] has aligned access   [ prefetch.cc(56,16) ]
       remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
       remark #15305: vectorization support: vector length 4
       remark #15427: loop was completely unrolled
@@ -388,8 +383,8 @@ LOOP BEGIN at prefetch.cc(31,1)
       remark #15488: --- end vector cost summary ---
    LOOP END
 
-   LOOP BEGIN at prefetch.cc(39,9)
-      remark #15388: vectorization support: reference a.a[a.next[i][1]][_2] has aligned access   [ prefetch.cc(39,16) ]
+   LOOP BEGIN at prefetch.cc(59,9)
+      remark #15388: vectorization support: reference a.a[a.next[i][1]][_2] has aligned access   [ prefetch.cc(59,16) ]
       remark #15305: vectorization support: vector length 4
       remark #15427: loop was completely unrolled
       remark #15399: vectorization support: unroll factor set to 3
@@ -403,8 +398,8 @@ LOOP BEGIN at prefetch.cc(31,1)
       remark #15488: --- end vector cost summary ---
    LOOP END
 
-   LOOP BEGIN at prefetch.cc(40,9)
-      remark #15388: vectorization support: reference a.next[a.next[i][1]][_2] has aligned access   [ prefetch.cc(40,16) ]
+   LOOP BEGIN at prefetch.cc(65,9)
+      remark #15388: vectorization support: reference a.next[a.next[i][1]][_2] has aligned access   [ prefetch.cc(65,16) ]
       remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
       remark #15305: vectorization support: vector length 4
       remark #15427: loop was completely unrolled
@@ -417,8 +412,8 @@ LOOP BEGIN at prefetch.cc(31,1)
       remark #15488: --- end vector cost summary ---
    LOOP END
 
-   LOOP BEGIN at prefetch.cc(42,9)
-      remark #15388: vectorization support: reference a.a[a.next[i][2]][_2] has aligned access   [ prefetch.cc(42,16) ]
+   LOOP BEGIN at prefetch.cc(68,9)
+      remark #15388: vectorization support: reference a.a[a.next[i][2]][_2] has aligned access   [ prefetch.cc(68,16) ]
       remark #15305: vectorization support: vector length 4
       remark #15427: loop was completely unrolled
       remark #15399: vectorization support: unroll factor set to 3
@@ -432,8 +427,8 @@ LOOP BEGIN at prefetch.cc(31,1)
       remark #15488: --- end vector cost summary ---
    LOOP END
 
-   LOOP BEGIN at prefetch.cc(43,9)
-      remark #15388: vectorization support: reference a.next[a.next[i][2]][_2] has aligned access   [ prefetch.cc(43,16) ]
+   LOOP BEGIN at prefetch.cc(74,9)
+      remark #15388: vectorization support: reference a.next[a.next[i][2]][_2] has aligned access   [ prefetch.cc(74,16) ]
       remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
       remark #15305: vectorization support: vector length 4
       remark #15427: loop was completely unrolled
@@ -446,8 +441,8 @@ LOOP BEGIN at prefetch.cc(31,1)
       remark #15488: --- end vector cost summary ---
    LOOP END
 
-   LOOP BEGIN at prefetch.cc(45,9)
-      remark #15388: vectorization support: reference a.a[a.next[i][3]][_2] has aligned access   [ prefetch.cc(45,16) ]
+   LOOP BEGIN at prefetch.cc(77,9)
+      remark #15388: vectorization support: reference a.a[a.next[i][3]][_2] has aligned access   [ prefetch.cc(77,16) ]
       remark #15305: vectorization support: vector length 4
       remark #15427: loop was completely unrolled
       remark #15399: vectorization support: unroll factor set to 3
@@ -461,8 +456,8 @@ LOOP BEGIN at prefetch.cc(31,1)
       remark #15488: --- end vector cost summary ---
    LOOP END
 
-   LOOP BEGIN at prefetch.cc(46,9)
-      remark #15388: vectorization support: reference a.next[a.next[i][3]][_2] has aligned access   [ prefetch.cc(46,16) ]
+   LOOP BEGIN at prefetch.cc(83,9)
+      remark #15388: vectorization support: reference a.next[a.next[i][3]][_2] has aligned access   [ prefetch.cc(83,16) ]
       remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
       remark #15305: vectorization support: vector length 4
       remark #15427: loop was completely unrolled

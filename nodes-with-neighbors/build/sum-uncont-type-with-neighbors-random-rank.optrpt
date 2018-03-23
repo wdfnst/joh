@@ -11,21 +11,21 @@ Begin optimization report for: main()
     Report from: Vector optimizations [vec]
 
 
-LOOP BEGIN at /usr/include/c++/4.8.5/bits/random.tcc(334,7) inlined into sum-uncont-type-with-neighbors-random-rank.cc(79,24)
+LOOP BEGIN at /usr/include/c++/4.8.5/bits/random.tcc(334,7) inlined into sum-uncont-type-with-neighbors-random-rank.cc(108,24)
    remark #15344: loop was not vectorized: vector dependence prevents vectorization
    remark #15346: vector dependence: assumed FLOW dependence between gen._M_x[__i] (340:4) and gen._M_x[__i-1] (336:20)
 LOOP END
 
-LOOP BEGIN at sum-uncont-type-with-neighbors-random-rank.cc(84,5)
+LOOP BEGIN at sum-uncont-type-with-neighbors-random-rank.cc(114,5)
    remark #15542: loop was not vectorized: inner loop was already vectorized
 
-   LOOP BEGIN at sum-uncont-type-with-neighbors-random-rank.cc(86,9)
+   LOOP BEGIN at sum-uncont-type-with-neighbors-random-rank.cc(116,9)
       remark #15542: loop was not vectorized: inner loop was already vectorized
 
-      LOOP BEGIN at /usr/include/c++/4.8.5/bits/random.tcc(901,42) inlined into sum-uncont-type-with-neighbors-random-rank.cc(86,55)
+      LOOP BEGIN at /usr/include/c++/4.8.5/bits/random.tcc(901,42) inlined into sum-uncont-type-with-neighbors-random-rank.cc(116,55)
          remark #15542: loop was not vectorized: inner loop was already vectorized
 
-         LOOP BEGIN at /usr/include/c++/4.8.5/bits/random.tcc(404,7) inlined into sum-uncont-type-with-neighbors-random-rank.cc(86,55)
+         LOOP BEGIN at /usr/include/c++/4.8.5/bits/random.tcc(404,7) inlined into sum-uncont-type-with-neighbors-random-rank.cc(116,55)
             remark #15388: vectorization support: reference gen._M_x[__k] has aligned access   [ /usr/include/c++/4.8.5/bits/random.tcc(406,22) ]
             remark #15389: vectorization support: reference gen._M_x[__k+1] has unaligned access   [ /usr/include/c++/4.8.5/bits/random.tcc(407,10) ]
             remark #15388: vectorization support: reference gen._M_x[__k] has aligned access   [ /usr/include/c++/4.8.5/bits/random.tcc(408,4) ]
@@ -44,13 +44,13 @@ LOOP BEGIN at sum-uncont-type-with-neighbors-random-rank.cc(84,5)
             remark #15488: --- end vector cost summary ---
          LOOP END
 
-         LOOP BEGIN at /usr/include/c++/4.8.5/bits/random.tcc(412,7) inlined into sum-uncont-type-with-neighbors-random-rank.cc(86,55)
+         LOOP BEGIN at /usr/include/c++/4.8.5/bits/random.tcc(412,7) inlined into sum-uncont-type-with-neighbors-random-rank.cc(116,55)
             remark #15344: loop was not vectorized: vector dependence prevents vectorization
             remark #15346: vector dependence: assumed FLOW dependence between gen._M_x[__k] (416:4) and gen._M_x[__k+?] (416:4)
             remark #15346: vector dependence: assumed ANTI dependence between gen._M_x[__k+?] (416:4) and gen._M_x[__k] (416:4)
          LOOP END
 
-         LOOP BEGIN at /usr/include/c++/4.8.5/bits/random.tcc(404,7) inlined into sum-uncont-type-with-neighbors-random-rank.cc(86,55)
+         LOOP BEGIN at /usr/include/c++/4.8.5/bits/random.tcc(404,7) inlined into sum-uncont-type-with-neighbors-random-rank.cc(116,55)
          <Remainder loop for vectorization>
             remark #15388: vectorization support: reference gen._M_x[__k] has aligned access   [ /usr/include/c++/4.8.5/bits/random.tcc(406,22) ]
             remark #15389: vectorization support: reference gen._M_x[__k+1] has unaligned access   [ /usr/include/c++/4.8.5/bits/random.tcc(407,10) ]
@@ -64,10 +64,10 @@ LOOP BEGIN at sum-uncont-type-with-neighbors-random-rank.cc(84,5)
          LOOP END
       LOOP END
 
-      LOOP BEGIN at /usr/include/c++/4.8.5/bits/random.tcc(932,21) inlined into sum-uncont-type-with-neighbors-random-rank.cc(86,55)
+      LOOP BEGIN at /usr/include/c++/4.8.5/bits/random.tcc(932,21) inlined into sum-uncont-type-with-neighbors-random-rank.cc(116,55)
          remark #15542: loop was not vectorized: inner loop was already vectorized
 
-         LOOP BEGIN at /usr/include/c++/4.8.5/bits/random.tcc(404,7) inlined into sum-uncont-type-with-neighbors-random-rank.cc(86,55)
+         LOOP BEGIN at /usr/include/c++/4.8.5/bits/random.tcc(404,7) inlined into sum-uncont-type-with-neighbors-random-rank.cc(116,55)
             remark #15388: vectorization support: reference gen._M_x[__k] has aligned access   [ /usr/include/c++/4.8.5/bits/random.tcc(406,22) ]
             remark #15389: vectorization support: reference gen._M_x[__k+1] has unaligned access   [ /usr/include/c++/4.8.5/bits/random.tcc(407,10) ]
             remark #15388: vectorization support: reference gen._M_x[__k] has aligned access   [ /usr/include/c++/4.8.5/bits/random.tcc(408,4) ]
@@ -86,13 +86,13 @@ LOOP BEGIN at sum-uncont-type-with-neighbors-random-rank.cc(84,5)
             remark #15488: --- end vector cost summary ---
          LOOP END
 
-         LOOP BEGIN at /usr/include/c++/4.8.5/bits/random.tcc(412,7) inlined into sum-uncont-type-with-neighbors-random-rank.cc(86,55)
+         LOOP BEGIN at /usr/include/c++/4.8.5/bits/random.tcc(412,7) inlined into sum-uncont-type-with-neighbors-random-rank.cc(116,55)
             remark #15344: loop was not vectorized: vector dependence prevents vectorization
             remark #15346: vector dependence: assumed FLOW dependence between gen._M_x[__k] (416:4) and gen._M_x[__k+?] (416:4)
             remark #15346: vector dependence: assumed ANTI dependence between gen._M_x[__k+?] (416:4) and gen._M_x[__k] (416:4)
          LOOP END
 
-         LOOP BEGIN at /usr/include/c++/4.8.5/bits/random.tcc(404,7) inlined into sum-uncont-type-with-neighbors-random-rank.cc(86,55)
+         LOOP BEGIN at /usr/include/c++/4.8.5/bits/random.tcc(404,7) inlined into sum-uncont-type-with-neighbors-random-rank.cc(116,55)
          <Remainder loop for vectorization>
             remark #15388: vectorization support: reference gen._M_x[__k] has aligned access   [ /usr/include/c++/4.8.5/bits/random.tcc(406,22) ]
             remark #15389: vectorization support: reference gen._M_x[__k+1] has unaligned access   [ /usr/include/c++/4.8.5/bits/random.tcc(407,10) ]
@@ -106,7 +106,7 @@ LOOP BEGIN at sum-uncont-type-with-neighbors-random-rank.cc(84,5)
          LOOP END
       LOOP END
 
-      LOOP BEGIN at /usr/include/c++/4.8.5/bits/random.tcc(404,7) inlined into sum-uncont-type-with-neighbors-random-rank.cc(86,55)
+      LOOP BEGIN at /usr/include/c++/4.8.5/bits/random.tcc(404,7) inlined into sum-uncont-type-with-neighbors-random-rank.cc(116,55)
          remark #15388: vectorization support: reference gen._M_x[__k] has aligned access   [ /usr/include/c++/4.8.5/bits/random.tcc(406,22) ]
          remark #15389: vectorization support: reference gen._M_x[__k+1] has unaligned access   [ /usr/include/c++/4.8.5/bits/random.tcc(407,10) ]
          remark #15388: vectorization support: reference gen._M_x[__k] has aligned access   [ /usr/include/c++/4.8.5/bits/random.tcc(408,4) ]
@@ -125,13 +125,13 @@ LOOP BEGIN at sum-uncont-type-with-neighbors-random-rank.cc(84,5)
          remark #15488: --- end vector cost summary ---
       LOOP END
 
-      LOOP BEGIN at /usr/include/c++/4.8.5/bits/random.tcc(412,7) inlined into sum-uncont-type-with-neighbors-random-rank.cc(86,55)
+      LOOP BEGIN at /usr/include/c++/4.8.5/bits/random.tcc(412,7) inlined into sum-uncont-type-with-neighbors-random-rank.cc(116,55)
          remark #15344: loop was not vectorized: vector dependence prevents vectorization
          remark #15346: vector dependence: assumed FLOW dependence between gen._M_x[__k] (416:4) and gen._M_x[__k+?] (416:4)
          remark #15346: vector dependence: assumed ANTI dependence between gen._M_x[__k+?] (416:4) and gen._M_x[__k] (416:4)
       LOOP END
 
-      LOOP BEGIN at /usr/include/c++/4.8.5/bits/random.tcc(404,7) inlined into sum-uncont-type-with-neighbors-random-rank.cc(86,55)
+      LOOP BEGIN at /usr/include/c++/4.8.5/bits/random.tcc(404,7) inlined into sum-uncont-type-with-neighbors-random-rank.cc(116,55)
       <Remainder loop for vectorization>
          remark #15388: vectorization support: reference gen._M_x[__k] has aligned access   [ /usr/include/c++/4.8.5/bits/random.tcc(406,22) ]
          remark #15389: vectorization support: reference gen._M_x[__k+1] has unaligned access   [ /usr/include/c++/4.8.5/bits/random.tcc(407,10) ]
@@ -145,12 +145,12 @@ LOOP BEGIN at sum-uncont-type-with-neighbors-random-rank.cc(84,5)
       LOOP END
    LOOP END
 
-   LOOP BEGIN at sum-uncont-type-with-neighbors-random-rank.cc(85,9)
-      remark #15388: vectorization support: reference a.a[i][j] has aligned access   [ sum-uncont-type-with-neighbors-random-rank.cc(85,38) ]
+   LOOP BEGIN at sum-uncont-type-with-neighbors-random-rank.cc(115,9)
+      remark #15388: vectorization support: reference a.a[i][j] has aligned access   [ sum-uncont-type-with-neighbors-random-rank.cc(115,38) ]
       remark #15305: vectorization support: vector length 4
       remark #15427: loop was completely unrolled
       remark #15399: vectorization support: unroll factor set to 3
-      remark #15388: vectorization support: reference a.a[i][j] has aligned access   [ sum-uncont-type-with-neighbors-random-rank.cc(85,38) ]
+      remark #15388: vectorization support: reference a.a[i][j] has aligned access   [ sum-uncont-type-with-neighbors-random-rank.cc(115,38) ]
       remark #15305: vectorization support: vector length 16
       remark #15427: loop was completely unrolled
       remark #15309: vectorization support: normalized vectorization overhead 0.250
@@ -164,20 +164,20 @@ LOOP BEGIN at sum-uncont-type-with-neighbors-random-rank.cc(84,5)
    LOOP END
 LOOP END
 
-LOOP BEGIN at sum-uncont-type-with-neighbors-random-rank.cc(90,9)
+LOOP BEGIN at sum-uncont-type-with-neighbors-random-rank.cc(120,9)
    remark #15542: loop was not vectorized: inner loop was already vectorized
 
-   LOOP BEGIN at sum-uncont-type-with-neighbors-random-rank.cc(89,5)
+   LOOP BEGIN at sum-uncont-type-with-neighbors-random-rank.cc(119,5)
    <Peeled loop for vectorization>
-      remark #15389: vectorization support: reference rank[j][i] has unaligned access   [ sum-uncont-type-with-neighbors-random-rank.cc(91,13) ]
+      remark #15389: vectorization support: reference rank[j][i] has unaligned access   [ sum-uncont-type-with-neighbors-random-rank.cc(121,13) ]
       remark #15381: vectorization support: unaligned access used inside loop body
       remark #15305: vectorization support: vector length 16
       remark #15309: vectorization support: normalized vectorization overhead 1.455
       remark #15301: PEEL LOOP WAS VECTORIZED
    LOOP END
 
-   LOOP BEGIN at sum-uncont-type-with-neighbors-random-rank.cc(89,5)
-      remark #15388: vectorization support: reference rank[j][i] has aligned access   [ sum-uncont-type-with-neighbors-random-rank.cc(91,13) ]
+   LOOP BEGIN at sum-uncont-type-with-neighbors-random-rank.cc(119,5)
+      remark #15388: vectorization support: reference rank[j][i] has aligned access   [ sum-uncont-type-with-neighbors-random-rank.cc(121,13) ]
       remark #15305: vectorization support: vector length 16
       remark #15399: vectorization support: unroll factor set to 4
       remark #15309: vectorization support: normalized vectorization overhead 0.917
@@ -190,30 +190,30 @@ LOOP BEGIN at sum-uncont-type-with-neighbors-random-rank.cc(90,9)
       remark #15488: --- end vector cost summary ---
    LOOP END
 
-   LOOP BEGIN at sum-uncont-type-with-neighbors-random-rank.cc(89,5)
+   LOOP BEGIN at sum-uncont-type-with-neighbors-random-rank.cc(119,5)
    <Remainder loop for vectorization>
-      remark #15388: vectorization support: reference rank[j][i] has aligned access   [ sum-uncont-type-with-neighbors-random-rank.cc(91,13) ]
+      remark #15388: vectorization support: reference rank[j][i] has aligned access   [ sum-uncont-type-with-neighbors-random-rank.cc(121,13) ]
       remark #15305: vectorization support: vector length 16
       remark #15309: vectorization support: normalized vectorization overhead 1.444
       remark #15301: REMAINDER LOOP WAS VECTORIZED
    LOOP END
 LOOP END
 
-LOOP BEGIN at /usr/include/c++/4.8.5/bits/random.tcc(334,7) inlined into sum-uncont-type-with-neighbors-random-rank.cc(94,5)
+LOOP BEGIN at /usr/include/c++/4.8.5/bits/random.tcc(334,7) inlined into sum-uncont-type-with-neighbors-random-rank.cc(124,5)
    remark #15344: loop was not vectorized: vector dependence prevents vectorization
    remark #15346: vector dependence: assumed FLOW dependence between gen.gen[__i] (340:4) and gen.gen[__i-1] (336:20)
 LOOP END
 
-LOOP BEGIN at sum-uncont-type-with-neighbors-random-rank.cc(64,5) inlined into sum-uncont-type-with-neighbors-random-rank.cc(94,5)
+LOOP BEGIN at sum-uncont-type-with-neighbors-random-rank.cc(93,5) inlined into sum-uncont-type-with-neighbors-random-rank.cc(124,5)
    remark #15542: loop was not vectorized: inner loop was already vectorized
 
-   LOOP BEGIN at sum-uncont-type-with-neighbors-random-rank.cc(65,9) inlined into sum-uncont-type-with-neighbors-random-rank.cc(94,5)
+   LOOP BEGIN at sum-uncont-type-with-neighbors-random-rank.cc(94,9) inlined into sum-uncont-type-with-neighbors-random-rank.cc(124,5)
       remark #15542: loop was not vectorized: inner loop was already vectorized
 
-      LOOP BEGIN at /usr/include/c++/4.8.5/bits/random.tcc(901,42) inlined into sum-uncont-type-with-neighbors-random-rank.cc(94,5)
+      LOOP BEGIN at /usr/include/c++/4.8.5/bits/random.tcc(901,42) inlined into sum-uncont-type-with-neighbors-random-rank.cc(124,5)
          remark #15542: loop was not vectorized: inner loop was already vectorized
 
-         LOOP BEGIN at /usr/include/c++/4.8.5/bits/random.tcc(404,7) inlined into sum-uncont-type-with-neighbors-random-rank.cc(94,5)
+         LOOP BEGIN at /usr/include/c++/4.8.5/bits/random.tcc(404,7) inlined into sum-uncont-type-with-neighbors-random-rank.cc(124,5)
             remark #15388: vectorization support: reference gen.gen[__k] has aligned access   [ /usr/include/c++/4.8.5/bits/random.tcc(406,22) ]
             remark #15389: vectorization support: reference gen.gen[__k+1] has unaligned access   [ /usr/include/c++/4.8.5/bits/random.tcc(407,10) ]
             remark #15388: vectorization support: reference gen.gen[__k] has aligned access   [ /usr/include/c++/4.8.5/bits/random.tcc(408,4) ]
@@ -232,13 +232,13 @@ LOOP BEGIN at sum-uncont-type-with-neighbors-random-rank.cc(64,5) inlined into s
             remark #15488: --- end vector cost summary ---
          LOOP END
 
-         LOOP BEGIN at /usr/include/c++/4.8.5/bits/random.tcc(412,7) inlined into sum-uncont-type-with-neighbors-random-rank.cc(94,5)
+         LOOP BEGIN at /usr/include/c++/4.8.5/bits/random.tcc(412,7) inlined into sum-uncont-type-with-neighbors-random-rank.cc(124,5)
             remark #15344: loop was not vectorized: vector dependence prevents vectorization
             remark #15346: vector dependence: assumed FLOW dependence between gen.gen[__k] (416:4) and gen.gen[__k+?] (416:4)
             remark #15346: vector dependence: assumed ANTI dependence between gen.gen[__k+?] (416:4) and gen.gen[__k] (416:4)
          LOOP END
 
-         LOOP BEGIN at /usr/include/c++/4.8.5/bits/random.tcc(404,7) inlined into sum-uncont-type-with-neighbors-random-rank.cc(94,5)
+         LOOP BEGIN at /usr/include/c++/4.8.5/bits/random.tcc(404,7) inlined into sum-uncont-type-with-neighbors-random-rank.cc(124,5)
          <Remainder loop for vectorization>
             remark #15388: vectorization support: reference gen.gen[__k] has aligned access   [ /usr/include/c++/4.8.5/bits/random.tcc(406,22) ]
             remark #15389: vectorization support: reference gen.gen[__k+1] has unaligned access   [ /usr/include/c++/4.8.5/bits/random.tcc(407,10) ]
@@ -252,10 +252,10 @@ LOOP BEGIN at sum-uncont-type-with-neighbors-random-rank.cc(64,5) inlined into s
          LOOP END
       LOOP END
 
-      LOOP BEGIN at /usr/include/c++/4.8.5/bits/random.tcc(932,21) inlined into sum-uncont-type-with-neighbors-random-rank.cc(94,5)
+      LOOP BEGIN at /usr/include/c++/4.8.5/bits/random.tcc(932,21) inlined into sum-uncont-type-with-neighbors-random-rank.cc(124,5)
          remark #15542: loop was not vectorized: inner loop was already vectorized
 
-         LOOP BEGIN at /usr/include/c++/4.8.5/bits/random.tcc(404,7) inlined into sum-uncont-type-with-neighbors-random-rank.cc(94,5)
+         LOOP BEGIN at /usr/include/c++/4.8.5/bits/random.tcc(404,7) inlined into sum-uncont-type-with-neighbors-random-rank.cc(124,5)
             remark #15388: vectorization support: reference gen.gen[__k] has aligned access   [ /usr/include/c++/4.8.5/bits/random.tcc(406,22) ]
             remark #15389: vectorization support: reference gen.gen[__k+1] has unaligned access   [ /usr/include/c++/4.8.5/bits/random.tcc(407,10) ]
             remark #15388: vectorization support: reference gen.gen[__k] has aligned access   [ /usr/include/c++/4.8.5/bits/random.tcc(408,4) ]
@@ -274,13 +274,13 @@ LOOP BEGIN at sum-uncont-type-with-neighbors-random-rank.cc(64,5) inlined into s
             remark #15488: --- end vector cost summary ---
          LOOP END
 
-         LOOP BEGIN at /usr/include/c++/4.8.5/bits/random.tcc(412,7) inlined into sum-uncont-type-with-neighbors-random-rank.cc(94,5)
+         LOOP BEGIN at /usr/include/c++/4.8.5/bits/random.tcc(412,7) inlined into sum-uncont-type-with-neighbors-random-rank.cc(124,5)
             remark #15344: loop was not vectorized: vector dependence prevents vectorization
             remark #15346: vector dependence: assumed FLOW dependence between gen.gen[__k] (416:4) and gen.gen[__k+?] (416:4)
             remark #15346: vector dependence: assumed ANTI dependence between gen.gen[__k+?] (416:4) and gen.gen[__k] (416:4)
          LOOP END
 
-         LOOP BEGIN at /usr/include/c++/4.8.5/bits/random.tcc(404,7) inlined into sum-uncont-type-with-neighbors-random-rank.cc(94,5)
+         LOOP BEGIN at /usr/include/c++/4.8.5/bits/random.tcc(404,7) inlined into sum-uncont-type-with-neighbors-random-rank.cc(124,5)
          <Remainder loop for vectorization>
             remark #15388: vectorization support: reference gen.gen[__k] has aligned access   [ /usr/include/c++/4.8.5/bits/random.tcc(406,22) ]
             remark #15389: vectorization support: reference gen.gen[__k+1] has unaligned access   [ /usr/include/c++/4.8.5/bits/random.tcc(407,10) ]
@@ -294,7 +294,7 @@ LOOP BEGIN at sum-uncont-type-with-neighbors-random-rank.cc(64,5) inlined into s
          LOOP END
       LOOP END
 
-      LOOP BEGIN at /usr/include/c++/4.8.5/bits/random.tcc(404,7) inlined into sum-uncont-type-with-neighbors-random-rank.cc(94,5)
+      LOOP BEGIN at /usr/include/c++/4.8.5/bits/random.tcc(404,7) inlined into sum-uncont-type-with-neighbors-random-rank.cc(124,5)
          remark #15388: vectorization support: reference gen.gen[__k] has aligned access   [ /usr/include/c++/4.8.5/bits/random.tcc(406,22) ]
          remark #15389: vectorization support: reference gen.gen[__k+1] has unaligned access   [ /usr/include/c++/4.8.5/bits/random.tcc(407,10) ]
          remark #15388: vectorization support: reference gen.gen[__k] has aligned access   [ /usr/include/c++/4.8.5/bits/random.tcc(408,4) ]
@@ -313,16 +313,16 @@ LOOP BEGIN at sum-uncont-type-with-neighbors-random-rank.cc(64,5) inlined into s
          remark #15488: --- end vector cost summary ---
       LOOP END
 
-      LOOP BEGIN at /usr/include/c++/4.8.5/bits/random.tcc(412,7) inlined into sum-uncont-type-with-neighbors-random-rank.cc(94,5)
+      LOOP BEGIN at /usr/include/c++/4.8.5/bits/random.tcc(412,7) inlined into sum-uncont-type-with-neighbors-random-rank.cc(124,5)
          remark #15344: loop was not vectorized: vector dependence prevents vectorization
          remark #15346: vector dependence: assumed FLOW dependence between gen.gen[__k] (416:4) and gen.gen[__k+?] (416:4)
          remark #15346: vector dependence: assumed ANTI dependence between gen.gen[__k+?] (416:4) and gen.gen[__k] (416:4)
       LOOP END
 
-      LOOP BEGIN at /usr/include/c++/4.8.5/bits/random.tcc(901,42) inlined into sum-uncont-type-with-neighbors-random-rank.cc(94,5)
+      LOOP BEGIN at /usr/include/c++/4.8.5/bits/random.tcc(901,42) inlined into sum-uncont-type-with-neighbors-random-rank.cc(124,5)
          remark #15542: loop was not vectorized: inner loop was already vectorized
 
-         LOOP BEGIN at /usr/include/c++/4.8.5/bits/random.tcc(404,7) inlined into sum-uncont-type-with-neighbors-random-rank.cc(94,5)
+         LOOP BEGIN at /usr/include/c++/4.8.5/bits/random.tcc(404,7) inlined into sum-uncont-type-with-neighbors-random-rank.cc(124,5)
             remark #15388: vectorization support: reference gen.gen[__k] has aligned access   [ /usr/include/c++/4.8.5/bits/random.tcc(406,22) ]
             remark #15389: vectorization support: reference gen.gen[__k+1] has unaligned access   [ /usr/include/c++/4.8.5/bits/random.tcc(407,10) ]
             remark #15388: vectorization support: reference gen.gen[__k] has aligned access   [ /usr/include/c++/4.8.5/bits/random.tcc(408,4) ]
@@ -341,13 +341,13 @@ LOOP BEGIN at sum-uncont-type-with-neighbors-random-rank.cc(64,5) inlined into s
             remark #15488: --- end vector cost summary ---
          LOOP END
 
-         LOOP BEGIN at /usr/include/c++/4.8.5/bits/random.tcc(412,7) inlined into sum-uncont-type-with-neighbors-random-rank.cc(94,5)
+         LOOP BEGIN at /usr/include/c++/4.8.5/bits/random.tcc(412,7) inlined into sum-uncont-type-with-neighbors-random-rank.cc(124,5)
             remark #15344: loop was not vectorized: vector dependence prevents vectorization
             remark #15346: vector dependence: assumed FLOW dependence between gen.gen[__k] (416:4) and gen.gen[__k+?] (416:4)
             remark #15346: vector dependence: assumed ANTI dependence between gen.gen[__k+?] (416:4) and gen.gen[__k] (416:4)
          LOOP END
 
-         LOOP BEGIN at /usr/include/c++/4.8.5/bits/random.tcc(404,7) inlined into sum-uncont-type-with-neighbors-random-rank.cc(94,5)
+         LOOP BEGIN at /usr/include/c++/4.8.5/bits/random.tcc(404,7) inlined into sum-uncont-type-with-neighbors-random-rank.cc(124,5)
          <Remainder loop for vectorization>
             remark #15388: vectorization support: reference gen.gen[__k] has aligned access   [ /usr/include/c++/4.8.5/bits/random.tcc(406,22) ]
             remark #15389: vectorization support: reference gen.gen[__k+1] has unaligned access   [ /usr/include/c++/4.8.5/bits/random.tcc(407,10) ]
@@ -361,10 +361,10 @@ LOOP BEGIN at sum-uncont-type-with-neighbors-random-rank.cc(64,5) inlined into s
          LOOP END
       LOOP END
 
-      LOOP BEGIN at /usr/include/c++/4.8.5/bits/random.tcc(932,21) inlined into sum-uncont-type-with-neighbors-random-rank.cc(94,5)
+      LOOP BEGIN at /usr/include/c++/4.8.5/bits/random.tcc(932,21) inlined into sum-uncont-type-with-neighbors-random-rank.cc(124,5)
          remark #15542: loop was not vectorized: inner loop was already vectorized
 
-         LOOP BEGIN at /usr/include/c++/4.8.5/bits/random.tcc(404,7) inlined into sum-uncont-type-with-neighbors-random-rank.cc(94,5)
+         LOOP BEGIN at /usr/include/c++/4.8.5/bits/random.tcc(404,7) inlined into sum-uncont-type-with-neighbors-random-rank.cc(124,5)
             remark #15388: vectorization support: reference gen.gen[__k] has aligned access   [ /usr/include/c++/4.8.5/bits/random.tcc(406,22) ]
             remark #15389: vectorization support: reference gen.gen[__k+1] has unaligned access   [ /usr/include/c++/4.8.5/bits/random.tcc(407,10) ]
             remark #15388: vectorization support: reference gen.gen[__k] has aligned access   [ /usr/include/c++/4.8.5/bits/random.tcc(408,4) ]
@@ -383,13 +383,13 @@ LOOP BEGIN at sum-uncont-type-with-neighbors-random-rank.cc(64,5) inlined into s
             remark #15488: --- end vector cost summary ---
          LOOP END
 
-         LOOP BEGIN at /usr/include/c++/4.8.5/bits/random.tcc(412,7) inlined into sum-uncont-type-with-neighbors-random-rank.cc(94,5)
+         LOOP BEGIN at /usr/include/c++/4.8.5/bits/random.tcc(412,7) inlined into sum-uncont-type-with-neighbors-random-rank.cc(124,5)
             remark #15344: loop was not vectorized: vector dependence prevents vectorization
             remark #15346: vector dependence: assumed FLOW dependence between gen.gen[__k] (416:4) and gen.gen[__k+?] (416:4)
             remark #15346: vector dependence: assumed ANTI dependence between gen.gen[__k+?] (416:4) and gen.gen[__k] (416:4)
          LOOP END
 
-         LOOP BEGIN at /usr/include/c++/4.8.5/bits/random.tcc(404,7) inlined into sum-uncont-type-with-neighbors-random-rank.cc(94,5)
+         LOOP BEGIN at /usr/include/c++/4.8.5/bits/random.tcc(404,7) inlined into sum-uncont-type-with-neighbors-random-rank.cc(124,5)
          <Remainder loop for vectorization>
             remark #15388: vectorization support: reference gen.gen[__k] has aligned access   [ /usr/include/c++/4.8.5/bits/random.tcc(406,22) ]
             remark #15389: vectorization support: reference gen.gen[__k+1] has unaligned access   [ /usr/include/c++/4.8.5/bits/random.tcc(407,10) ]
@@ -403,7 +403,7 @@ LOOP BEGIN at sum-uncont-type-with-neighbors-random-rank.cc(64,5) inlined into s
          LOOP END
       LOOP END
 
-      LOOP BEGIN at /usr/include/c++/4.8.5/bits/random.tcc(404,7) inlined into sum-uncont-type-with-neighbors-random-rank.cc(94,5)
+      LOOP BEGIN at /usr/include/c++/4.8.5/bits/random.tcc(404,7) inlined into sum-uncont-type-with-neighbors-random-rank.cc(124,5)
          remark #15388: vectorization support: reference gen.gen[__k] has aligned access   [ /usr/include/c++/4.8.5/bits/random.tcc(406,22) ]
          remark #15389: vectorization support: reference gen.gen[__k+1] has unaligned access   [ /usr/include/c++/4.8.5/bits/random.tcc(407,10) ]
          remark #15388: vectorization support: reference gen.gen[__k] has aligned access   [ /usr/include/c++/4.8.5/bits/random.tcc(408,4) ]
@@ -422,13 +422,13 @@ LOOP BEGIN at sum-uncont-type-with-neighbors-random-rank.cc(64,5) inlined into s
          remark #15488: --- end vector cost summary ---
       LOOP END
 
-      LOOP BEGIN at /usr/include/c++/4.8.5/bits/random.tcc(412,7) inlined into sum-uncont-type-with-neighbors-random-rank.cc(94,5)
+      LOOP BEGIN at /usr/include/c++/4.8.5/bits/random.tcc(412,7) inlined into sum-uncont-type-with-neighbors-random-rank.cc(124,5)
          remark #15344: loop was not vectorized: vector dependence prevents vectorization
          remark #15346: vector dependence: assumed FLOW dependence between gen.gen[__k] (416:4) and gen.gen[__k+?] (416:4)
          remark #15346: vector dependence: assumed ANTI dependence between gen.gen[__k+?] (416:4) and gen.gen[__k] (416:4)
       LOOP END
 
-      LOOP BEGIN at /usr/include/c++/4.8.5/bits/random.tcc(404,7) inlined into sum-uncont-type-with-neighbors-random-rank.cc(94,5)
+      LOOP BEGIN at /usr/include/c++/4.8.5/bits/random.tcc(404,7) inlined into sum-uncont-type-with-neighbors-random-rank.cc(124,5)
       <Remainder loop for vectorization>
          remark #15388: vectorization support: reference gen.gen[__k] has aligned access   [ /usr/include/c++/4.8.5/bits/random.tcc(406,22) ]
          remark #15389: vectorization support: reference gen.gen[__k+1] has unaligned access   [ /usr/include/c++/4.8.5/bits/random.tcc(407,10) ]
@@ -441,7 +441,7 @@ LOOP BEGIN at sum-uncont-type-with-neighbors-random-rank.cc(64,5) inlined into s
          remark #15309: vectorization support: normalized vectorization overhead 0.283
       LOOP END
 
-      LOOP BEGIN at /usr/include/c++/4.8.5/bits/random.tcc(404,7) inlined into sum-uncont-type-with-neighbors-random-rank.cc(94,5)
+      LOOP BEGIN at /usr/include/c++/4.8.5/bits/random.tcc(404,7) inlined into sum-uncont-type-with-neighbors-random-rank.cc(124,5)
       <Remainder loop for vectorization>
          remark #15388: vectorization support: reference gen.gen[__k] has aligned access   [ /usr/include/c++/4.8.5/bits/random.tcc(406,22) ]
          remark #15389: vectorization support: reference gen.gen[__k+1] has unaligned access   [ /usr/include/c++/4.8.5/bits/random.tcc(407,10) ]
@@ -456,13 +456,8 @@ LOOP BEGIN at sum-uncont-type-with-neighbors-random-rank.cc(64,5) inlined into s
    LOOP END
 LOOP END
 
-LOOP BEGIN at sum-uncont-type-with-neighbors-random-rank.cc(99,5)
-   remark #15382: vectorization support: call to function calc() cannot be vectorized   [ sum-uncont-type-with-neighbors-random-rank.cc(100,16) ]
-   remark #15344: loop was not vectorized: vector dependence prevents vectorization
-LOOP END
-
-LOOP BEGIN at sum-uncont-type-with-neighbors-random-rank.cc(104,5)
-   remark #15382: vectorization support: call to function calc() cannot be vectorized   [ sum-uncont-type-with-neighbors-random-rank.cc(105,16) ]
+LOOP BEGIN at sum-uncont-type-with-neighbors-random-rank.cc(129,5)
+   remark #15382: vectorization support: call to function calc() cannot be vectorized   [ sum-uncont-type-with-neighbors-random-rank.cc(130,16) ]
    remark #15344: loop was not vectorized: vector dependence prevents vectorization
 LOOP END
 ===========================================================================
@@ -490,8 +485,8 @@ LOOP BEGIN at sum-uncont-type-with-neighbors-random-rank.cc(35,1)
       remark #15488: --- end vector cost summary ---
    LOOP END
 
-   LOOP BEGIN at sum-uncont-type-with-neighbors-random-rank.cc(43,9)
-      remark #15388: vectorization support: reference a.a[a.next[rank[:][i]][0]][_2] has aligned access   [ sum-uncont-type-with-neighbors-random-rank.cc(43,16) ]
+   LOOP BEGIN at sum-uncont-type-with-neighbors-random-rank.cc(48,9)
+      remark #15388: vectorization support: reference a.a[a.next[rank[:][i]][0]][_2] has aligned access   [ sum-uncont-type-with-neighbors-random-rank.cc(48,16) ]
       remark #15305: vectorization support: vector length 4
       remark #15427: loop was completely unrolled
       remark #15399: vectorization support: unroll factor set to 3
@@ -505,8 +500,8 @@ LOOP BEGIN at sum-uncont-type-with-neighbors-random-rank.cc(35,1)
       remark #15488: --- end vector cost summary ---
    LOOP END
 
-   LOOP BEGIN at sum-uncont-type-with-neighbors-random-rank.cc(44,9)
-      remark #15388: vectorization support: reference a.next[a.next[rank[:][i]][0]][_2] has aligned access   [ sum-uncont-type-with-neighbors-random-rank.cc(44,16) ]
+   LOOP BEGIN at sum-uncont-type-with-neighbors-random-rank.cc(54,9)
+      remark #15388: vectorization support: reference a.next[a.next[rank[:][i]][0]][_2] has aligned access   [ sum-uncont-type-with-neighbors-random-rank.cc(54,16) ]
       remark #15305: vectorization support: vector length 4
       remark #15427: loop was completely unrolled
       remark #15309: vectorization support: normalized vectorization overhead 3.800
@@ -519,8 +514,8 @@ LOOP BEGIN at sum-uncont-type-with-neighbors-random-rank.cc(35,1)
       remark #15488: --- end vector cost summary ---
    LOOP END
 
-   LOOP BEGIN at sum-uncont-type-with-neighbors-random-rank.cc(46,9)
-      remark #15388: vectorization support: reference a.a[a.next[rank[:][i]][1]][_2] has aligned access   [ sum-uncont-type-with-neighbors-random-rank.cc(46,16) ]
+   LOOP BEGIN at sum-uncont-type-with-neighbors-random-rank.cc(57,9)
+      remark #15388: vectorization support: reference a.a[a.next[rank[:][i]][1]][_2] has aligned access   [ sum-uncont-type-with-neighbors-random-rank.cc(57,16) ]
       remark #15305: vectorization support: vector length 4
       remark #15427: loop was completely unrolled
       remark #15399: vectorization support: unroll factor set to 3
@@ -534,8 +529,8 @@ LOOP BEGIN at sum-uncont-type-with-neighbors-random-rank.cc(35,1)
       remark #15488: --- end vector cost summary ---
    LOOP END
 
-   LOOP BEGIN at sum-uncont-type-with-neighbors-random-rank.cc(47,9)
-      remark #15388: vectorization support: reference a.next[a.next[rank[:][i]][1]][_2] has aligned access   [ sum-uncont-type-with-neighbors-random-rank.cc(47,16) ]
+   LOOP BEGIN at sum-uncont-type-with-neighbors-random-rank.cc(63,9)
+      remark #15388: vectorization support: reference a.next[a.next[rank[:][i]][1]][_2] has aligned access   [ sum-uncont-type-with-neighbors-random-rank.cc(63,16) ]
       remark #15305: vectorization support: vector length 4
       remark #15427: loop was completely unrolled
       remark #15309: vectorization support: normalized vectorization overhead 3.800
@@ -548,8 +543,8 @@ LOOP BEGIN at sum-uncont-type-with-neighbors-random-rank.cc(35,1)
       remark #15488: --- end vector cost summary ---
    LOOP END
 
-   LOOP BEGIN at sum-uncont-type-with-neighbors-random-rank.cc(49,9)
-      remark #15388: vectorization support: reference a.a[a.next[rank[:][i]][2]][_2] has aligned access   [ sum-uncont-type-with-neighbors-random-rank.cc(49,16) ]
+   LOOP BEGIN at sum-uncont-type-with-neighbors-random-rank.cc(66,9)
+      remark #15388: vectorization support: reference a.a[a.next[rank[:][i]][2]][_2] has aligned access   [ sum-uncont-type-with-neighbors-random-rank.cc(66,16) ]
       remark #15305: vectorization support: vector length 4
       remark #15427: loop was completely unrolled
       remark #15399: vectorization support: unroll factor set to 3
@@ -563,8 +558,8 @@ LOOP BEGIN at sum-uncont-type-with-neighbors-random-rank.cc(35,1)
       remark #15488: --- end vector cost summary ---
    LOOP END
 
-   LOOP BEGIN at sum-uncont-type-with-neighbors-random-rank.cc(50,9)
-      remark #15388: vectorization support: reference a.next[a.next[rank[:][i]][2]][_2] has aligned access   [ sum-uncont-type-with-neighbors-random-rank.cc(50,16) ]
+   LOOP BEGIN at sum-uncont-type-with-neighbors-random-rank.cc(72,9)
+      remark #15388: vectorization support: reference a.next[a.next[rank[:][i]][2]][_2] has aligned access   [ sum-uncont-type-with-neighbors-random-rank.cc(72,16) ]
       remark #15305: vectorization support: vector length 4
       remark #15427: loop was completely unrolled
       remark #15309: vectorization support: normalized vectorization overhead 3.800
@@ -577,8 +572,8 @@ LOOP BEGIN at sum-uncont-type-with-neighbors-random-rank.cc(35,1)
       remark #15488: --- end vector cost summary ---
    LOOP END
 
-   LOOP BEGIN at sum-uncont-type-with-neighbors-random-rank.cc(52,9)
-      remark #15388: vectorization support: reference a.a[a.next[rank[:][i]][3]][_2] has aligned access   [ sum-uncont-type-with-neighbors-random-rank.cc(52,16) ]
+   LOOP BEGIN at sum-uncont-type-with-neighbors-random-rank.cc(75,9)
+      remark #15388: vectorization support: reference a.a[a.next[rank[:][i]][3]][_2] has aligned access   [ sum-uncont-type-with-neighbors-random-rank.cc(75,16) ]
       remark #15305: vectorization support: vector length 4
       remark #15427: loop was completely unrolled
       remark #15399: vectorization support: unroll factor set to 3
@@ -592,8 +587,8 @@ LOOP BEGIN at sum-uncont-type-with-neighbors-random-rank.cc(35,1)
       remark #15488: --- end vector cost summary ---
    LOOP END
 
-   LOOP BEGIN at sum-uncont-type-with-neighbors-random-rank.cc(53,9)
-      remark #15388: vectorization support: reference a.next[a.next[rank[:][i]][3]][_2] has aligned access   [ sum-uncont-type-with-neighbors-random-rank.cc(53,16) ]
+   LOOP BEGIN at sum-uncont-type-with-neighbors-random-rank.cc(81,9)
+      remark #15388: vectorization support: reference a.next[a.next[rank[:][i]][3]][_2] has aligned access   [ sum-uncont-type-with-neighbors-random-rank.cc(81,16) ]
       remark #15305: vectorization support: vector length 4
       remark #15427: loop was completely unrolled
       remark #15309: vectorization support: normalized vectorization overhead 3.800
@@ -613,21 +608,21 @@ Begin optimization report for: random_swap(int)
     Report from: Vector optimizations [vec]
 
 
-LOOP BEGIN at /usr/include/c++/4.8.5/bits/random.tcc(334,7) inlined into sum-uncont-type-with-neighbors-random-rank.cc(62,24)
+LOOP BEGIN at /usr/include/c++/4.8.5/bits/random.tcc(334,7) inlined into sum-uncont-type-with-neighbors-random-rank.cc(91,24)
    remark #15344: loop was not vectorized: vector dependence prevents vectorization
    remark #15346: vector dependence: assumed FLOW dependence between gen._M_x[__i] (340:4) and gen._M_x[__i-1] (336:20)
 LOOP END
 
-LOOP BEGIN at sum-uncont-type-with-neighbors-random-rank.cc(64,5)
+LOOP BEGIN at sum-uncont-type-with-neighbors-random-rank.cc(93,5)
    remark #15542: loop was not vectorized: inner loop was already vectorized
 
-   LOOP BEGIN at sum-uncont-type-with-neighbors-random-rank.cc(65,9)
+   LOOP BEGIN at sum-uncont-type-with-neighbors-random-rank.cc(94,9)
       remark #15542: loop was not vectorized: inner loop was already vectorized
 
-      LOOP BEGIN at /usr/include/c++/4.8.5/bits/random.tcc(901,42) inlined into sum-uncont-type-with-neighbors-random-rank.cc(66,27)
+      LOOP BEGIN at /usr/include/c++/4.8.5/bits/random.tcc(901,42) inlined into sum-uncont-type-with-neighbors-random-rank.cc(95,27)
          remark #15542: loop was not vectorized: inner loop was already vectorized
 
-         LOOP BEGIN at /usr/include/c++/4.8.5/bits/random.tcc(404,7) inlined into sum-uncont-type-with-neighbors-random-rank.cc(66,27)
+         LOOP BEGIN at /usr/include/c++/4.8.5/bits/random.tcc(404,7) inlined into sum-uncont-type-with-neighbors-random-rank.cc(95,27)
             remark #15388: vectorization support: reference gen._M_x[__k] has aligned access   [ /usr/include/c++/4.8.5/bits/random.tcc(406,22) ]
             remark #15389: vectorization support: reference gen._M_x[__k+1] has unaligned access   [ /usr/include/c++/4.8.5/bits/random.tcc(407,10) ]
             remark #15388: vectorization support: reference gen._M_x[__k] has aligned access   [ /usr/include/c++/4.8.5/bits/random.tcc(408,4) ]
@@ -646,13 +641,13 @@ LOOP BEGIN at sum-uncont-type-with-neighbors-random-rank.cc(64,5)
             remark #15488: --- end vector cost summary ---
          LOOP END
 
-         LOOP BEGIN at /usr/include/c++/4.8.5/bits/random.tcc(412,7) inlined into sum-uncont-type-with-neighbors-random-rank.cc(66,27)
+         LOOP BEGIN at /usr/include/c++/4.8.5/bits/random.tcc(412,7) inlined into sum-uncont-type-with-neighbors-random-rank.cc(95,27)
             remark #15344: loop was not vectorized: vector dependence prevents vectorization
             remark #15346: vector dependence: assumed FLOW dependence between gen._M_x[__k] (416:4) and gen._M_x[__k+?] (416:4)
             remark #15346: vector dependence: assumed ANTI dependence between gen._M_x[__k+?] (416:4) and gen._M_x[__k] (416:4)
          LOOP END
 
-         LOOP BEGIN at /usr/include/c++/4.8.5/bits/random.tcc(404,7) inlined into sum-uncont-type-with-neighbors-random-rank.cc(66,27)
+         LOOP BEGIN at /usr/include/c++/4.8.5/bits/random.tcc(404,7) inlined into sum-uncont-type-with-neighbors-random-rank.cc(95,27)
          <Remainder loop for vectorization>
             remark #15388: vectorization support: reference gen._M_x[__k] has aligned access   [ /usr/include/c++/4.8.5/bits/random.tcc(406,22) ]
             remark #15389: vectorization support: reference gen._M_x[__k+1] has unaligned access   [ /usr/include/c++/4.8.5/bits/random.tcc(407,10) ]
@@ -666,10 +661,10 @@ LOOP BEGIN at sum-uncont-type-with-neighbors-random-rank.cc(64,5)
          LOOP END
       LOOP END
 
-      LOOP BEGIN at /usr/include/c++/4.8.5/bits/random.tcc(932,21) inlined into sum-uncont-type-with-neighbors-random-rank.cc(66,27)
+      LOOP BEGIN at /usr/include/c++/4.8.5/bits/random.tcc(932,21) inlined into sum-uncont-type-with-neighbors-random-rank.cc(95,27)
          remark #15542: loop was not vectorized: inner loop was already vectorized
 
-         LOOP BEGIN at /usr/include/c++/4.8.5/bits/random.tcc(404,7) inlined into sum-uncont-type-with-neighbors-random-rank.cc(66,27)
+         LOOP BEGIN at /usr/include/c++/4.8.5/bits/random.tcc(404,7) inlined into sum-uncont-type-with-neighbors-random-rank.cc(95,27)
             remark #15388: vectorization support: reference gen._M_x[__k] has aligned access   [ /usr/include/c++/4.8.5/bits/random.tcc(406,22) ]
             remark #15389: vectorization support: reference gen._M_x[__k+1] has unaligned access   [ /usr/include/c++/4.8.5/bits/random.tcc(407,10) ]
             remark #15388: vectorization support: reference gen._M_x[__k] has aligned access   [ /usr/include/c++/4.8.5/bits/random.tcc(408,4) ]
@@ -688,13 +683,13 @@ LOOP BEGIN at sum-uncont-type-with-neighbors-random-rank.cc(64,5)
             remark #15488: --- end vector cost summary ---
          LOOP END
 
-         LOOP BEGIN at /usr/include/c++/4.8.5/bits/random.tcc(412,7) inlined into sum-uncont-type-with-neighbors-random-rank.cc(66,27)
+         LOOP BEGIN at /usr/include/c++/4.8.5/bits/random.tcc(412,7) inlined into sum-uncont-type-with-neighbors-random-rank.cc(95,27)
             remark #15344: loop was not vectorized: vector dependence prevents vectorization
             remark #15346: vector dependence: assumed FLOW dependence between gen._M_x[__k] (416:4) and gen._M_x[__k+?] (416:4)
             remark #15346: vector dependence: assumed ANTI dependence between gen._M_x[__k+?] (416:4) and gen._M_x[__k] (416:4)
          LOOP END
 
-         LOOP BEGIN at /usr/include/c++/4.8.5/bits/random.tcc(404,7) inlined into sum-uncont-type-with-neighbors-random-rank.cc(66,27)
+         LOOP BEGIN at /usr/include/c++/4.8.5/bits/random.tcc(404,7) inlined into sum-uncont-type-with-neighbors-random-rank.cc(95,27)
          <Remainder loop for vectorization>
             remark #15388: vectorization support: reference gen._M_x[__k] has aligned access   [ /usr/include/c++/4.8.5/bits/random.tcc(406,22) ]
             remark #15389: vectorization support: reference gen._M_x[__k+1] has unaligned access   [ /usr/include/c++/4.8.5/bits/random.tcc(407,10) ]
@@ -708,7 +703,7 @@ LOOP BEGIN at sum-uncont-type-with-neighbors-random-rank.cc(64,5)
          LOOP END
       LOOP END
 
-      LOOP BEGIN at /usr/include/c++/4.8.5/bits/random.tcc(404,7) inlined into sum-uncont-type-with-neighbors-random-rank.cc(66,27)
+      LOOP BEGIN at /usr/include/c++/4.8.5/bits/random.tcc(404,7) inlined into sum-uncont-type-with-neighbors-random-rank.cc(95,27)
          remark #15388: vectorization support: reference gen._M_x[__k] has aligned access   [ /usr/include/c++/4.8.5/bits/random.tcc(406,22) ]
          remark #15389: vectorization support: reference gen._M_x[__k+1] has unaligned access   [ /usr/include/c++/4.8.5/bits/random.tcc(407,10) ]
          remark #15388: vectorization support: reference gen._M_x[__k] has aligned access   [ /usr/include/c++/4.8.5/bits/random.tcc(408,4) ]
@@ -727,16 +722,16 @@ LOOP BEGIN at sum-uncont-type-with-neighbors-random-rank.cc(64,5)
          remark #15488: --- end vector cost summary ---
       LOOP END
 
-      LOOP BEGIN at /usr/include/c++/4.8.5/bits/random.tcc(412,7) inlined into sum-uncont-type-with-neighbors-random-rank.cc(66,27)
+      LOOP BEGIN at /usr/include/c++/4.8.5/bits/random.tcc(412,7) inlined into sum-uncont-type-with-neighbors-random-rank.cc(95,27)
          remark #15344: loop was not vectorized: vector dependence prevents vectorization
          remark #15346: vector dependence: assumed FLOW dependence between gen._M_x[__k] (416:4) and gen._M_x[__k+?] (416:4)
          remark #15346: vector dependence: assumed ANTI dependence between gen._M_x[__k+?] (416:4) and gen._M_x[__k] (416:4)
       LOOP END
 
-      LOOP BEGIN at /usr/include/c++/4.8.5/bits/random.tcc(901,42) inlined into sum-uncont-type-with-neighbors-random-rank.cc(67,27)
+      LOOP BEGIN at /usr/include/c++/4.8.5/bits/random.tcc(901,42) inlined into sum-uncont-type-with-neighbors-random-rank.cc(96,27)
          remark #15542: loop was not vectorized: inner loop was already vectorized
 
-         LOOP BEGIN at /usr/include/c++/4.8.5/bits/random.tcc(404,7) inlined into sum-uncont-type-with-neighbors-random-rank.cc(67,27)
+         LOOP BEGIN at /usr/include/c++/4.8.5/bits/random.tcc(404,7) inlined into sum-uncont-type-with-neighbors-random-rank.cc(96,27)
             remark #15388: vectorization support: reference gen._M_x[__k] has aligned access   [ /usr/include/c++/4.8.5/bits/random.tcc(406,22) ]
             remark #15389: vectorization support: reference gen._M_x[__k+1] has unaligned access   [ /usr/include/c++/4.8.5/bits/random.tcc(407,10) ]
             remark #15388: vectorization support: reference gen._M_x[__k] has aligned access   [ /usr/include/c++/4.8.5/bits/random.tcc(408,4) ]
@@ -755,13 +750,13 @@ LOOP BEGIN at sum-uncont-type-with-neighbors-random-rank.cc(64,5)
             remark #15488: --- end vector cost summary ---
          LOOP END
 
-         LOOP BEGIN at /usr/include/c++/4.8.5/bits/random.tcc(412,7) inlined into sum-uncont-type-with-neighbors-random-rank.cc(67,27)
+         LOOP BEGIN at /usr/include/c++/4.8.5/bits/random.tcc(412,7) inlined into sum-uncont-type-with-neighbors-random-rank.cc(96,27)
             remark #15344: loop was not vectorized: vector dependence prevents vectorization
             remark #15346: vector dependence: assumed FLOW dependence between gen._M_x[__k] (416:4) and gen._M_x[__k+?] (416:4)
             remark #15346: vector dependence: assumed ANTI dependence between gen._M_x[__k+?] (416:4) and gen._M_x[__k] (416:4)
          LOOP END
 
-         LOOP BEGIN at /usr/include/c++/4.8.5/bits/random.tcc(404,7) inlined into sum-uncont-type-with-neighbors-random-rank.cc(67,27)
+         LOOP BEGIN at /usr/include/c++/4.8.5/bits/random.tcc(404,7) inlined into sum-uncont-type-with-neighbors-random-rank.cc(96,27)
          <Remainder loop for vectorization>
             remark #15388: vectorization support: reference gen._M_x[__k] has aligned access   [ /usr/include/c++/4.8.5/bits/random.tcc(406,22) ]
             remark #15389: vectorization support: reference gen._M_x[__k+1] has unaligned access   [ /usr/include/c++/4.8.5/bits/random.tcc(407,10) ]
@@ -775,10 +770,10 @@ LOOP BEGIN at sum-uncont-type-with-neighbors-random-rank.cc(64,5)
          LOOP END
       LOOP END
 
-      LOOP BEGIN at /usr/include/c++/4.8.5/bits/random.tcc(932,21) inlined into sum-uncont-type-with-neighbors-random-rank.cc(67,27)
+      LOOP BEGIN at /usr/include/c++/4.8.5/bits/random.tcc(932,21) inlined into sum-uncont-type-with-neighbors-random-rank.cc(96,27)
          remark #15542: loop was not vectorized: inner loop was already vectorized
 
-         LOOP BEGIN at /usr/include/c++/4.8.5/bits/random.tcc(404,7) inlined into sum-uncont-type-with-neighbors-random-rank.cc(67,27)
+         LOOP BEGIN at /usr/include/c++/4.8.5/bits/random.tcc(404,7) inlined into sum-uncont-type-with-neighbors-random-rank.cc(96,27)
             remark #15388: vectorization support: reference gen._M_x[__k] has aligned access   [ /usr/include/c++/4.8.5/bits/random.tcc(406,22) ]
             remark #15389: vectorization support: reference gen._M_x[__k+1] has unaligned access   [ /usr/include/c++/4.8.5/bits/random.tcc(407,10) ]
             remark #15388: vectorization support: reference gen._M_x[__k] has aligned access   [ /usr/include/c++/4.8.5/bits/random.tcc(408,4) ]
@@ -797,13 +792,13 @@ LOOP BEGIN at sum-uncont-type-with-neighbors-random-rank.cc(64,5)
             remark #15488: --- end vector cost summary ---
          LOOP END
 
-         LOOP BEGIN at /usr/include/c++/4.8.5/bits/random.tcc(412,7) inlined into sum-uncont-type-with-neighbors-random-rank.cc(67,27)
+         LOOP BEGIN at /usr/include/c++/4.8.5/bits/random.tcc(412,7) inlined into sum-uncont-type-with-neighbors-random-rank.cc(96,27)
             remark #15344: loop was not vectorized: vector dependence prevents vectorization
             remark #15346: vector dependence: assumed FLOW dependence between gen._M_x[__k] (416:4) and gen._M_x[__k+?] (416:4)
             remark #15346: vector dependence: assumed ANTI dependence between gen._M_x[__k+?] (416:4) and gen._M_x[__k] (416:4)
          LOOP END
 
-         LOOP BEGIN at /usr/include/c++/4.8.5/bits/random.tcc(404,7) inlined into sum-uncont-type-with-neighbors-random-rank.cc(67,27)
+         LOOP BEGIN at /usr/include/c++/4.8.5/bits/random.tcc(404,7) inlined into sum-uncont-type-with-neighbors-random-rank.cc(96,27)
          <Remainder loop for vectorization>
             remark #15388: vectorization support: reference gen._M_x[__k] has aligned access   [ /usr/include/c++/4.8.5/bits/random.tcc(406,22) ]
             remark #15389: vectorization support: reference gen._M_x[__k+1] has unaligned access   [ /usr/include/c++/4.8.5/bits/random.tcc(407,10) ]
@@ -817,7 +812,7 @@ LOOP BEGIN at sum-uncont-type-with-neighbors-random-rank.cc(64,5)
          LOOP END
       LOOP END
 
-      LOOP BEGIN at /usr/include/c++/4.8.5/bits/random.tcc(404,7) inlined into sum-uncont-type-with-neighbors-random-rank.cc(67,27)
+      LOOP BEGIN at /usr/include/c++/4.8.5/bits/random.tcc(404,7) inlined into sum-uncont-type-with-neighbors-random-rank.cc(96,27)
          remark #15388: vectorization support: reference gen._M_x[__k] has aligned access   [ /usr/include/c++/4.8.5/bits/random.tcc(406,22) ]
          remark #15389: vectorization support: reference gen._M_x[__k+1] has unaligned access   [ /usr/include/c++/4.8.5/bits/random.tcc(407,10) ]
          remark #15388: vectorization support: reference gen._M_x[__k] has aligned access   [ /usr/include/c++/4.8.5/bits/random.tcc(408,4) ]
@@ -836,13 +831,13 @@ LOOP BEGIN at sum-uncont-type-with-neighbors-random-rank.cc(64,5)
          remark #15488: --- end vector cost summary ---
       LOOP END
 
-      LOOP BEGIN at /usr/include/c++/4.8.5/bits/random.tcc(412,7) inlined into sum-uncont-type-with-neighbors-random-rank.cc(67,27)
+      LOOP BEGIN at /usr/include/c++/4.8.5/bits/random.tcc(412,7) inlined into sum-uncont-type-with-neighbors-random-rank.cc(96,27)
          remark #15344: loop was not vectorized: vector dependence prevents vectorization
          remark #15346: vector dependence: assumed FLOW dependence between gen._M_x[__k] (416:4) and gen._M_x[__k+?] (416:4)
          remark #15346: vector dependence: assumed ANTI dependence between gen._M_x[__k+?] (416:4) and gen._M_x[__k] (416:4)
       LOOP END
 
-      LOOP BEGIN at /usr/include/c++/4.8.5/bits/random.tcc(404,7) inlined into sum-uncont-type-with-neighbors-random-rank.cc(66,27)
+      LOOP BEGIN at /usr/include/c++/4.8.5/bits/random.tcc(404,7) inlined into sum-uncont-type-with-neighbors-random-rank.cc(95,27)
       <Remainder loop for vectorization>
          remark #15388: vectorization support: reference gen._M_x[__k] has aligned access   [ /usr/include/c++/4.8.5/bits/random.tcc(406,22) ]
          remark #15389: vectorization support: reference gen._M_x[__k+1] has unaligned access   [ /usr/include/c++/4.8.5/bits/random.tcc(407,10) ]
@@ -855,7 +850,7 @@ LOOP BEGIN at sum-uncont-type-with-neighbors-random-rank.cc(64,5)
          remark #15309: vectorization support: normalized vectorization overhead 0.283
       LOOP END
 
-      LOOP BEGIN at /usr/include/c++/4.8.5/bits/random.tcc(404,7) inlined into sum-uncont-type-with-neighbors-random-rank.cc(67,27)
+      LOOP BEGIN at /usr/include/c++/4.8.5/bits/random.tcc(404,7) inlined into sum-uncont-type-with-neighbors-random-rank.cc(96,27)
       <Remainder loop for vectorization>
          remark #15388: vectorization support: reference gen._M_x[__k] has aligned access   [ /usr/include/c++/4.8.5/bits/random.tcc(406,22) ]
          remark #15389: vectorization support: reference gen._M_x[__k+1] has unaligned access   [ /usr/include/c++/4.8.5/bits/random.tcc(407,10) ]

@@ -1,0 +1,11 @@
+#!/bin/fish
+
+echo "repot sum"
+head -n2 sum.cc
+
+echo "repot sum-rank"
+head -n2 sum-rank.cc
+
+echo "repot sum-rank-random"
+head -n4 sum-rank-random.cc
+
