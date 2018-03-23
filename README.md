@@ -54,13 +54,11 @@ O3 –xmic-avx512 –qopt-prefetch=<n>:
 
 预取方法 |    带宽       | 注释 
 ---------|---------------|-----------
-n = 0    | 10 - 16 GB/s  | This is the default and if you omit the –qopt-prefetch option, then no auto-prefetching is done by the compiler    
-n = 2    |  16 GB/s      | This is the default if you use only –qopt-prefetch with no explicit “<n>” argument. Insert prefetches for direct references where the compiler thinks the hardware prefetcher may not be able to handle it    
-n = 3    | 10 - 14 GB/s  | Prefetching is turned on for all direct memory references without regard to the hardware prefetcher 
-n = 4    | 同上          | Same as n=3 (currently) 
-n = 5    | 26 - 30 GB/s  | Additional prefetching for all indirect references (Intel® Advanced Vector Extensions 512 (Intel® AVX-512) and above)    
-    - Indirect prefetches (hint 1) is done using AVX512-PF gatherpf instructions on Knights Landing (not all cases, but a subset)    
-    - Extra prefetches issued for strided vector accesses (hint 0) to cover all cache-lines`
+n = 0    | 10 - 16 GB/s  |  无
+n = 2    |  16 GB/s      |  无
+n = 3    | 10 - 14 GB/s  |  无
+n = 4    | 同上          |  无
+n = 5    | 26 - 30 GB/s  |  无
 
 - 0    This is the default and if you omit the –qopt-prefetch option, then no auto-prefetching is done by the compiler    
 - 2    This is the default if you use only –qopt-prefetch with no explicit “<n>” argument. Insert prefetches for direct references where the compiler thinks the hardware prefetcher may not be able to handle it    
