@@ -40,7 +40,7 @@ Xeon Phi 7210: 32 tiles / 64 cores (+ 6 tiles / 12 cores for yield recovery)
 改动: 通过编译选项`-O3 –xmic-avx512 –qopt-prefetch=<n>`指导编译器预取
 
 1. 在源代码prefetch.cc中使用指示语句:
-  	      预取方法    |       带宽      | 注释 
+  	预取方法    |       带宽      | 注释 
 	------------------|-----------------|-----------
 	 without prefetch |  10 - 16 GB/s   | 无
 	 \_MM\_HINT\_T0   |       30 GB/s   | 无
