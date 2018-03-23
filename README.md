@@ -1,6 +1,6 @@
 # Single Source Shortest Path Problem
 
-#### Preface
+#### 一 Preface
 1. The Intel® Xeon Phi™ Processor Architecture:    
 Xeon Phi 7210: 32 tiles / 64 cores (+ 6 tiles / 12 cores for yield recovery)
 <img src="https://software.intel.com/sites/default/files/managed/aa/e0/c02-f02-1024x1063.png" width="300">
@@ -8,7 +8,7 @@ Xeon Phi 7210: 32 tiles / 64 cores (+ 6 tiles / 12 cores for yield recovery)
 2. Official release: max memory bandwidth 102 GB/s.
 
 
-#### nodes:
+#### 二 nodes:
 (在Xu基础上,将每个64B的结构体内容全部填充, 避免编译器的优化. 实验结果表明将内容
 填充完成的计算和只有一个整数的计算, 带宽相差非常大, 可能是: 计算时间增加或
 其他原因)
@@ -22,7 +22,7 @@ Xeon Phi 7210: 32 tiles / 64 cores (+ 6 tiles / 12 cores for yield recovery)
 3. sum-rank-random.cc: 41 GB/s, 与(2)中类似, 扫描内存中的数组a[index[i]], 不同的
 是index[]中存储的是一个随机的实数序列.
 
-#### nodes-with-neighbors
+#### 三 nodes-with-neighbors
 1. sum-cont-type.cc:
 
 2. sum-uncont-type-rank.cc: 
@@ -36,8 +36,8 @@ Xeon Phi 7210: 32 tiles / 64 cores (+ 6 tiles / 12 cores for yield recovery)
 5. sum-uncont-type-with-neighbors-random-rank.cc: 
 
 
-#### nodes-with-neighbors-prefetch
-变动: 通过编译选项`-O3 –xmic-avx512 –qopt-prefetch=<n>`指导编译器预取
+#### 四 nodes-with-neighbors-prefetch
+改动: 通过编译选项`-O3 –xmic-avx512 –qopt-prefetch=<n>`指导编译器预取
 
 1. 在源代码prefetch.cc中使用指示语句:
     - without prefetch:  10 - 16 GB/s.
@@ -46,15 +46,15 @@ Xeon Phi 7210: 32 tiles / 64 cores (+ 6 tiles / 12 cores for yield recovery)
     - \_MM\_HINT\_T2:         34 GB/s.
     - \_MM\_HINT\_NTA:        20 GB/s.
 
-2. 使用编译选项:
-O3 –xmic-avx512 –qopt-prefetch=<n>:
-n = 0: 10 - 16 GB/s
-n = 2:      16 GB/s
-n = 3: 10 - 14 GB/s
-n = 4: 同上.
-n = 5: 26 - 30 GB/s
+2. 使用编译选项:    
+O3 –xmic-avx512 –qopt-prefetch=<n>:    
+    - n = 0: 10 - 16 GB/s
+    - n = 2:      16 GB/s
+    - n = 3: 10 - 14 GB/s
+    - n = 4: 同上.
+    - n = 5: 26 - 30 GB/s
 
-`0    This is the default and if you omit the –qopt-prefetch option, then no auto-prefetching is done by the compiler    
+0    This is the default and if you omit the –qopt-prefetch option, then no auto-prefetching is done by the compiler    
 2    This is the default if you use only –qopt-prefetch with no explicit “<n>” argument. Insert prefetches for direct references where the compiler thinks the hardware prefetcher may not be able to handle it    
 3    Prefetching is turned on for all direct memory references without regard to the hardware prefetcher    
 4    Same as n=3 (currently)    
@@ -63,7 +63,7 @@ n = 5: 26 - 30 GB/s
     - Extra prefetches issued for strided vector accesses (hint 0) to cover all cache-lines`
 
 
-#### 基于Xu 版本上的改动
+#### 五 基于Xu 版本上的改动
 1. nodes/中局部变量rep: 1000 -->1, 原因是怀疑并行的位置会导致进程间共享第一个
 进程读入的数据, 实际上读入的次数可能少于rep=1000. (在nodes-with-neighbors中由于
 每个线程扫描内存相距较远, 经测试发现rep=1或1000, 带宽变化不大.)
