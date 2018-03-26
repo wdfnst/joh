@@ -16,8 +16,8 @@ Xeon Phi 7210: 32 tiles / 64 cores (+ 6 tiles / 12 cores for yield recovery)
 预取方法    |       带宽      | 注释 
 ------------------|-----------------|-----------
 nodes/sum-all.cc | `200 GB/s` | 顺序扫描内存块, 并将内存块中存储的整形数相加
-nodes/sum-rank.cc | `157 GB/s` | 使用一个数组来遍历内存块的索引a[index[i]], 即访问a[]中元素之前, 需要先在index[]中找到数组a[]中的位置. index[]中存放的数据为一个连续的实数序列.
-sum-rank-random.cc | `41 GB/s` | 与(2)中类似, 扫描内存中的数组a[index[i]], 不同的是index[]中存储的是一个随机的实数序列.
+nodes/sum-rank.cc | `157 GB/s` | 使用一个数组来遍历内存块的索引a[index[i]], 即访问<br/>a[]中元素之前, 需要先在index[]中找到数组a[]中的位置. <br/>index[]中存放的数据为一个连续的实数序列.
+sum-rank-random.cc | `41 GB/s` | 与(2)中类似, 扫描内存中的数组a[index[i]], 不同的是index[]<br/>中存储的是一个随机的实数序列.
 
 #### 三. nodes-with-neighbors
 
