@@ -13,13 +13,13 @@ Xeon Phi 7210: 32 tiles / 64 cores (+ 6 tiles / 12 cores for yield recovery)
 填充完成的计算和只有一个整数的计算, 带宽相差非常大, 可能是: 计算时间增加或
 其他原因)
 
-1. nodes/sum-all.cc: 200 GB/s, 顺序扫描内存块, 并将内存块中存储的整形数相加.
+1. nodes/sum-all.cc: `200 GB/s`, 顺序扫描内存块, 并将内存块中存储的整形数相加.
 
-2. nodes/sum-rank.cc: 157 GB/s, 使用一个数组来遍历内存块的索引a[index[i]], 即
+2. nodes/sum-rank.cc: `157 GB/s`, 使用一个数组来遍历内存块的索引a[index[i]], 即
 访问a[]中元素之前, 需要先在index[]中找到数组a[]中的位置. index[]中存放的数据为
 一个连续的实数序列.
 
-3. sum-rank-random.cc: 41 GB/s, 与(2)中类似, 扫描内存中的数组a[index[i]], 不同的
+3. sum-rank-random.cc: `41 GB/s`, 与(2)中类似, 扫描内存中的数组a[index[i]], 不同的
 是index[]中存储的是一个随机的实数序列.
 
 #### 三. nodes-with-neighbors
@@ -27,10 +27,10 @@ Xeon Phi 7210: 32 tiles / 64 cores (+ 6 tiles / 12 cores for yield recovery)
 
 2. sum-uncont-type-rank.cc: 
 
-3. sum-uncont-type-with-neighbors.cc: 15 GB/s, 顺序扫描内存块中'图顶点', 并累加
+3. sum-uncont-type-with-neighbors.cc: `15 GB/s`, 顺序扫描内存块中'图顶点', 并累加
 其邻居所存储的数据.
 
-4. sum-uncont-type-with-neighbors-rank.cc: 13 GB/s, 随机访问内存块中'图顶点', 并
+4. sum-uncont-type-with-neighbors-rank.cc: `13 GB/s`, 随机访问内存块中'图顶点', 并
 累加其邻居所存储的数据.
 
 5. sum-uncont-type-with-neighbors-random-rank.cc: 
