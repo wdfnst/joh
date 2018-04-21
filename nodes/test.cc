@@ -1,7 +1,7 @@
 // 280 GB/s
 #include <iostream>
 #include <omp.h>
-#include "../../src/utils/timer.hh"
+#include "../../../src/utils/timer.hh"
 
 long long constexpr maxn = 1000;
 int a[maxn] __attribute__((aligned(64)));

@@ -30,3 +30,13 @@
 *.exe
 *.out
 *.app
+
+# Test data / output
+*/output/*
+*/tmp*
+*/*.gr
+*/*/*.gr
+
+# ctags
+*/CTAGS
+*/GRTAGS

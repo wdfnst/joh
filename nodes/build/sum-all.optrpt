@@ -11,15 +11,15 @@ Begin optimization report for: main()
     Report from: Vector optimizations [vec]
 
 
-LOOP BEGIN at sum-all.cc(61,5)
+LOOP BEGIN at sum-all.cc(48,5)
    remark #15542: loop was not vectorized: inner loop was already vectorized
 
-   LOOP BEGIN at sum-all.cc(62,9)
-      remark #15388: vectorization support: reference a.a[i][_2] has aligned access
+   LOOP BEGIN at sum-all.cc(48,36)
+      remark #15388: vectorization support: reference a.a[i][j] has aligned access   [ sum-all.cc(48,61) ]
       remark #15305: vectorization support: vector length 16
       remark #15427: loop was completely unrolled
       remark #15309: vectorization support: normalized vectorization overhead 0.333
-      remark #15301: MATERIALIZED LOOP WAS VECTORIZED
+      remark #15300: LOOP WAS VECTORIZED
       remark #15449: unmasked aligned unit stride stores: 1 
       remark #15475: --- begin vector cost summary ---
       remark #15476: scalar cost: 2 
@@ -29,22 +29,22 @@ LOOP BEGIN at sum-all.cc(61,5)
    LOOP END
 LOOP END
 
-LOOP BEGIN at sum-all.cc(82,5)
-   remark #15382: vectorization support: call to function __kmpc_ok_to_fork cannot be vectorized   [ sum-all.cc(20,1) ]
-   remark #15382: vectorization support: call to function __kmpc_fork_call cannot be vectorized   [ sum-all.cc(20,1) ]
-   remark #15382: vectorization support: call to function __kmpc_serialized_parallel cannot be vectorized   [ sum-all.cc(20,1) ]
-   remark #15382: vectorization support: call to function .1 cannot be vectorized   [ sum-all.cc(20,1) ]
-   remark #15382: vectorization support: call to function __kmpc_end_serialized_parallel cannot be vectorized   [ sum-all.cc(20,1) ]
+LOOP BEGIN at sum-all.cc(49,19)
+   remark #15382: vectorization support: call to function __kmpc_ok_to_fork cannot be vectorized   [ sum-all.cc(12,1) ]
+   remark #15382: vectorization support: call to function __kmpc_fork_call cannot be vectorized   [ sum-all.cc(12,1) ]
+   remark #15382: vectorization support: call to function __kmpc_serialized_parallel cannot be vectorized   [ sum-all.cc(12,1) ]
+   remark #15382: vectorization support: call to function .1 cannot be vectorized   [ sum-all.cc(12,1) ]
+   remark #15382: vectorization support: call to function __kmpc_end_serialized_parallel cannot be vectorized   [ sum-all.cc(12,1) ]
    remark #15344: loop was not vectorized: vector dependence prevents vectorization
-   remark #15346: vector dependence: assumed OUTPUT dependence between ret (19:14) and ret (20:1)
-   remark #15346: vector dependence: assumed OUTPUT dependence between ret (20:1) and ret (19:14)
+   remark #15346: vector dependence: assumed OUTPUT dependence between ret (11:14) and ret (12:1)
+   remark #15346: vector dependence: assumed OUTPUT dependence between ret (12:1) and ret (11:14)
 LOOP END
 
-LOOP BEGIN at sum-all.cc(20,1) inlined into sum-all.cc(83,16)
+LOOP BEGIN at sum-all.cc(12,1) inlined into sum-all.cc(49,57)
    remark #15542: loop was not vectorized: inner loop was already vectorized
 
-   LOOP BEGIN at sum-all.cc(22,9) inlined into sum-all.cc(83,16)
-      remark #15388: vectorization support: reference a.a[i][_2] has aligned access   [ sum-all.cc(22,16) ]
+   LOOP BEGIN at sum-all.cc(14,9) inlined into sum-all.cc(49,57)
+      remark #15388: vectorization support: reference a.a[i][_2] has aligned access   [ sum-all.cc(14,16) ]
       remark #15305: vectorization support: vector length 8
       remark #15427: loop was completely unrolled
       remark #15399: vectorization support: unroll factor set to 2
@@ -59,15 +59,15 @@ LOOP BEGIN at sum-all.cc(20,1) inlined into sum-all.cc(83,16)
    LOOP END
 LOOP END
 
-LOOP BEGIN at sum-all.cc(20,1) inlined into sum-all.cc(83,16)
+LOOP BEGIN at sum-all.cc(12,1) inlined into sum-all.cc(49,57)
 <Remainder>
 LOOP END
 
-LOOP BEGIN at sum-all.cc(20,1) inlined into sum-all.cc(103,5)
+LOOP BEGIN at sum-all.cc(12,1) inlined into sum-all.cc(51,5)
    remark #15542: loop was not vectorized: inner loop was already vectorized
 
-   LOOP BEGIN at sum-all.cc(22,9) inlined into sum-all.cc(103,5)
-      remark #15388: vectorization support: reference a.a[i][_2] has aligned access   [ sum-all.cc(22,16) ]
+   LOOP BEGIN at sum-all.cc(14,9) inlined into sum-all.cc(51,5)
+      remark #15388: vectorization support: reference a.a[i][_2] has aligned access   [ sum-all.cc(14,16) ]
       remark #15305: vectorization support: vector length 8
       remark #15427: loop was completely unrolled
       remark #15399: vectorization support: unroll factor set to 2
@@ -82,30 +82,7 @@ LOOP BEGIN at sum-all.cc(20,1) inlined into sum-all.cc(103,5)
    LOOP END
 LOOP END
 
-LOOP BEGIN at sum-all.cc(20,1) inlined into sum-all.cc(103,5)
-<Remainder>
-LOOP END
-
-LOOP BEGIN at sum-all.cc(20,1) inlined into sum-all.cc(104,5)
-   remark #15542: loop was not vectorized: inner loop was already vectorized
-
-   LOOP BEGIN at sum-all.cc(22,9) inlined into sum-all.cc(104,5)
-      remark #15388: vectorization support: reference a.a[i][_2] has aligned access   [ sum-all.cc(22,16) ]
-      remark #15305: vectorization support: vector length 8
-      remark #15427: loop was completely unrolled
-      remark #15399: vectorization support: unroll factor set to 2
-      remark #15309: vectorization support: normalized vectorization overhead 2.500
-      remark #15301: MATERIALIZED LOOP WAS VECTORIZED
-      remark #15448: unmasked aligned unit stride loads: 1 
-      remark #15475: --- begin vector cost summary ---
-      remark #15476: scalar cost: 3 
-      remark #15477: vector cost: 0.620 
-      remark #15478: estimated potential speedup: 1.370 
-      remark #15488: --- end vector cost summary ---
-   LOOP END
-LOOP END
-
-LOOP BEGIN at sum-all.cc(20,1) inlined into sum-all.cc(104,5)
+LOOP BEGIN at sum-all.cc(12,1) inlined into sum-all.cc(51,5)
 <Remainder>
 LOOP END
 ===========================================================================
@@ -115,11 +92,11 @@ Begin optimization report for: calc()
     Report from: Vector optimizations [vec]
 
 
-LOOP BEGIN at sum-all.cc(20,1)
+LOOP BEGIN at sum-all.cc(12,1)
    remark #15542: loop was not vectorized: inner loop was already vectorized
 
-   LOOP BEGIN at sum-all.cc(22,9)
-      remark #15388: vectorization support: reference a.a[i][_2] has aligned access   [ sum-all.cc(22,16) ]
+   LOOP BEGIN at sum-all.cc(14,9)
+      remark #15388: vectorization support: reference a.a[i][_2] has aligned access   [ sum-all.cc(14,16) ]
       remark #15305: vectorization support: vector length 8
       remark #15427: loop was completely unrolled
       remark #15399: vectorization support: unroll factor set to 2
@@ -134,7 +111,7 @@ LOOP BEGIN at sum-all.cc(20,1)
    LOOP END
 LOOP END
 
-LOOP BEGIN at sum-all.cc(20,1)
+LOOP BEGIN at sum-all.cc(12,1)
 <Remainder>
 LOOP END
 ===========================================================================

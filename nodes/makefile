@@ -12,7 +12,7 @@ BUILD = build
 $(BUILD)/:
 	mkdir -p $(BUILD)/
 %: %.cc | $(BUILD)/
-	$(CC) $(CCFLAGS) -o $(BUILD)/$@ $^ $(DEPEND)
+	$(CC) $(CCFLAGS) -o -lmemkind $(BUILD)/$@ $^ $(DEPEND)
 	echo "$@" >> README.md
 	./$(BUILD)/$@  | tee -a README.md
 
